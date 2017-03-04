@@ -24,6 +24,7 @@ const App = (): React$Element<any> => (
         render={(): React$Element<any> => (
           <BottomNavigation
             renderTabBar={TabBar}
+            lazy={false}
           >
             <Tab
               path="/app/home"

@@ -4,9 +4,9 @@ import { compose } from 'recompose'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router'
 
-import type { Store } from '@store/types.js'
+import type { State } from '@store/types.js'
 
-const mapStateToProps = (state: Store): Object => ({
+const mapStateToProps = (state: State): Object => ({
   app: state.app,
 })
 
@@ -17,4 +17,4 @@ export default (container: ReactClass<any>): ReactClass<any> => compose(
     mapStateToProps,
     mapActionsToProps,
   ),
-)(container: ReactClass<any>)
+)(container)
