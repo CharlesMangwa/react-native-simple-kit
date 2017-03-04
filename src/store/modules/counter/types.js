@@ -1,7 +1,7 @@
 /* @flow */
 
 export type Action = {
-  type: string,
+  type: 'INCREMENT' | 'DECREMENT',
   payload?: {
     counter: number,
   },

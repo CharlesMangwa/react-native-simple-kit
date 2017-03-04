@@ -27,4 +27,5 @@ Just clone the repo and start :
 https://github.com/CharlesMangwa/react-native-simple-kit.git myAwesomeApp
 $ cd myAwesomeApp
 $ yarn                  # Install Node.js components listed in your package.json with Yarn 😺
+$ yarn start            # Let's make some magic!
 ```

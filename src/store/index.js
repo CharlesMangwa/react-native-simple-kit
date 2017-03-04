@@ -10,11 +10,11 @@ import * as reducers from './reducers'
 
 // Create store
 const store: Store = createStore(
-  combineReducers({ ...reducers }: Object): Function,
-  {}: Object,
+  combineReducers({ ...reducers }),
+  {},
 )
 
-persistStore(store: Store, {
+persistStore(store, {
   storage: AsyncStorage,
 })
 
