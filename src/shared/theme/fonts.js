@@ -17,7 +17,7 @@ export const AVENIR_BLACK_ITALIC: Font = {
   fontStyle: 'italic',
 }
 
-export const AVENIR_BOLD: {fontFamily: 'Avenir', fontWeight: string} = {
+export const AVENIR_BOLD: Font = {
   fontFamily: 'Avenir',
   fontWeight: '700',
 }

@@ -4,7 +4,7 @@ import { compose } from 'recompose'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router'
 
-import type { State } from '@store/types.js'
+import type { State } from '@store/types'
 
 const mapStateToProps = (state: State): Object => ({
   app: state.app,

@@ -17,27 +17,27 @@ const App = (): React$Element<any> => (
       <Route
         exact
         path="/app"
-        render={(): React$Element<any> => <Redirect to="/app/home" />}
+        render={({ match }: Object): React$Element<any> => <Redirect to={`${match.url}/app/home`} />}
       />
       <Route
         path="/app"
-        render={(): React$Element<any> => (
+        render={({ match }: Object): React$Element<any> => (
           <BottomNavigation
             renderTabBar={TabBar}
             lazy={false}
           >
             <Tab
-              path="/app/home"
+              path={`${match.url}/app/home`}
               component={Home}
               label="Home"
             />
             <Tab
-              path="/app/counter"
+              path={`${match.url}/app/counter`}
               component={Counter}
               label="Counter"
             />
             <Tab
-              path="/app/settings"
+              path={`${match.url}/app/settings`}
               component={Settings}
               label="Settings"
             />
@@ -45,7 +45,6 @@ const App = (): React$Element<any> => (
         )}
       />
     </Switch>
-    {/* @TODO Implement a global modal system from here */}
   </View>
 )
 
