@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -21,6 +22,8 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		233C51E841254DC59E9D7539 /* Bariol-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BC8E52D83154A9AA459E924 /* Bariol-Bold.ttf */; };
+		2C157763EF27438E9A799E69 /* Avenir-Roman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9488604D973840D1A9693F00 /* Avenir-Roman.ttf */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -33,21 +36,19 @@
 		2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */; };
 		2D02E4C91E0B4AEC006451C7 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* RNSKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* RNSKTests.m */; };
+		48CD2A5C17BD4068819E51A6 /* Avenir-LightOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10FBD2EB758747A7BB5D45DC /* Avenir-LightOblique.ttf */; };
+		4AC4BDA40E58453C8DA5B170 /* Avenir-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C5C78C96A18C47188B514902 /* Avenir-Book.ttf */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
+		6281EECBC27545168D629949 /* Avenir-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5441263841E4B769496E700 /* Avenir-Medium.ttf */; };
+		6F50ACF7246C4499AF11EAB3 /* Avenir-HeavyOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2730E3FA0DE24FEE9C45D6AA /* Avenir-HeavyOblique.ttf */; };
+		7253C3D5A71E40808E057ADF /* Avenir-BookOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5FA0098BEE984CC79D9A414D /* Avenir-BookOblique.ttf */; };
+		79D1D712C43647188BC7F501 /* Avenir-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1558C6392BBA43E3A424160F /* Avenir-Heavy.ttf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		8E66CA49C3A04E6F9DA3B948 /* AvenirLTPro-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E0C6D9D0B78A4D08810950CD /* AvenirLTPro-Black.ttf */; };
-		490F986B357B439AB9D4ACA7 /* AvenirLTPro-BlackOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8EDE259FAD22445BAD8B060E /* AvenirLTPro-BlackOblique.ttf */; };
-		3B7E6382C4294BD19DCE44F0 /* AvenirLTPro-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81CDAEA035824ED68943D666 /* AvenirLTPro-Book.ttf */; };
-		0DB317E9EE24446FA1464F20 /* AvenirLTPro-BookOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7228C739BE847F6A83973F7 /* AvenirLTPro-BookOblique.ttf */; };
-		894EA7AA4F1244F981A1702D /* AvenirLTPro-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7416A23189B457EBBE83A44 /* AvenirLTPro-Heavy.ttf */; };
-		F530444415574304B7C540B7 /* AvenirLTPro-HeavyOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1671A9BA599F449BB58CCB53 /* AvenirLTPro-HeavyOblique.ttf */; };
-		EB287CF2731447AFBC24313F /* AvenirLTPro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 204BCEC00431476ABEDD551A /* AvenirLTPro-Light.ttf */; };
-		48CB03D9960943BAAE653AFF /* AvenirLTPro-LightOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B37C4EDCA89545F4938CC8CF /* AvenirLTPro-LightOblique.ttf */; };
-		896C43CEF7234B4396157804 /* AvenirLTPro-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BE41DE1420E4243A27CB47A /* AvenirLTPro-Medium.ttf */; };
-		8845E290DE57417D9A9D1CE6 /* AvenirLTPro-MediumOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B78D984A6101427D809A91F9 /* AvenirLTPro-MediumOblique.ttf */; };
-		346B801BC6334EB2AB0597D6 /* AvenirLTPro-Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 106650303B03491184C7595D /* AvenirLTPro-Oblique.ttf */; };
-		1F5DB90C3FAC4A6BB0C7CFF0 /* AvenirLTPro-Roman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 755EFFB3E98344048A8047CC /* AvenirLTPro-Roman.ttf */; };
-		233C51E841254DC59E9D7539 /* Bariol-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BC8E52D83154A9AA459E924 /* Bariol-Bold.ttf */; };
+		95A42200111A49249E6E4793 /* Avenir-Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8D9EE131B2C495FA2F970AA /* Avenir-Oblique.ttf */; };
+		99B7CB42C7B44B5E9CA07EA3 /* Avenir-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 05E67DDF44CB4FF49F9A715C /* Avenir-Light.ttf */; };
+		AB65C87D492A45EBBEAAB419 /* Avenir-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81929F51517444C88F589E07 /* Avenir-Black.ttf */; };
+		B33E256A639148408797794E /* Avenir-MediumOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62324BC91BFB44459EE32E5D /* Avenir-MediumOblique.ttf */; };
+		DE4B683BE0E749E0A6E3FDB7 /* Avenir-BlackOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D8CF1451B744C8DA9A55094 /* Avenir-BlackOblique.ttf */; };
 		F776EB08E3014CF685847F4A /* Bariol-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7D1A87770C34B44BBD2DB9A /* Bariol-Regular.ttf */; };
 /* End PBXBuildFile section */
 
@@ -253,6 +254,9 @@
 		00E356EE1AD99517003FC87E /* RNSKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNSKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* RNSKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNSKTests.m; sourceTree = "<group>"; };
+		05E67DDF44CB4FF49F9A715C /* Avenir-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir-Light.ttf"; path = "../src/shared/assets/fonts/Avenir-Light.ttf"; sourceTree = "<group>"; };
+		106650303B03491184C7595D /* AvenirLTPro-Oblique.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "AvenirLTPro-Oblique.ttf"; path = "../src/shared/assets/fonts/AvenirLTPro-Oblique.ttf"; sourceTree = "<group>"; };
+		10FBD2EB758747A7BB5D45DC /* Avenir-LightOblique.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir-LightOblique.ttf"; path = "../src/shared/assets/fonts/Avenir-LightOblique.ttf"; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* RNSK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNSK.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -263,25 +267,34 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RNSK/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RNSK/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		1558C6392BBA43E3A424160F /* Avenir-Heavy.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir-Heavy.ttf"; path = "../src/shared/assets/fonts/Avenir-Heavy.ttf"; sourceTree = "<group>"; };
+		1671A9BA599F449BB58CCB53 /* AvenirLTPro-HeavyOblique.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "AvenirLTPro-HeavyOblique.ttf"; path = "../src/shared/assets/fonts/AvenirLTPro-HeavyOblique.ttf"; sourceTree = "<group>"; };
+		1BE41DE1420E4243A27CB47A /* AvenirLTPro-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "AvenirLTPro-Medium.ttf"; path = "../src/shared/assets/fonts/AvenirLTPro-Medium.ttf"; sourceTree = "<group>"; };
+		204BCEC00431476ABEDD551A /* AvenirLTPro-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "AvenirLTPro-Light.ttf"; path = "../src/shared/assets/fonts/AvenirLTPro-Light.ttf"; sourceTree = "<group>"; };
+		2730E3FA0DE24FEE9C45D6AA /* Avenir-HeavyOblique.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir-HeavyOblique.ttf"; path = "../src/shared/assets/fonts/Avenir-HeavyOblique.ttf"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* RNSK-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RNSK-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* RNSK-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RNSK-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D8CF1451B744C8DA9A55094 /* Avenir-BlackOblique.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir-BlackOblique.ttf"; path = "../src/shared/assets/fonts/Avenir-BlackOblique.ttf"; sourceTree = "<group>"; };
+		5BC8E52D83154A9AA459E924 /* Bariol-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Bariol-Bold.ttf"; path = "../src/shared/assets/fonts/Bariol-Bold.ttf"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
+		5FA0098BEE984CC79D9A414D /* Avenir-BookOblique.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir-BookOblique.ttf"; path = "../src/shared/assets/fonts/Avenir-BookOblique.ttf"; sourceTree = "<group>"; };
+		62324BC91BFB44459EE32E5D /* Avenir-MediumOblique.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir-MediumOblique.ttf"; path = "../src/shared/assets/fonts/Avenir-MediumOblique.ttf"; sourceTree = "<group>"; };
+		755EFFB3E98344048A8047CC /* AvenirLTPro-Roman.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "AvenirLTPro-Roman.ttf"; path = "../src/shared/assets/fonts/AvenirLTPro-Roman.ttf"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
+		81929F51517444C88F589E07 /* Avenir-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir-Black.ttf"; path = "../src/shared/assets/fonts/Avenir-Black.ttf"; sourceTree = "<group>"; };
+		81CDAEA035824ED68943D666 /* AvenirLTPro-Book.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "AvenirLTPro-Book.ttf"; path = "../src/shared/assets/fonts/AvenirLTPro-Book.ttf"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
-		E0C6D9D0B78A4D08810950CD /* AvenirLTPro-Black.ttf */ = {isa = PBXFileReference; name = "AvenirLTPro-Black.ttf"; path = "../src/shared/assets/fonts/AvenirLTPro-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		8EDE259FAD22445BAD8B060E /* AvenirLTPro-BlackOblique.ttf */ = {isa = PBXFileReference; name = "AvenirLTPro-BlackOblique.ttf"; path = "../src/shared/assets/fonts/AvenirLTPro-BlackOblique.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		81CDAEA035824ED68943D666 /* AvenirLTPro-Book.ttf */ = {isa = PBXFileReference; name = "AvenirLTPro-Book.ttf"; path = "../src/shared/assets/fonts/AvenirLTPro-Book.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		C7228C739BE847F6A83973F7 /* AvenirLTPro-BookOblique.ttf */ = {isa = PBXFileReference; name = "AvenirLTPro-BookOblique.ttf"; path = "../src/shared/assets/fonts/AvenirLTPro-BookOblique.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		E7416A23189B457EBBE83A44 /* AvenirLTPro-Heavy.ttf */ = {isa = PBXFileReference; name = "AvenirLTPro-Heavy.ttf"; path = "../src/shared/assets/fonts/AvenirLTPro-Heavy.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		1671A9BA599F449BB58CCB53 /* AvenirLTPro-HeavyOblique.ttf */ = {isa = PBXFileReference; name = "AvenirLTPro-HeavyOblique.ttf"; path = "../src/shared/assets/fonts/AvenirLTPro-HeavyOblique.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		204BCEC00431476ABEDD551A /* AvenirLTPro-Light.ttf */ = {isa = PBXFileReference; name = "AvenirLTPro-Light.ttf"; path = "../src/shared/assets/fonts/AvenirLTPro-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B37C4EDCA89545F4938CC8CF /* AvenirLTPro-LightOblique.ttf */ = {isa = PBXFileReference; name = "AvenirLTPro-LightOblique.ttf"; path = "../src/shared/assets/fonts/AvenirLTPro-LightOblique.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		1BE41DE1420E4243A27CB47A /* AvenirLTPro-Medium.ttf */ = {isa = PBXFileReference; name = "AvenirLTPro-Medium.ttf"; path = "../src/shared/assets/fonts/AvenirLTPro-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B78D984A6101427D809A91F9 /* AvenirLTPro-MediumOblique.ttf */ = {isa = PBXFileReference; name = "AvenirLTPro-MediumOblique.ttf"; path = "../src/shared/assets/fonts/AvenirLTPro-MediumOblique.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		106650303B03491184C7595D /* AvenirLTPro-Oblique.ttf */ = {isa = PBXFileReference; name = "AvenirLTPro-Oblique.ttf"; path = "../src/shared/assets/fonts/AvenirLTPro-Oblique.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		755EFFB3E98344048A8047CC /* AvenirLTPro-Roman.ttf */ = {isa = PBXFileReference; name = "AvenirLTPro-Roman.ttf"; path = "../src/shared/assets/fonts/AvenirLTPro-Roman.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5BC8E52D83154A9AA459E924 /* Bariol-Bold.ttf */ = {isa = PBXFileReference; name = "Bariol-Bold.ttf"; path = "../src/shared/assets/fonts/Bariol-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		C7D1A87770C34B44BBD2DB9A /* Bariol-Regular.ttf */ = {isa = PBXFileReference; name = "Bariol-Regular.ttf"; path = "../src/shared/assets/fonts/Bariol-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8EDE259FAD22445BAD8B060E /* AvenirLTPro-BlackOblique.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "AvenirLTPro-BlackOblique.ttf"; path = "../src/shared/assets/fonts/AvenirLTPro-BlackOblique.ttf"; sourceTree = "<group>"; };
+		9488604D973840D1A9693F00 /* Avenir-Roman.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir-Roman.ttf"; path = "../src/shared/assets/fonts/Avenir-Roman.ttf"; sourceTree = "<group>"; };
+		A8D9EE131B2C495FA2F970AA /* Avenir-Oblique.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir-Oblique.ttf"; path = "../src/shared/assets/fonts/Avenir-Oblique.ttf"; sourceTree = "<group>"; };
+		B37C4EDCA89545F4938CC8CF /* AvenirLTPro-LightOblique.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "AvenirLTPro-LightOblique.ttf"; path = "../src/shared/assets/fonts/AvenirLTPro-LightOblique.ttf"; sourceTree = "<group>"; };
+		B78D984A6101427D809A91F9 /* AvenirLTPro-MediumOblique.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "AvenirLTPro-MediumOblique.ttf"; path = "../src/shared/assets/fonts/AvenirLTPro-MediumOblique.ttf"; sourceTree = "<group>"; };
+		C5C78C96A18C47188B514902 /* Avenir-Book.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir-Book.ttf"; path = "../src/shared/assets/fonts/Avenir-Book.ttf"; sourceTree = "<group>"; };
+		C7228C739BE847F6A83973F7 /* AvenirLTPro-BookOblique.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "AvenirLTPro-BookOblique.ttf"; path = "../src/shared/assets/fonts/AvenirLTPro-BookOblique.ttf"; sourceTree = "<group>"; };
+		C7D1A87770C34B44BBD2DB9A /* Bariol-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Bariol-Regular.ttf"; path = "../src/shared/assets/fonts/Bariol-Regular.ttf"; sourceTree = "<group>"; };
+		E0C6D9D0B78A4D08810950CD /* AvenirLTPro-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "AvenirLTPro-Black.ttf"; path = "../src/shared/assets/fonts/AvenirLTPro-Black.ttf"; sourceTree = "<group>"; };
+		E7416A23189B457EBBE83A44 /* AvenirLTPro-Heavy.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "AvenirLTPro-Heavy.ttf"; path = "../src/shared/assets/fonts/AvenirLTPro-Heavy.ttf"; sourceTree = "<group>"; };
+		F5441263841E4B769496E700 /* Avenir-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir-Medium.ttf"; path = "../src/shared/assets/fonts/Avenir-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -528,9 +541,20 @@
 				755EFFB3E98344048A8047CC /* AvenirLTPro-Roman.ttf */,
 				5BC8E52D83154A9AA459E924 /* Bariol-Bold.ttf */,
 				C7D1A87770C34B44BBD2DB9A /* Bariol-Regular.ttf */,
+				81929F51517444C88F589E07 /* Avenir-Black.ttf */,
+				3D8CF1451B744C8DA9A55094 /* Avenir-BlackOblique.ttf */,
+				C5C78C96A18C47188B514902 /* Avenir-Book.ttf */,
+				5FA0098BEE984CC79D9A414D /* Avenir-BookOblique.ttf */,
+				1558C6392BBA43E3A424160F /* Avenir-Heavy.ttf */,
+				2730E3FA0DE24FEE9C45D6AA /* Avenir-HeavyOblique.ttf */,
+				05E67DDF44CB4FF49F9A715C /* Avenir-Light.ttf */,
+				10FBD2EB758747A7BB5D45DC /* Avenir-LightOblique.ttf */,
+				F5441263841E4B769496E700 /* Avenir-Medium.ttf */,
+				62324BC91BFB44459EE32E5D /* Avenir-MediumOblique.ttf */,
+				A8D9EE131B2C495FA2F970AA /* Avenir-Oblique.ttf */,
+				9488604D973840D1A9693F00 /* Avenir-Roman.ttf */,
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -891,20 +915,20 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				8E66CA49C3A04E6F9DA3B948 /* AvenirLTPro-Black.ttf in Resources */,
-				490F986B357B439AB9D4ACA7 /* AvenirLTPro-BlackOblique.ttf in Resources */,
-				3B7E6382C4294BD19DCE44F0 /* AvenirLTPro-Book.ttf in Resources */,
-				0DB317E9EE24446FA1464F20 /* AvenirLTPro-BookOblique.ttf in Resources */,
-				894EA7AA4F1244F981A1702D /* AvenirLTPro-Heavy.ttf in Resources */,
-				F530444415574304B7C540B7 /* AvenirLTPro-HeavyOblique.ttf in Resources */,
-				EB287CF2731447AFBC24313F /* AvenirLTPro-Light.ttf in Resources */,
-				48CB03D9960943BAAE653AFF /* AvenirLTPro-LightOblique.ttf in Resources */,
-				896C43CEF7234B4396157804 /* AvenirLTPro-Medium.ttf in Resources */,
-				8845E290DE57417D9A9D1CE6 /* AvenirLTPro-MediumOblique.ttf in Resources */,
-				346B801BC6334EB2AB0597D6 /* AvenirLTPro-Oblique.ttf in Resources */,
-				1F5DB90C3FAC4A6BB0C7CFF0 /* AvenirLTPro-Roman.ttf in Resources */,
 				233C51E841254DC59E9D7539 /* Bariol-Bold.ttf in Resources */,
 				F776EB08E3014CF685847F4A /* Bariol-Regular.ttf in Resources */,
+				AB65C87D492A45EBBEAAB419 /* Avenir-Black.ttf in Resources */,
+				DE4B683BE0E749E0A6E3FDB7 /* Avenir-BlackOblique.ttf in Resources */,
+				4AC4BDA40E58453C8DA5B170 /* Avenir-Book.ttf in Resources */,
+				7253C3D5A71E40808E057ADF /* Avenir-BookOblique.ttf in Resources */,
+				79D1D712C43647188BC7F501 /* Avenir-Heavy.ttf in Resources */,
+				6F50ACF7246C4499AF11EAB3 /* Avenir-HeavyOblique.ttf in Resources */,
+				99B7CB42C7B44B5E9CA07EA3 /* Avenir-Light.ttf in Resources */,
+				48CD2A5C17BD4068819E51A6 /* Avenir-LightOblique.ttf in Resources */,
+				6281EECBC27545168D629949 /* Avenir-Medium.ttf in Resources */,
+				B33E256A639148408797794E /* Avenir-MediumOblique.ttf in Resources */,
+				95A42200111A49249E6E4793 /* Avenir-Oblique.ttf in Resources */,
+				2C157763EF27438E9A799E69 /* Avenir-Roman.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
