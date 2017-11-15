@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Helper function: getIcon renders correctly 1`] = `
+<View
+  actived={false}
+  defaultColor="#b8b8b8"
+  defaultactivedColor={undefined}
+  name="backButton"
+  size={100}
+  style={null}
+>
+  <Svg />
+</View>
+`;
+
+exports[`Helper function: getIcon renders with actived parameter 1`] = `
+<View
+  actived={true}
+  defaultColor="#b8b8b8"
+  defaultactivedColor={undefined}
+  name="backButton"
+  size={100}
+  style={null}
+>
+  <Svg />
+</View>
+`;
+
+exports[`Helper function: getIcon renders with color parameter 1`] = `
+<View
+  actived={false}
+  defaultColor="#122E46"
+  defaultactivedColor={undefined}
+  name="backButton"
+  size={100}
+  style={null}
+>
+  <Svg />
+</View>
+`;
