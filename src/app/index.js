@@ -1,24 +1,28 @@
 /* @flow */
 
 import React from 'react'
+import { Switch, Route, Redirect } from 'react-router'
 import { Navigation, Card } from 'react-router-navigation'
 
 import App from '@scenes/App'
 import Launch from '@scenes/Launch'
 
 const Root = (): React$Element<any> => (
-  <Navigation>
-    <Card
-      path="/launch"
-      component={Launch}
-      hideNavBar
+  <Switch>
+    <Route
+      exact path="/"
+      render={(): React$Element<any> => <Redirect to="/launch" />}
     />
-    <Card
-      path="/app"
-      component={App}
-      hideNavBar
+    <Route
+      path="/"
+      render={(): React$Element<any> => (
+        <Navigation hideNavBar>
+          <Card path="/launch" component={Launch} />
+          <Card path="/app" component={App} />
+        </Navigation>
+      )}
     />
-  </Navigation>
+  </Switch>
 )
 
 export default Root

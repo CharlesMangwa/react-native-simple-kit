@@ -12,21 +12,30 @@ export type Location = {
 
 export type Entries = Array<Location>
 
+export type LocationShape = {
+  pathname?: string,
+  search?: string,
+  hash?: string,
+  state?: any,
+}
+
+export type HistoryAction = 'PUSH' | 'REPLACE' | 'POP'
+
 export type History = {
   length: number,
-  action: 'POP' | 'REPLACE' | 'STRING',
   location: Location,
-  index: number,
-  entries: Entries,
-  createHref: (location: string) => string,
-  push: (path: string, state?: Object) => void,
-  replace: (path: string, state?: Object) => void,
-  go: (n: number) => void,
-  goBack: () => void,
-  goForward: () => void,
-  canGo: (n: number) => void,
-  block: (promt?: boolean) => void,
-  listen: (listener: Function) => void,
+  action: HistoryAction,
+  listen(callback: (location: Location, action: HistoryAction) => void): () => void,
+  push(path: string | LocationShape, state?: any): void,
+  replace(path: string | LocationShape, state?: any): void,
+  go(n: number): void,
+  goBack(): void,
+  goForward(): void,
+  canGo?: (n: number) => boolean,
+  block(callback: (location: Location, action: HistoryAction) => boolean): void,
+  // createMemoryHistory
+  index?: number,
+  entries?: Array<Location>,
 }
 
 export type HistoryState = {

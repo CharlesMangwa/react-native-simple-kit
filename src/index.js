@@ -2,16 +2,20 @@
 
 import React from 'react'
 import { Provider } from 'react-redux'
+import { ConnectedRouter } from 'react-router-redux'
+import createHistory from 'history/createMemoryHistory'
 
-import Router from '@helpers/router'
+import type { History } from '@store/types'
 import Root from '@app'
 import store from '@store'
 
+export const history: History = createHistory()
+
 const Core = (): React$Element<any> => (
   <Provider store={store}>
-    <Router initialEntries={['/launch']}>
+    <ConnectedRouter history={history}>
       <Root />
-    </Router>
+    </ConnectedRouter>
   </Provider>
 )
 
