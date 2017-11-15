@@ -22,16 +22,19 @@ DerivedData
 *.xcuserstate
 project.xcworkspace
 
-# Android/IJ
+# Android/IntelliJ
 #
+build/
 .idea
 .gradle
 local.properties
+*.iml
 
 # node.js
 #
 node_modules/
 npm-debug.log
+yarn-error.log
 
 # BUCK
 buck-out/
@@ -45,6 +48,6 @@ buck-out/
 # For more information about the recommended setup visit:
 # https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Gitignore.md
 
-# Bundle
-android/main.jsbundle
-ios/main.jsbundle
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots

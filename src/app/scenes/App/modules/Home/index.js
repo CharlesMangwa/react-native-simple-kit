@@ -1,17 +1,19 @@
 /* @flow */
 
 import React from 'react'
-import { Image, Text } from 'react-native'
+import { ImageBackground, Text } from 'react-native'
+
+import background from '@assets/images/background.png'
 import styles from './styles'
 
 const Home = (): React$Element<any> => (
-  <Image
+  <ImageBackground
     resizeMode="cover"
     style={styles.container}
-    source={require('../../../../../shared/assets/images/background.png')}
+    source={background}
   >
     <Text style={styles.text}>Home</Text>
-  </Image>
+  </ImageBackground>
 )
 
 export default Home

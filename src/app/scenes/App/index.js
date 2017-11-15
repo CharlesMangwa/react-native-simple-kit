@@ -11,33 +11,32 @@ import Settings from './modules/Settings'
 import TabBar from './components/TabBar'
 import styles from './styles'
 
-const App = (): React$Element<any> => (
+const App = ({ location }): React$Element<any> => (
   <View style={styles.container}>
-    <Switch>
+    <Switch location={location}>
       <Route
-        exact
-        path="/app"
-        render={({ match }: Object): React$Element<any> => <Redirect to={`${match.url}/app/home`} />}
+        exact path="/app"
+        render={(): React$Element<any> => <Redirect to="/app/home" />}
       />
       <Route
-        path="/app"
-        render={({ match }: Object): React$Element<any> => (
+        path="/app/(home)?"
+        render={(): React$Element<any> => (
           <BottomNavigation
-            renderTabBar={TabBar}
+            // renderTabBar={TabBar}
             lazy={false}
           >
             <Tab
-              path={`${match.url}/app/home`}
+              path="/app/home"
               component={Home}
               label="Home"
             />
             <Tab
-              path={`${match.url}/app/counter`}
+              path="/app/counter"
               component={Counter}
               label="Counter"
             />
             <Tab
-              path={`${match.url}/app/settings`}
+              path="/app/settings"
               component={Settings}
               label="Settings"
             />
