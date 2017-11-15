@@ -5,15 +5,19 @@ import { View } from 'react-native'
 import { Switch, Route, Redirect } from 'react-router'
 import { BottomNavigation, Tab } from 'react-router-navigation'
 
+import type { Location } from '@store/types'
 import Counter from './modules/Counter'
 import Home from './modules/Home'
 import Settings from './modules/Settings'
-import TabBar from './components/TabBar'
 import styles from './styles'
 
-const App = ({ location }): React$Element<any> => (
+type Props = {
+  location: Location,
+}
+
+const App = (props: Props): React$Element<any> => (
   <View style={styles.container}>
-    <Switch location={location}>
+    <Switch location={props.location}>
       <Route
         exact path="/app"
         render={(): React$Element<any> => <Redirect to="/app/home" />}
@@ -21,10 +25,7 @@ const App = ({ location }): React$Element<any> => (
       <Route
         path="/app/(home)?"
         render={(): React$Element<any> => (
-          <BottomNavigation
-            // renderTabBar={TabBar}
-            lazy={false}
-          >
+          <BottomNavigation lazy={false}>
             <Tab
               path="/app/home"
               component={Home}

@@ -1,5 +1,6 @@
 /* @flow */
 
+import { Component } from 'react'
 import { compose } from 'recompose'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router'
@@ -12,9 +13,5 @@ const mapStateToProps = (state: State): Object => ({
 
 const mapActionsToProps = (): Object => ({ withRouter }: Object)
 
-export default (container: ReactClass<any>): ReactClass<any> => compose(
-  connect(
-    mapStateToProps,
-    mapActionsToProps,
-  ),
-)(container)
+export default (container: Component<any, any>) =>
+  compose(connect(mapStateToProps, mapActionsToProps))(container)

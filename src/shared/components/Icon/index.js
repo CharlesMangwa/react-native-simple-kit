@@ -4,7 +4,7 @@ import React, { createElement } from 'react'
 import { View } from 'react-native'
 
 import { rem } from '@helpers/responsive'
-import { NEUTRAL_COLOR_50, BRAND_COLOR_GREEN } from '@theme/colors'
+import { NEUTRAL_COLOR_50, SUCCESS_COLOR } from '@theme/colors'
 import * as SVGs from './SVGs'
 
 type Props = {
@@ -19,7 +19,7 @@ type Props = {
 const Icon = (props: Props): React$Element<any> => {
   const { name, style, size, actived, defaultColor, defaultactivedColor } = props
   const color = actived
-    ? defaultactivedColor || BRAND_COLOR_GREEN
+    ? defaultactivedColor || SUCCESS_COLOR
     : defaultColor || NEUTRAL_COLOR_50
 
   let icon
@@ -43,7 +43,7 @@ const Icon = (props: Props): React$Element<any> => {
 
 Icon.defaultProps = {
   actived: false,
-  defaultactivedColor: BRAND_COLOR_GREEN,
+  defaultactivedColor: SUCCESS_COLOR,
   defaultColor: NEUTRAL_COLOR_50,
   size: rem(0.875),
   style: null,

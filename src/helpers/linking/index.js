@@ -1,8 +1,7 @@
 /* @flow */
 
 import { Alert, Linking, Platform, Share } from 'react-native'
-import { BRAND_COLOR_GREEN } from '@theme/colors'
-import { LANGUAGE } from '@config'
+import { SUCCESS_COLOR } from '@theme/colors'
 
 type Coordinates = {
   latitude: number,
@@ -30,7 +29,7 @@ export const share = (sharedContent: SharedContent): void => {
     url,
   }, {
     dialogTitle: 'Partager',
-    tintColor: BRAND_COLOR_GREEN,
+    tintColor: SUCCESS_COLOR,
   })
 }
 
@@ -38,16 +37,12 @@ export const call = (phoneNumber: PhoneNumber): void => (
   Linking.canOpenURL(`tel:${phoneNumber}`)
     .then((supported) => {
       return !supported
-        ? Alert.alert(LANGUAGE === 'fr'
-          ? `Nous n'arrivons pas à accéder au numéro 😯 : ${phoneNumber}`
-          : `We can't open the following phone number 😯: ${phoneNumber}`)
+        ? `We can't open the following phone number 😯: ${phoneNumber}`
         : Linking.openURL(`tel:${phoneNumber}`)
     })
     .catch((error) => {
       console.log(error)
-      Alert.alert(LANGUAGE === 'fr'
-        ? 'Une erreur est survenue pendant la redirection 😯…'
-        : 'Something went wrong during the redirection 😯…')
+      Alert.alert('Something went wrong during the redirection 😯…')
     })
 )
 
@@ -55,16 +50,12 @@ export const email = (address: Email): void => (
   Linking.canOpenURL(`mailto:${address}`)
     .then((supported) => {
       return !supported
-        ? Alert.alert(LANGUAGE === 'fr'
-          ? `Nous n'arrivons pas à accéder à l'adresse 😯 : ${address}`
-          : `We can't open the following email 😯: ${address}`)
+        ? Alert.alert(`We can't open the following email 😯: ${address}`)
         : Linking.openURL(`mailto:${address}`)
     })
     .catch((error) => {
       console.log(error)
-      Alert.alert(LANGUAGE === 'fr'
-        ? 'Une erreur est survenue pendant la redirection 😯…'
-        : 'Something went wrong during the redirection 😯…')
+      Alert.alert('Something went wrong during the redirection 😯…')
     })
 )
 
@@ -72,16 +63,12 @@ export const openURL = (url: URL): void => (
   Linking.canOpenURL(url)
     .then((supported) => {
       return !supported
-        ? Alert.alert(LANGUAGE === 'fr'
-          ? `Nous n'arrivons pas à ouvrir l'URL 😯 : "${url}"`
-          : `We can't open the following URL 😯: "${url}"`)
+        ? Alert.alert(`We can't open the following URL 😯: "${url}"`)
         : Linking.openURL(url)
     })
     .catch((error) => {
       console.log(error)
-      Alert.alert(LANGUAGE === 'fr'
-        ? 'Une erreur est survenue pendant la redirection 😯…'
-        : 'Something went wrong during the redirection 😯…')
+      Alert.alert('Something went wrong during the redirection 😯…')
     })
 )
 

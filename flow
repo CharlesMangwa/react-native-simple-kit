@@ -1,0 +1,3 @@
+declare module 'RNSK' {
+  declare var exports: any;
+}

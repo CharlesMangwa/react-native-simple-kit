@@ -2,18 +2,19 @@
 
 import React, { Component } from 'react'
 import { ActivityIndicator, ImageBackground } from 'react-native'
-import { BRAND_COLOR_50 } from '@theme/colors'
+import { SUCCESS_COLOR } from '@theme/colors'
 
-import type { App } from '@store/modules/app/types'
+import type { App, History } from '@store/types'
+import backgroundImage from '@assets/images/background.png'
 import connect from './connect'
 import styles from './styles'
 
 type Props = {
   app: App,
-  replace: Function,
+  history: History,
 }
 
-class Launch extends Component<void, Props, void> {
+class Launch extends Component<Props, void> {
   props: Props
   isRedirecting: boolean = false
   redirectDelay: number = 0
@@ -35,7 +36,8 @@ class Launch extends Component<void, Props, void> {
       this.isRedirecting = true
       if (this.redirectDelay > 250) {
         history.replace('/app')
-      } else {
+      }
+      else {
         setTimeout((): void => {
           history.replace('/app')
         }, (250 - this.redirectDelay))
@@ -50,11 +52,11 @@ class Launch extends Component<void, Props, void> {
       <ImageBackground
         resizeMode="cover"
         style={styles.container}
-        source={require('../../../shared/assets/images/background.png')}
+        source={backgroundImage}
       >
         <ActivityIndicator
           size="large"
-          color={BRAND_COLOR_50}
+          color={SUCCESS_COLOR}
         />
       </ImageBackground>
     )
