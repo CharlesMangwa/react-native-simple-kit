@@ -28,8 +28,8 @@ jobs:
 
       # To be remove when react-router-navigation will be udpated on npm
       - run:
-          name: Cleaning cache
-          command: yarn clean
+          name: Deleting yarn.lock
+          command: rm yarn.lock
 
       - run:
           name: Installing packages
