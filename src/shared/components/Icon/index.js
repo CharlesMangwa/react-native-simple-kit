@@ -13,7 +13,7 @@ type Props = {
   defaultColor?: string,
   name: string,
   size: number,
-  style?: StyleSheet,
+  style?: ?StyleSheet,
 }
 
 const Icon = (props: Props): React$Element<any> => {
