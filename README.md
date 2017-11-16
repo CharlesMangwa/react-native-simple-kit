@@ -1,5 +1,8 @@
 # react-native-simple-kit
 
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![CircleCI status](https://circleci.com/gh/CharlesMangwa/react-native-simple-kit.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/CharlesMangwa/react-native-simple-kit)
+
 `react-native-simple-kit` is a starter boilerplate for mobile apps using React Native, Redux for data management, and a bunch of other cool tools. This starter is compatible with both iOS and Android!
 
 ## Requirements
