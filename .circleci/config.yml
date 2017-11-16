@@ -28,7 +28,7 @@ jobs:
 
       - run:
           name: Installing packages
-          command: yarn install --pure-lockfile
+          command: yarn install --frozen-lockfile
 
       - save_cache:
           paths:
