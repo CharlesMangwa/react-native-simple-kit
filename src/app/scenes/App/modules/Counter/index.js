@@ -3,6 +3,7 @@
 import React from 'react'
 import { ImageBackground, Text } from 'react-native'
 
+import TextInput from '@components/TextInput/index'
 import background from '@assets/images/background.png'
 import styles from './styles'
 
@@ -13,6 +14,10 @@ const Counter = (): React$Element<any> => (
     source={background}
   >
     <Text style={styles.text}>Counter</Text>
+    <TextInput
+      keyboardType="numeric"
+      placeholder="Limit"
+    />
   </ImageBackground>
 )
 

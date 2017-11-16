@@ -9,10 +9,10 @@
 
 ## Requirements
 - [Node](https://nodejs.org) `6` or newer
-- [React Native](http://facebook.github.io/react-native/docs/getting-started.html) for development
+- [React Native CLI](http://facebook.github.io/react-native/docs/getting-started.html) for development
 - [Xcode](https://developer.apple.com/xcode/) `9.0` or newer for iOS development
 - [Android Studio](https://developer.android.com/studio/index.html) `3.0` or newer for Android development
-- [Android SDK](https://developer.android.com/sdk/) `23.0.1` or newer for Android development
+- [Android SDK](https://developer.android.com/sdk/) `25.0.1` or newer for Android development
 - [Android](https://www.android.com/) `5.0` or newer on your Android device to test properly
 - [ESLint](http://eslint.org/) `4.11.0` or newer to lint your code on fly
 

@@ -4,7 +4,7 @@ import React, { createElement } from 'react'
 import PropTypes from 'prop-types'
 import { SafeAreaView } from 'react-native'
 
-import { NEUTRAL_COLOR_50, SUCCESS_COLOR } from '@theme/colors'
+import { NEUTRAL_COLOR_50, BRAND_COLOR_GREEN } from '@theme/colors'
 import * as SVGs from './SVGs'
 
 type Props = {
@@ -19,7 +19,7 @@ type Props = {
 const Icon = (props: Props): React$Element<any> => {
   const { name, style, size, actived, defaultColor, defaultactivedColor } = props
   const color = actived
-    ? defaultactivedColor || SUCCESS_COLOR
+    ? defaultactivedColor || BRAND_COLOR_GREEN
     : defaultColor || NEUTRAL_COLOR_50
 
   let icon
@@ -50,7 +50,7 @@ Icon.propTypes = {
 
 Icon.defaultProps = {
   actived: false,
-  defaultactivedColor: SUCCESS_COLOR,
+  defaultactivedColor: BRAND_COLOR_GREEN,
   defaultColor: NEUTRAL_COLOR_50,
   style: undefined,
 }

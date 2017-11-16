@@ -1,9 +1,9 @@
 /* @flow */
 
 import {
-  SUCCESS_COLOR,
-  FAIL_COLOR,
-  WARNING_COLOR,
+  BRAND_COLOR_GREEN,
+  BRAND_COLOR_RED,
+  BRAND_COLOR_YELLOW,
   NEUTRAL_COLOR_00,
 } from '@theme/colors'
 
@@ -22,8 +22,8 @@ export type DefaultProps = {
 export type ButtonProps = DefaultProps
 
 export const brandColors = {
-  green: SUCCESS_COLOR,
-  red: FAIL_COLOR,
-  yellow: WARNING_COLOR,
+  green: BRAND_COLOR_GREEN,
+  red: BRAND_COLOR_RED,
+  yellow: BRAND_COLOR_YELLOW,
   white: NEUTRAL_COLOR_00,
 }

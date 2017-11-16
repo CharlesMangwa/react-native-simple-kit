@@ -1,7 +1,7 @@
 /* @flow */
 
 import { Alert, Linking, Platform, Share } from 'react-native'
-import { SUCCESS_COLOR } from '@theme/colors'
+import { BRAND_COLOR_GREEN } from '@theme/colors'
 
 type Coordinates = {
   latitude: number,
@@ -29,7 +29,7 @@ export const share = (sharedContent: SharedContent): void => {
     url,
   }, {
     dialogTitle: 'Partager',
-    tintColor: SUCCESS_COLOR,
+    tintColor: BRAND_COLOR_GREEN,
   })
 }
 

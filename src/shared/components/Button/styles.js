@@ -2,7 +2,7 @@
 
 import { StyleSheet } from 'react-native'
 import { rem } from '@helpers/responsive'
-import { SUCCESS_COLOR, DEFAULT_TEXT_COLOR } from '@theme/colors'
+import { BRAND_COLOR_GREEN, DEFAULT_TEXT_COLOR } from '@theme/colors'
 import { AVENIR_MEDIUM } from '@theme/fonts'
 
 const styles: Object = StyleSheet.create({
@@ -12,8 +12,8 @@ const styles: Object = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: SUCCESS_COLOR,
-    backgroundColor: SUCCESS_COLOR,
+    borderColor: BRAND_COLOR_GREEN,
+    backgroundColor: BRAND_COLOR_GREEN,
     borderRadius: 100,
   },
   text: {

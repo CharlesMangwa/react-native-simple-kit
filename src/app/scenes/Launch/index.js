@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react'
 import { ActivityIndicator, ImageBackground } from 'react-native'
-import { SUCCESS_COLOR } from '@theme/colors'
+import { BRAND_COLOR_RED } from '@theme/colors'
 
 import type { App, History } from '@store/types'
 import backgroundImage from '@assets/images/background.png'
@@ -56,7 +56,7 @@ class Launch extends Component<Props, void> {
       >
         <ActivityIndicator
           size="large"
-          color={SUCCESS_COLOR}
+          color={BRAND_COLOR_RED}
         />
       </ImageBackground>
     )

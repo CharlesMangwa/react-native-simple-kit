@@ -19,7 +19,7 @@ const Settings = (): React$Element<any> => (
       color="red"
       style={StyleSheet.flatten({ flexDirection: 'row-reverse' })}
       to="/app"
-      text="Go back home"
+      text="  Go back home"
     >
       {getIcon('backButton', 15, false, 'white')}
     </Button>

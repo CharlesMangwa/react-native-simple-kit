@@ -1,5 +1,5 @@
 # Icon 💠
-A generic component for SVG icons.
+A generic component for custom SVG icons.
 
 ### API
 * name: `'backButton'`
@@ -7,7 +7,7 @@ A generic component for SVG icons.
 * size?: `number`
 * defaultActivedColor?: `string`
 * defaultColor?: `string`
-* style?: `Stylesheet | number`
+* style?: `StyleSheet`
 
 ### Example
 ```js
@@ -16,7 +16,7 @@ import Icon from '@components/Icon'
 
 const MyComponent = (): React$Element<any> => (
   <Icon
-    name="google"
+    name="backButton"
     defaultColor="red"
     size={22}
   />
