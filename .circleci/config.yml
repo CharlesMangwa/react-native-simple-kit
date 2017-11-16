@@ -27,8 +27,12 @@ jobs:
           - v1-dependencies-
 
       - run:
-          clean: yarn cache clean
-          install: yarn install
+          name: Cleaning cache
+          command: yarn clean cache
+
+      - run:
+          name: Installing packages
+          command: yarn install
 
       - save_cache:
           paths:
