@@ -26,14 +26,9 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      # To be remove when react-router-navigation will be udpated on npm
-      - run:
-          name: Deleting yarn.lock
-          command: rm yarn.lock
-
       - run:
           name: Installing packages
-          command: yarn install
+          command: yarn install --pure-lockfile
 
       - save_cache:
           paths:
