@@ -46,7 +46,7 @@ Icon.defaultProps = {
   defaultactivedColor: SUCCESS_COLOR,
   defaultColor: NEUTRAL_COLOR_50,
   size: rem(0.875),
-  style: null,
+  style: undefined,
 }
 
 export default Icon

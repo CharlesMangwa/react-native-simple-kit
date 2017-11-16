@@ -7,7 +7,7 @@ exports[`Helper function: getIcon renders correctly 1`] = `
   defaultactivedColor="#53C000"
   name="backButton"
   size={100}
-  style={null}
+  style={undefined}
 >
   <Svg />
 </View>
@@ -20,7 +20,7 @@ exports[`Helper function: getIcon renders with actived parameter 1`] = `
   defaultactivedColor="#53C000"
   name="backButton"
   size={100}
-  style={null}
+  style={undefined}
 >
   <Svg />
 </View>
@@ -33,7 +33,7 @@ exports[`Helper function: getIcon renders with color parameter 1`] = `
   defaultactivedColor="#53C000"
   name="backButton"
   size={100}
-  style={null}
+  style={undefined}
 >
   <Svg />
 </View>

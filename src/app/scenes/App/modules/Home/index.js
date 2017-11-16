@@ -3,6 +3,7 @@
 import React from 'react'
 import { ImageBackground, Text } from 'react-native'
 
+import Button from '@components/Button'
 import background from '@assets/images/background.png'
 import styles from './styles'
 
@@ -13,6 +14,13 @@ const Home = (): React$Element<any> => (
     source={background}
   >
     <Text style={styles.text}>Home</Text>
+    <Button
+      inactive
+      color="red"
+      onPress={() => console.log('✈️ ➡️ ⚙️')}
+      to="/app/settings"
+      text="Go to settings"
+    />
   </ImageBackground>
 )
 

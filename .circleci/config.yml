@@ -27,8 +27,8 @@ jobs:
           - v1-dependencies-
 
       - run:
-          name: Installing packages
-          command: yarn install --no-lockfile
+          name: Installing Packages
+          command: yarn install
 
       - save_cache:
           paths:
@@ -36,6 +36,8 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
         
       # run tests!
-      - run: yarn test
+      - run:
+          name: Running tests
+          command: yarn test
 
 

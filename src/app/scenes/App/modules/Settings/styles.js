@@ -15,6 +15,7 @@ const styles: Object = StyleSheet.create({
     ...AVENIR_LIGHT,
     fontSize: rem(18),
     backgroundColor: 'transparent',
+    marginBottom: rem(15),
   },
 })
 
