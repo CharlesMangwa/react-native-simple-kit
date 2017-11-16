@@ -13,6 +13,8 @@
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
 		00E356F31AD99517003FC87E /* RNSKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* RNSKTests.m */; };
+		092A432B65F8473485BCDAD5 /* Avenir-BookOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A93B8EADC4D84E7781C42938 /* Avenir-BookOblique.ttf */; };
+		0D8F42B082774F89BF9C1224 /* Avenir-Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8379801A8F7A43288CB309D7 /* Avenir-Oblique.ttf */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
 		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
@@ -22,6 +24,10 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		158830E03B7347B8A600817B /* Avenir-LightOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD6E575A34F94DA7819CDF2A /* Avenir-LightOblique.ttf */; };
+		193EAA96DAF144CCBF7DEDEA /* Avenir-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B50A73AF8B1D431E8CAB5684 /* Avenir-Medium.ttf */; };
+		270B4483DED9490281F32D49 /* Avenir-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76FC76942A0C488ABBAB77C1 /* Avenir-Light.ttf */; };
+		2AE3ABE93662403C80CFEC13 /* Avenir-MediumOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377186EB1ADE44FD8B078DBC /* Avenir-MediumOblique.ttf */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -34,8 +40,18 @@
 		2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */; };
 		2D02E4C91E0B4AEC006451C7 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* RNSKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* RNSKTests.m */; };
+		4DEA0FD4D0D843EC906ACFEE /* Avenir-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0DF22F20E45D4F67BB22CE76 /* Avenir-Book.ttf */; };
+		58A23FC08CE247DC815B57FD /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 431B3B0D94674DE2AB93B1B1 /* background.png */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
+		62B64EE5F56F4FFA88F52614 /* Avenir-BlackOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 89F17E7EDC8E4577945CACCD /* Avenir-BlackOblique.ttf */; };
+		78C8CABD9AFB40C1834D76AE /* Bariol-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 878BCA6897CC4C248AC26C1A /* Bariol-Bold.ttf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		AA0CFEDDBF39406782B3A0F3 /* Avenir-Roman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0349B7C2F5AB4A2485CF4637 /* Avenir-Roman.ttf */; };
+		BCF986FF776B41D8ABC4C25C /* Avenir-HeavyOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD76D9EEAC884EA59A14486A /* Avenir-HeavyOblique.ttf */; };
+		C2C5F232C41B42C39065CA8F /* Avenir-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 716EEB3498B8406F8943B926 /* Avenir-Heavy.ttf */; };
+		C7837F3B536946D29CED4890 /* Avenir-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B6405BBD8514F3BBC04130C /* Avenir-Black.ttf */; };
+		C861C886AA8F4E6D908BC7C0 /* Bariol-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C278B577FFC24B5E9C6F282C /* Bariol-Regular.ttf */; };
+		F52BC00163084217A1DD9625 /* libRNSVG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93F1BFF3FEAC4EC38A396FB4 /* libRNSVG.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -284,6 +300,20 @@
 			remoteGlobalIDString = 9936F32F1F5F2E5B0010BF04;
 			remoteInfo = "privatedata-tvOS";
 		};
+		F4C2C4011FBE36A700F39238 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07B539131A7B42568189A0A3 /* RNSVG.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0CF68AC11AF0540F00FF9E5C;
+			remoteInfo = RNSVG;
+		};
+		F4C2C4031FBE36A700F39238 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07B539131A7B42568189A0A3 /* RNSVG.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 94DDAC5C1F3D024300EED511;
+			remoteInfo = "RNSVG-tvOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -296,6 +326,9 @@
 		00E356EE1AD99517003FC87E /* RNSKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNSKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* RNSKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNSKTests.m; sourceTree = "<group>"; };
+		0349B7C2F5AB4A2485CF4637 /* Avenir-Roman.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir-Roman.ttf"; path = "../src/shared/assets/fonts/Avenir-Roman.ttf"; sourceTree = "<group>"; };
+		07B539131A7B42568189A0A3 /* RNSVG.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNSVG.xcodeproj; path = "../node_modules/react-native-svg/ios/RNSVG.xcodeproj"; sourceTree = "<group>"; };
+		0DF22F20E45D4F67BB22CE76 /* Avenir-Book.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir-Book.ttf"; path = "../src/shared/assets/fonts/Avenir-Book.ttf"; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* RNSK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNSK.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -308,9 +341,24 @@
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* RNSK-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RNSK-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* RNSK-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RNSK-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		32CF32C72BFA48D3B99B6EE5 /* libRNSVG-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNSVG-tvOS.a"; sourceTree = "<group>"; };
+		377186EB1ADE44FD8B078DBC /* Avenir-MediumOblique.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir-MediumOblique.ttf"; path = "../src/shared/assets/fonts/Avenir-MediumOblique.ttf"; sourceTree = "<group>"; };
+		431B3B0D94674DE2AB93B1B1 /* background.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = background.png; path = ../src/shared/assets/images/background.png; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
+		6B6405BBD8514F3BBC04130C /* Avenir-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir-Black.ttf"; path = "../src/shared/assets/fonts/Avenir-Black.ttf"; sourceTree = "<group>"; };
+		716EEB3498B8406F8943B926 /* Avenir-Heavy.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir-Heavy.ttf"; path = "../src/shared/assets/fonts/Avenir-Heavy.ttf"; sourceTree = "<group>"; };
+		76FC76942A0C488ABBAB77C1 /* Avenir-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir-Light.ttf"; path = "../src/shared/assets/fonts/Avenir-Light.ttf"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		8379801A8F7A43288CB309D7 /* Avenir-Oblique.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir-Oblique.ttf"; path = "../src/shared/assets/fonts/Avenir-Oblique.ttf"; sourceTree = "<group>"; };
+		878BCA6897CC4C248AC26C1A /* Bariol-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Bariol-Bold.ttf"; path = "../src/shared/assets/fonts/Bariol-Bold.ttf"; sourceTree = "<group>"; };
+		89F17E7EDC8E4577945CACCD /* Avenir-BlackOblique.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir-BlackOblique.ttf"; path = "../src/shared/assets/fonts/Avenir-BlackOblique.ttf"; sourceTree = "<group>"; };
+		93F1BFF3FEAC4EC38A396FB4 /* libRNSVG.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNSVG.a; sourceTree = "<group>"; };
+		A93B8EADC4D84E7781C42938 /* Avenir-BookOblique.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir-BookOblique.ttf"; path = "../src/shared/assets/fonts/Avenir-BookOblique.ttf"; sourceTree = "<group>"; };
+		AD6E575A34F94DA7819CDF2A /* Avenir-LightOblique.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir-LightOblique.ttf"; path = "../src/shared/assets/fonts/Avenir-LightOblique.ttf"; sourceTree = "<group>"; };
+		B50A73AF8B1D431E8CAB5684 /* Avenir-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir-Medium.ttf"; path = "../src/shared/assets/fonts/Avenir-Medium.ttf"; sourceTree = "<group>"; };
+		C278B577FFC24B5E9C6F282C /* Bariol-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Bariol-Regular.ttf"; path = "../src/shared/assets/fonts/Bariol-Regular.ttf"; sourceTree = "<group>"; };
+		DD76D9EEAC884EA59A14486A /* Avenir-HeavyOblique.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Avenir-HeavyOblique.ttf"; path = "../src/shared/assets/fonts/Avenir-HeavyOblique.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,6 +385,7 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
+				F52BC00163084217A1DD9625 /* libRNSVG.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +537,28 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		774AAF89D50D41EC982F231C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				431B3B0D94674DE2AB93B1B1 /* background.png */,
+				6B6405BBD8514F3BBC04130C /* Avenir-Black.ttf */,
+				89F17E7EDC8E4577945CACCD /* Avenir-BlackOblique.ttf */,
+				0DF22F20E45D4F67BB22CE76 /* Avenir-Book.ttf */,
+				A93B8EADC4D84E7781C42938 /* Avenir-BookOblique.ttf */,
+				716EEB3498B8406F8943B926 /* Avenir-Heavy.ttf */,
+				DD76D9EEAC884EA59A14486A /* Avenir-HeavyOblique.ttf */,
+				76FC76942A0C488ABBAB77C1 /* Avenir-Light.ttf */,
+				AD6E575A34F94DA7819CDF2A /* Avenir-LightOblique.ttf */,
+				B50A73AF8B1D431E8CAB5684 /* Avenir-Medium.ttf */,
+				377186EB1ADE44FD8B078DBC /* Avenir-MediumOblique.ttf */,
+				8379801A8F7A43288CB309D7 /* Avenir-Oblique.ttf */,
+				0349B7C2F5AB4A2485CF4637 /* Avenir-Roman.ttf */,
+				878BCA6897CC4C248AC26C1A /* Bariol-Bold.ttf */,
+				C278B577FFC24B5E9C6F282C /* Bariol-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		78C398B11ACF4ADC00677621 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -511,6 +582,7 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
+				07B539131A7B42568189A0A3 /* RNSVG.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -531,6 +603,8 @@
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* RNSKTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
+				774AAF89D50D41EC982F231C /* Resources */,
+				F4C2C3D91FBE36A600F39238 /* Recovered References */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -543,6 +617,24 @@
 				00E356EE1AD99517003FC87E /* RNSKTests.xctest */,
 				2D02E47B1E0B4A5D006451C7 /* RNSK-tvOS.app */,
 				2D02E4901E0B4A5D006451C7 /* RNSK-tvOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F4C2C3D91FBE36A600F39238 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				93F1BFF3FEAC4EC38A396FB4 /* libRNSVG.a */,
+				32CF32C72BFA48D3B99B6EE5 /* libRNSVG-tvOS.a */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		F4C2C3FD1FBE36A700F39238 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4C2C4021FBE36A700F39238 /* libRNSVG.a */,
+				F4C2C4041FBE36A700F39238 /* libRNSVG-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -628,7 +720,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 610;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -701,6 +793,10 @@
 				{
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+				},
+				{
+					ProductGroup = F4C2C3FD1FBE36A700F39238 /* Products */;
+					ProjectRef = 07B539131A7B42568189A0A3 /* RNSVG.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -945,6 +1041,20 @@
 			remoteRef = F4C2C3CC1FBE1D4B00F39238 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		F4C2C4021FBE36A700F39238 /* libRNSVG.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNSVG.a;
+			remoteRef = F4C2C4011FBE36A700F39238 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F4C2C4041FBE36A700F39238 /* libRNSVG-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRNSVG-tvOS.a";
+			remoteRef = F4C2C4031FBE36A700F39238 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -961,6 +1071,21 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				58A23FC08CE247DC815B57FD /* background.png in Resources */,
+				C7837F3B536946D29CED4890 /* Avenir-Black.ttf in Resources */,
+				62B64EE5F56F4FFA88F52614 /* Avenir-BlackOblique.ttf in Resources */,
+				4DEA0FD4D0D843EC906ACFEE /* Avenir-Book.ttf in Resources */,
+				092A432B65F8473485BCDAD5 /* Avenir-BookOblique.ttf in Resources */,
+				C2C5F232C41B42C39065CA8F /* Avenir-Heavy.ttf in Resources */,
+				BCF986FF776B41D8ABC4C25C /* Avenir-HeavyOblique.ttf in Resources */,
+				270B4483DED9490281F32D49 /* Avenir-Light.ttf in Resources */,
+				158830E03B7347B8A600817B /* Avenir-LightOblique.ttf in Resources */,
+				193EAA96DAF144CCBF7DEDEA /* Avenir-Medium.ttf in Resources */,
+				2AE3ABE93662403C80CFEC13 /* Avenir-MediumOblique.ttf in Resources */,
+				0D8F42B082774F89BF9C1224 /* Avenir-Oblique.ttf in Resources */,
+				AA0CFEDDBF39406782B3A0F3 /* Avenir-Roman.ttf in Resources */,
+				78C8CABD9AFB40C1834D76AE /* Bariol-Bold.ttf in Resources */,
+				C861C886AA8F4E6D908BC7C0 /* Bariol-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1083,9 +1208,18 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
+				);
 				INFOPLIST_FILE = RNSKTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1100,9 +1234,18 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
+				);
 				INFOPLIST_FILE = RNSKTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1118,6 +1261,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
+				);
 				INFOPLIST_FILE = RNSK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1135,6 +1282,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
+				);
 				INFOPLIST_FILE = RNSK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1159,8 +1310,17 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
+				);
 				INFOPLIST_FILE = "RNSK-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1185,8 +1345,17 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
+				);
 				INFOPLIST_FILE = "RNSK-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1212,6 +1381,11 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "RNSK-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.RNSK-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
@@ -1233,6 +1407,11 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "RNSK-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.RNSK-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;

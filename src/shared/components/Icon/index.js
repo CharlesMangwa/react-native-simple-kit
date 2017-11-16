@@ -1,9 +1,9 @@
 /* @flow */
 
 import React, { createElement } from 'react'
+import PropTypes from 'prop-types'
 import { SafeAreaView } from 'react-native'
 
-import { rem } from '@helpers/responsive'
 import { NEUTRAL_COLOR_50, SUCCESS_COLOR } from '@theme/colors'
 import * as SVGs from './SVGs'
 
@@ -27,25 +27,31 @@ const Icon = (props: Props): React$Element<any> => {
     case 'backButton': icon = SVGs.Back
       break
     default: {
-      console.error(`Invalid SVG name: ${name}`)
-      icon = <SafeAreaView />
+      icon = createElement(SafeAreaView, { ...props })
+      throw new Error(`Invalid SVG name: ${name}`)
     }
   }
 
   return (
-    icon &&
     <SafeAreaView {...props} style={style}>
-      {/* // $FlowFixMe */}
       {createElement(icon, { color, size })}
     </SafeAreaView>
   )
+}
+
+Icon.propTypes = {
+  actived: PropTypes.bool,
+  defaultactivedColor: PropTypes.string,
+  defaultColor: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  size: PropTypes.number.isRequired,
+  style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 }
 
 Icon.defaultProps = {
   actived: false,
   defaultactivedColor: SUCCESS_COLOR,
   defaultColor: NEUTRAL_COLOR_50,
-  size: rem(0.875),
   style: undefined,
 }
 
