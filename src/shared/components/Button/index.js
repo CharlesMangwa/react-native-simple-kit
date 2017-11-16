@@ -23,11 +23,11 @@ class Button extends Component<Props, void> {
     color: PropTypes.oneOf(['green', 'red', 'yellow', 'white']),
     inactive: PropTypes.bool,
     onPress: PropTypes.func,
-    to: PropTypes.string,
     replace: PropTypes.bool,
     routeState: PropTypes.object, // eslint-disable-line react/forbid-prop-types
     style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
     text: PropTypes.string,
+    to: PropTypes.string,
   }
 
   static defaultProps: DefaultProps = {
@@ -35,11 +35,11 @@ class Button extends Component<Props, void> {
     color: 'green',
     inactive: false,
     onPress: undefined,
-    to: undefined,
     replace: false,
     routeState: undefined,
     style: undefined,
     text: undefined,
+    to: undefined,
   }
 
   componentWillMount() {
@@ -49,6 +49,37 @@ class Button extends Component<Props, void> {
     if (!this.props.to && !this.props.onPress) {
       throw new Error('No `to` path or `onPress()` function was passed to <Button />')
     }
+  }
+
+  shouldComponentUpdate = (nextProps: Props): boolean => {
+    if (nextProps.color !== this.props.color) {
+      return true
+    }
+    if (nextProps.children !== this.props.children) {
+      return true
+    }
+    if (nextProps.inactive !== this.props.inactive) {
+      return true
+    }
+    if (nextProps.onPress !== this.props.onPress) {
+      return true
+    }
+    if (nextProps.replace !== this.props.replace) {
+      return true
+    }
+    if (nextProps.routeState !== this.props.routeState) {
+      return true
+    }
+    if (nextProps.style !== this.props.style) {
+      return true
+    }
+    if (nextProps.text !== this.props.text) {
+      return true
+    }
+    if (nextProps.to !== this.props.to) {
+      return true
+    }
+    return false
   }
 
   render() {

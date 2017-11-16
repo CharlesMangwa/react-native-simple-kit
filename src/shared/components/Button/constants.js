@@ -14,8 +14,8 @@ export type DefaultProps = {
   onPress?: ?Function,
   replace?: ?boolean,
   routeState: ?Object,
-  text?: ?string,
   style?: ?StyleSheet,
+  text?: ?string,
   to?: ?string,
 }
 
