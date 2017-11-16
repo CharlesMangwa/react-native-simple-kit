@@ -6,6 +6,8 @@ import { Text, View } from 'react-native'
 import { Link } from 'react-router-native'
 
 import { DEFAULT_TEXT_COLOR_DARK } from '@theme/colors'
+import Touchable from '@components/Touchable'
+
 import {
   type ButtonProps as Props,
   type DefaultProps,
@@ -65,7 +67,7 @@ class Button extends Component<Props, void> {
       <Link
         onPress={onPress}
         to={{ pathname: to || '', state: routeState || {} }}
-        // component={Touchable}
+        component={Touchable}
         replace={replace || false}
       >
         <View

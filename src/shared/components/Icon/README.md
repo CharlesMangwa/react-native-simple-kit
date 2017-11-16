@@ -1,5 +1,4 @@
 # Icon 💠
-
 A generic component for SVG icons.
 
 ### API
