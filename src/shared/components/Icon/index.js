@@ -1,7 +1,7 @@
 /* @flow */
 
 import React, { createElement } from 'react'
-import { View } from 'react-native'
+import { SafeAreaView } from 'react-native'
 
 import { rem } from '@helpers/responsive'
 import { NEUTRAL_COLOR_50, SUCCESS_COLOR } from '@theme/colors'
@@ -28,16 +28,16 @@ const Icon = (props: Props): React$Element<any> => {
       break
     default: {
       console.error(`Invalid SVG name: ${name}`)
-      icon = <View />
+      icon = <SafeAreaView />
     }
   }
 
   return (
     icon &&
-    <View {...props} style={style}>
+    <SafeAreaView {...props} style={style}>
       {/* // $FlowFixMe */}
       {createElement(icon, { color, size })}
-    </View>
+    </SafeAreaView>
   )
 }
 
