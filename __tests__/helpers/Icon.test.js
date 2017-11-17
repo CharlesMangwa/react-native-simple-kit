@@ -4,17 +4,17 @@ import renderer from 'react-test-renderer'
 import getIcon from '@helpers/icon'
 
 describe('Helper function: getIcon', () => {
-  test('renders correctly', () => {
+  it('renders correctly', () => {
     const component = renderer.create(getIcon('backButton', 100))
     const tree = component.toJSON()
     expect(tree).toMatchSnapshot()
   })
-  test('renders with actived parameter', () => {
+  it('renders with actived parameter', () => {
     const component = renderer.create(getIcon('backButton', 100, true))
     const tree = component.toJSON()
     expect(tree).toMatchSnapshot()
   })
-  test('renders with color parameter', () => {
+  it('renders with color parameter', () => {
     const component = renderer.create(
       getIcon('backButton', 100, false, '#122E46'),
     )

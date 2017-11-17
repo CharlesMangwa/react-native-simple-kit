@@ -1,13 +1,13 @@
 import { mq, rem, vh, vw } from '@helpers/responsive'
 
 describe('Helper component: Responsive', () => {
-  test('mq() operates correctly', () => {
+  it('mq() operates correctly', () => {
     const breakpoints = { maxWidth: 42 }
     const styles = { width: 42 }
     expect(mq(breakpoints, styles)).toEqual({})
   })
 
-  test('rem() operates correctly', () => {
+  it('rem() operates correctly', () => {
     expect(rem(0)).toBe(0)
     expect(rem(0)).toBeFalsy()
     expect(rem(0)).not.toBeNull()
@@ -15,7 +15,7 @@ describe('Helper component: Responsive', () => {
     expect(rem(0)).not.toBeTruthy()
   })
 
-  test('vh() operates correctly', () => {
+  it('vh() operates correctly', () => {
     expect(vh(42)).not.toBe(0)
     expect(vh(42)).not.toBeNull()
     expect(vh(42)).not.toBeUndefined()
@@ -28,7 +28,7 @@ describe('Helper component: Responsive', () => {
     expect(vh(0)).not.toBeTruthy()
   })
 
-  test('vw() operates correctly', () => {
+  it('vw() operates correctly', () => {
     expect(vw(42)).not.toBe(0)
     expect(vw(42)).not.toBeNull()
     expect(vw(42)).not.toBeUndefined()

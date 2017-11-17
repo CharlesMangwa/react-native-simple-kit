@@ -7,19 +7,19 @@ const shareMock = jest.fn(content => share(content))
 const startNavigationMock = jest.fn(coordinates => startNavigation(coordinates))
 
 describe('Helper function: Linking', () => {
-  test('call() operates correctly', () => {
+  it('call() operates correctly', () => {
     callMock('+330102030405')
     expect(callMock).toHaveBeenCalledTimes(1)
   })
-  test('email() operates correctly', () => {
+  it('email() operates correctly', () => {
     emailMock('hello@github.com')
     expect(emailMock).toHaveBeenCalledTimes(1)
   })
-  test('openURL() operates correctly', () => {
+  it('openURL() operates correctly', () => {
     openURLMock('htps://www.github.com')
     expect(openURLMock).toHaveBeenCalledTimes(1)
   })
-  test('share() operates correctly', () => {
+  it('share() operates correctly', () => {
     expect.assertions(1)
     shareMock({
       title: 'githubTest',
@@ -28,7 +28,7 @@ describe('Helper function: Linking', () => {
     })
     expect(shareMock).toHaveBeenCalledTimes(1)
   })
-  test('startNavigation() operates correctly', () => {
+  it('startNavigation() operates correctly', () => {
     startNavigationMock({
       latitude: 48.8705673,
       longitude: 2.3452987,

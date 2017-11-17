@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Generic component: <Button /> renders children if passed 1`] = `
+<View
+  accessibilityComponentType={undefined}
+  accessibilityLabel={undefined}
+  accessibilityTraits={undefined}
+  accessible={true}
+  collapsable={undefined}
+  hitSlop={undefined}
+  isTVSelectable={true}
+  nativeID={undefined}
+  onLayout={undefined}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "opacity": 1,
+    }
+  }
+  testID={undefined}
+  tvParallaxProperties={undefined}
+>
+  <RCTSafeAreaView
+    style={null}
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#53C000",
+            "borderColor": "#53C000",
+            "borderRadius": 100,
+            "borderWidth": 1,
+            "justifyContent": "center",
+            "minHeight": 43.58681250000001,
+            "minWidth": 166.04500000000002,
+          },
+          Object {
+            "backgroundColor": "#53C000",
+            "borderColor": "#53C000",
+          },
+          false,
+          undefined,
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+      >
+        Hello!
+      </Text>
+    </View>
+  </RCTSafeAreaView>
+</View>
+`;
+
+exports[`Generic component: <Button /> renders correctly 1`] = `
+<View
+  accessibilityComponentType={undefined}
+  accessibilityLabel={undefined}
+  accessibilityTraits={undefined}
+  accessible={true}
+  collapsable={undefined}
+  hitSlop={undefined}
+  isTVSelectable={true}
+  nativeID={undefined}
+  onLayout={undefined}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "opacity": 1,
+    }
+  }
+  testID={undefined}
+  tvParallaxProperties={undefined}
+>
+  <RCTSafeAreaView
+    style={null}
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#53C000",
+            "borderColor": "#53C000",
+            "borderRadius": 100,
+            "borderWidth": 1,
+            "justifyContent": "center",
+            "minHeight": 43.58681250000001,
+            "minWidth": 166.04500000000002,
+          },
+          Object {
+            "backgroundColor": "#53C000",
+            "borderColor": "#53C000",
+          },
+          false,
+          undefined,
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#fefefe",
+              "fontFamily": "Avenir",
+              "fontSize": 16.6045,
+              "fontWeight": "600",
+              "textAlign": "center",
+            },
+            false,
+            false,
+          ]
+        }
+      >
+        Hello!
+      </Text>
+    </View>
+  </RCTSafeAreaView>
+</View>
+`;
