@@ -1,6 +1,6 @@
 # react-native-simple-kit
 
-[![CircleCI](https://img.shields.io/circleci/project/github/CharlesMangwa/react-native-simple-kit.svg)](https://circleci.com/gh/CharlesMangwa/react-native-simple-kit)
+[![CircleCI](https://circleci.com/gh/CharlesMangwa/react-native-simple-kit.svg?style=shield&circle-token=7207fcf84efb2248759b3c51536c57a61d074712)](https://circleci.com/gh/CharlesMangwa/react-native-simple-kit)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![License MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://img.shields.io/badge/License-MIT-brightgreen.svg)
 [![GitHub package version](https://img.shields.io/github/tag/CharlesMangwa/react-native-simple-kit.svg)]()
