@@ -11,14 +11,17 @@ describe('Helper function: Linking', () => {
     callMock('+330102030405')
     expect(callMock).toHaveBeenCalledTimes(1)
   })
+
   it('email() operates correctly', () => {
     emailMock('hello@github.com')
     expect(emailMock).toHaveBeenCalledTimes(1)
   })
+
   it('openURL() operates correctly', () => {
     openURLMock('htps://www.github.com')
     expect(openURLMock).toHaveBeenCalledTimes(1)
   })
+
   it('share() operates correctly', () => {
     expect.assertions(1)
     shareMock({
@@ -28,6 +31,7 @@ describe('Helper function: Linking', () => {
     })
     expect(shareMock).toHaveBeenCalledTimes(1)
   })
+
   it('startNavigation() operates correctly', () => {
     startNavigationMock({
       latitude: 48.8705673,

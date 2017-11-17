@@ -55,7 +55,7 @@ exports[`Generic component: <Button /> renders children if passed 1`] = `
         allowFontScaling={true}
         ellipsizeMode="tail"
       >
-        Hello!
+        Wassup!
       </Text>
     </View>
   </RCTSafeAreaView>
@@ -132,6 +132,244 @@ exports[`Generic component: <Button /> renders correctly 1`] = `
         }
       >
         Hello!
+      </Text>
+    </View>
+  </RCTSafeAreaView>
+</View>
+`;
+
+exports[`Generic component: <Button /> renders correctly with color & inactive props 1`] = `
+<View
+  accessibilityComponentType={undefined}
+  accessibilityLabel={undefined}
+  accessibilityTraits={undefined}
+  accessible={true}
+  collapsable={undefined}
+  hitSlop={undefined}
+  isTVSelectable={true}
+  nativeID={undefined}
+  onLayout={undefined}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "opacity": 1,
+    }
+  }
+  testID={undefined}
+  tvParallaxProperties={undefined}
+>
+  <RCTSafeAreaView
+    style={null}
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#53C000",
+            "borderColor": "#53C000",
+            "borderRadius": 100,
+            "borderWidth": 1,
+            "justifyContent": "center",
+            "minHeight": 43.58681250000001,
+            "minWidth": 166.04500000000002,
+          },
+          Object {
+            "backgroundColor": "#E33258",
+            "borderColor": "#E33258",
+          },
+          Object {
+            "backgroundColor": "transparent",
+            "borderColor": "#E33258",
+          },
+          undefined,
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#fefefe",
+              "fontFamily": "Avenir",
+              "fontSize": 16.6045,
+              "fontWeight": "600",
+              "textAlign": "center",
+            },
+            false,
+            Object {
+              "color": "#E33258",
+            },
+          ]
+        }
+      >
+        Feel free to leave a ⭐!
+      </Text>
+    </View>
+  </RCTSafeAreaView>
+</View>
+`;
+
+exports[`Generic component: <Button /> renders correctly with color prop 1`] = `
+<View
+  accessibilityComponentType={undefined}
+  accessibilityLabel={undefined}
+  accessibilityTraits={undefined}
+  accessible={true}
+  collapsable={undefined}
+  hitSlop={undefined}
+  isTVSelectable={true}
+  nativeID={undefined}
+  onLayout={undefined}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "opacity": 1,
+    }
+  }
+  testID={undefined}
+  tvParallaxProperties={undefined}
+>
+  <RCTSafeAreaView
+    style={null}
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#53C000",
+            "borderColor": "#53C000",
+            "borderRadius": 100,
+            "borderWidth": 1,
+            "justifyContent": "center",
+            "minHeight": 43.58681250000001,
+            "minWidth": 166.04500000000002,
+          },
+          Object {
+            "backgroundColor": "#FFAD1D",
+            "borderColor": "#FFAD1D",
+          },
+          false,
+          undefined,
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#fefefe",
+              "fontFamily": "Avenir",
+              "fontSize": 16.6045,
+              "fontWeight": "600",
+              "textAlign": "center",
+            },
+            false,
+            false,
+          ]
+        }
+      >
+        Hope you like what you see so far
+      </Text>
+    </View>
+  </RCTSafeAreaView>
+</View>
+`;
+
+exports[`Generic component: <Button /> renders with inactive prop 1`] = `
+<View
+  accessibilityComponentType={undefined}
+  accessibilityLabel={undefined}
+  accessibilityTraits={undefined}
+  accessible={true}
+  collapsable={undefined}
+  hitSlop={undefined}
+  isTVSelectable={true}
+  nativeID={undefined}
+  onLayout={undefined}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "opacity": 1,
+    }
+  }
+  testID={undefined}
+  tvParallaxProperties={undefined}
+>
+  <RCTSafeAreaView
+    style={null}
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#53C000",
+            "borderColor": "#53C000",
+            "borderRadius": 100,
+            "borderWidth": 1,
+            "justifyContent": "center",
+            "minHeight": 43.58681250000001,
+            "minWidth": 166.04500000000002,
+          },
+          Object {
+            "backgroundColor": "#53C000",
+            "borderColor": "#53C000",
+          },
+          Object {
+            "backgroundColor": "transparent",
+            "borderColor": "#53C000",
+          },
+          undefined,
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#fefefe",
+              "fontFamily": "Avenir",
+              "fontSize": 16.6045,
+              "fontWeight": "600",
+              "textAlign": "center",
+            },
+            false,
+            Object {
+              "color": "#53C000",
+            },
+          ]
+        }
+      >
+        Having a good day?
       </Text>
     </View>
   </RCTSafeAreaView>

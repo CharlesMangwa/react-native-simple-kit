@@ -10,8 +10,64 @@ describe('Generic component: <Button />', () => {
     const component = TestRenderer.create(
       <NativeRouter>
         <Button
-          onPress={() => console.log('Success ✅')}
+          onPress={() => jest.fn()}
           text="Hello!"
+        />
+      </NativeRouter>,
+    )
+    const tree = component.toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('renders children if passed', () => {
+    const component = TestRenderer.create(
+      <NativeRouter>
+        <Button
+          onPress={() => jest.fn()}
+        >
+          <Text>Wassup!</Text>
+        </Button>
+      </NativeRouter>,
+    )
+    const tree = component.toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('renders with inactive prop', () => {
+    const component = TestRenderer.create(
+      <NativeRouter>
+        <Button
+          inactive
+          onPress={() => jest.fn()}
+          text="Having a good day?"
+        />
+      </NativeRouter>,
+    )
+    const tree = component.toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('renders correctly with color prop', () => {
+    const component = TestRenderer.create(
+      <NativeRouter>
+        <Button
+          color="yellow"
+          onPress={() => jest.fn()}
+          text="Hope you like what you see so far"
+        />
+      </NativeRouter>,
+    )
+    const tree = component.toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('renders correctly with color & inactive props', () => {
+    const component = TestRenderer.create(
+      <NativeRouter>
+        <Button
+          inactive color="red"
+          onPress={() => jest.fn()}
+          text="Feel free to leave a ⭐!"
         />
       </NativeRouter>,
     )
@@ -26,7 +82,7 @@ describe('Generic component: <Button />', () => {
     renderer.render((
       <Button
         onPress={() => onPress()}
-        text="Hello!"
+        text="And submit a PR if need!"
       />
     ))
 
@@ -35,18 +91,5 @@ describe('Generic component: <Button />', () => {
 
     expect(onPress).toBeCalled()
   })
-
-  it('renders children if passed', () => {
-    const component = TestRenderer.create(
-      <NativeRouter>
-        <Button
-          onPress={() => console.log('Success ✅')}
-        >
-          <Text>Hello!</Text>
-        </Button>
-      </NativeRouter>,
-    )
-    const tree = component.toJSON()
-    expect(tree).toMatchSnapshot()
-  })
 })
+

@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Generic component: <Icon /> renders actived version correctly 1`] = `
+<RCTSafeAreaView
+  actived={true}
+  defaultColor="#b8b8b8"
+  defaultactivedColor="#53C000"
+  name="backButton"
+  size={15}
+  style={undefined}
+>
+  <Svg />
+</RCTSafeAreaView>
+`;
+
+exports[`Generic component: <Icon /> renders correctly 1`] = `
+<RCTSafeAreaView
+  actived={false}
+  defaultColor="#b8b8b8"
+  defaultactivedColor="#53C000"
+  name="backButton"
+  size={15}
+  style={undefined}
+>
+  <Svg />
+</RCTSafeAreaView>
+`;
+
+exports[`Generic component: <Icon /> renders with actived version with custom color correctly 1`] = `
+<RCTSafeAreaView
+  actived={true}
+  defaultColor="#b8b8b8"
+  defaultactivedColor="#5AADEB"
+  name="backButton"
+  size={15}
+  style={undefined}
+>
+  <Svg />
+</RCTSafeAreaView>
+`;
+
+exports[`Generic component: <Icon /> renders with defaultColor correctly 1`] = `
+<RCTSafeAreaView
+  actived={false}
+  defaultColor="#333333"
+  defaultactivedColor="#53C000"
+  name="backButton"
+  size={15}
+  style={undefined}
+>
+  <Svg />
+</RCTSafeAreaView>
+`;
