@@ -44,10 +44,10 @@ class Button extends Component<Props, void> {
 
   componentWillMount() {
     if (!this.props.children && !this.props.text) {
-      throw new Error('No children or `text` prop was passed to <Button />')
+      throw new Error('Button requires at least 1 children or a `text`s prop')
     }
     if (!this.props.to && !this.props.onPress) {
-      throw new Error('No `to` path or `onPress()` function was passed to <Button />')
+      throw new Error('Button requires at least an `onPress` or `to` prop')
     }
   }
 

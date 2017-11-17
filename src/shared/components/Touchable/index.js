@@ -11,7 +11,7 @@ import {
 } from 'react-native'
 
 type DefaultProps = {
-  children: React$Element<any>,
+  children: null,
   onLongPress: Function,
   onPress: Function,
   style: null,
@@ -35,10 +35,16 @@ class Touchable extends Component<Props, void> {
   }
 
   static defaultProps: DefaultProps = {
-    children: <SafeAreaView />,
+    children: null,
     onLongPress: () => null,
     onPress: () => null,
     style: null,
+  }
+
+  componentWillMount() {
+    if (!this.props.children) {
+      throw new Error('Touchable requires at least 1 children')
+    }
   }
 
   requestAnimationFrame: () => number
