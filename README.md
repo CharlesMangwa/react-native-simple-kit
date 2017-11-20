@@ -5,7 +5,7 @@
 [![License MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://img.shields.io/badge/License-MIT-brightgreen.svg)
 [![GitHub package version](https://img.shields.io/github/tag/CharlesMangwa/react-native-simple-kit.svg)]()
 
-`react-native-simple-kit` is a starter boilerplate for mobile apps using React Native, Redux and a bunch of other cool tools. This starter is compatible with both iOS and Android out of the box 👍
+`react-native-simple-kit` is a starter boilerplate for mobile apps using React Native, Redux and a bunch of other cool tools. This starter is compatible with both iOS and Android out of the box 🤙
 
 ## Requirements
 
@@ -45,6 +45,42 @@ There are mainly 2 reasons why this project exists. One of them is: **evolution*
 That's why from one project to another, I used to copy/paste the whole previous project, remove all the specific code, and then use it as my starter. The another project. More modifications. Copy/paste. Start all over again. As you can understand: I really needed something that I can just fork, use for a project, modify at the root when needed, and...that's it! No need to waste my time removing project specific code, and I'll still have what I consider as a good starter kit.
 
 That was the first reason. The second one is just: **community**. I think there are people out there who probably need the same thing. Moreover, some of you sent me messages asking what does my typical project structure look like. So here it is!
+
+## Project structure
+
+This project structure is by no means "**THE**" perfect project structure. It's just the one which is currently making more sense to me than any other else, after several tries. Long story short: I divide my apps by `scenes`, scenes which contain several `modules` that can use that scene's `components`. That's it. Give it a try, you might be surprised how intuitive it could be. Anyhow: feel free to modify this structure and even send some PRs if you find a way to improve it!
+
+```
+...
+src
+├── app
+│   ├── scenes
+│   │   └── xxx
+│   │       ├── components
+│   │       ├── modules
+│   │       ├── index.js
+│   │       └── styles.js
+│   └── index.js
+├── config
+│   └── index.js
+├── helpers
+│   └── xxx
+│       └── index.js
+├── shared
+│   ├── assets
+│   ├── components
+│   └── theme
+├── store
+│   ├── modules
+│   │   └── xxx
+│   │       ├── index.js
+│   │       └── types.js
+│   ├── actions.js
+│   ├── index.js
+│   ├── reducers.js
+│   └── types.js
+└── index.js
+```
 
 ## Components
 
@@ -151,7 +187,7 @@ export class MyClass extends React.Component<Props, State> {
 }
 ```
 
-I personally use these 3 tools to keep my code clean, homogeneous, (sometimes 😁) performant and kinda organized. Obviously, this is just a starter kit: it's up to you to make any changes you'd like!
+I personally use these 3 tools to keep my code clean, homogeneous, (sometimes 😅) performant and kinda organized. Obviously, this is just a starter kit: it's up to you to make any changes you'd like!
 
 ## Use
 
