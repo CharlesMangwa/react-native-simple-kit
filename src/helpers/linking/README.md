@@ -1,13 +1,17 @@
 # Linking helpers 🔗
+
 ```Linking``` gives you a general interface to interact with both incoming and outgoing app links.
 
 ### ➜ Share
+
 Open native modal to share content.
 
 #### API
+
 * ```share({ title: string, url: string, content: string, }): void```
 
 #### Example
+
 ```jsx
 import React from 'react'
 import { TouchableWithoutFeedback, Text } from 'react-native'
@@ -27,12 +31,15 @@ export default MyComponent
 ```
 
 ### ➜ Call
+
 Call a phone number.
 
 #### API
+
 * ```call(phone: number): void```
 
 #### Example
+
 ```jsx
 import React from 'react'
 import { TouchableWithoutFeedback, Text } from 'react-native'
@@ -48,12 +55,15 @@ export default MyComponent
 ```
 
 ### ➜ Email
+
 Open mail client from a given email address.
 
 #### API
+
 * ```email(address: string): void```
 
 #### Example
+
 ```jsx
 import React from 'react'
 import { TouchableWithoutFeedback, Text } from 'react-native'
@@ -69,12 +79,15 @@ export default MyComponent
 ```
 
 ### ➜ URL
+
 Open an URL.
 
 #### API
+
 * ```openURL(url: string): void```
 
 #### Example
+
 ```jsx
 import React from 'react'
 import { TouchableWithoutFeedback, Text } from 'react-native'
@@ -90,12 +103,15 @@ export default MyComponent
 ```
 
 ### ➜ Navigation
+
 Open Plans (iOS) or Google Maps (Android) based on given coordinates.
 
 #### API
+
 * ```startNavigation(coordinates: { latitude: number, longitude: number, name: string }): void```
 
 #### Example
+
 ```jsx
 import React from 'react'
 import { TouchableWithoutFeedback, Text } from 'react-native'

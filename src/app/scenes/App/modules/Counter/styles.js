@@ -2,7 +2,8 @@
 
 import { StyleSheet } from 'react-native'
 import { rem, vw } from '@helpers/responsive'
-import { AVENIR_LIGHT } from '@theme/fonts'
+import { DEFAULT_TEXT_COLOR_DARK } from '@theme/colors'
+import { AVENIR_LIGHT, BARIOL_REGULAR } from '@theme/fonts'
 
 const styles: Object = StyleSheet.create({
   container: {
@@ -17,14 +18,29 @@ const styles: Object = StyleSheet.create({
     marginBottom: rem(15),
     backgroundColor: 'transparent',
   },
-  modalContentainer: {
+  modalContainer: {
     alignSelf: 'center',
-    width: '90%',
-    height: '60%',
+    width: '70%',
+    height: '40%',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 12,
     backgroundColor: 'white',
+  },
+  modalTitle: {
+    ...BARIOL_REGULAR,
+    fontSize: rem(45),
+    color: DEFAULT_TEXT_COLOR_DARK,
+  },
+  modalButtonsWrapper: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    width: '100%',
+    marginVertical: rem(30),
+    paddingHorizontal: '12.5%',
+  },
+  modalButton: {
+    width: rem(80),
   },
 })
 

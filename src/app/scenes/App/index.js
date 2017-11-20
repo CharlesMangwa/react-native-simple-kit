@@ -1,14 +1,14 @@
 /* @flow */
 
 import React from 'react'
-import { View } from 'react-native'
+import { SafeAreaView, StatusBar } from 'react-native'
 import { Switch, Route, Redirect } from 'react-router'
 import { BottomNavigation, Tab } from 'react-router-navigation'
 
 import type { Location } from '@store/types'
-import Counter from './modules/Counter'
-import Home from './modules/Home'
-import Settings from './modules/Settings'
+import { BRAND_COLOR_RED } from '@theme/colors'
+import { Counter, Home, Settings } from '@App/modules'
+
 import styles from './styles'
 
 type Props = {
@@ -16,7 +16,8 @@ type Props = {
 }
 
 const App = (props: Props): React$Element<any> => (
-  <View style={styles.container}>
+  <SafeAreaView style={styles.container}>
+    <StatusBar backgroundColor={BRAND_COLOR_RED} />
     <Switch location={props.location}>
       <Route
         exact path="/app"
@@ -25,7 +26,10 @@ const App = (props: Props): React$Element<any> => (
       <Route
         path="/app/(home)?"
         render={(): React$Element<any> => (
-          <BottomNavigation lazy={false}>
+          <BottomNavigation
+            tabBarStyle={{ backgroundColor: 'white' }}
+            tabActiveTintColor={BRAND_COLOR_RED}
+          >
             <Tab
               path="/app/home"
               component={Home}
@@ -45,7 +49,7 @@ const App = (props: Props): React$Element<any> => (
         )}
       />
     </Switch>
-  </View>
+  </SafeAreaView>
 )
 
 export default App

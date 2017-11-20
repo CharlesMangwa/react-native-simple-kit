@@ -5,6 +5,7 @@ import type { Action, Counter } from './types'
 
 const INCREMENT = 'INCREMENT'
 const DECREMENT = 'DECREMENT'
+const RESET = 'RESET'
 
 export default function (state: Counter = 0, action: Action): Counter {
   switch (action.type) {
@@ -17,6 +18,8 @@ export default function (state: Counter = 0, action: Action): Counter {
       return state - 1
     case INCREMENT:
       return state + 1
+    case RESET:
+      return 0
     default:
       return state
   }
@@ -28,4 +31,8 @@ export const decrement = (): Action => ({
 
 export const increment = (): Action => ({
   type: INCREMENT,
+})
+
+export const reset = (): Action => ({
+  type: RESET,
 })

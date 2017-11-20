@@ -1,8 +1,11 @@
 # Modal ⬜️
+
 A generic component for handling modal based on `react-native-modal`.
 
 ### API
+
 #### Basic
+
 * children?: `() => React$Element<any> | React$Element<any>`
 * content?: `() => React$Element<any> | React$Element<any>`
 * isVisible: `boolean`
@@ -10,9 +13,11 @@ A generic component for handling modal based on `react-native-modal`.
 * style?: `StyleSheet`
 
 #### Complete
+
 The exhaustive API can be found on [`react-native-community/react-native-modal`](https://github.com/react-native-community/react-native-modal) repository.
 
 ### Example
+
 ```jsx
 /* @flow */
 import React from 'react'

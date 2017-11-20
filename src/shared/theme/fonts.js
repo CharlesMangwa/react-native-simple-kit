@@ -137,5 +137,5 @@ export const BARIOL_REGULAR: Font = Platform.OS === 'ios'
     fontWeight: '400',
   }
   : {
-    fontFamily: 'Bariold-Regular',
+    fontFamily: 'Bariol-Regular',
   }

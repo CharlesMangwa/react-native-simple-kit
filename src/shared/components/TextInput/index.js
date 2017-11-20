@@ -25,7 +25,7 @@ class TextInput extends Component<Props, void> {
     onSubmitEditing: () => null,
     placeholderTextColor: undefined,
     returnKeyType: 'done',
-    search: false,
+    selectionColor: undefined,
     secured: false,
     style: StyleSheet.flatten(null),
     value: undefined,
@@ -46,7 +46,7 @@ class TextInput extends Component<Props, void> {
       placeholder,
       placeholderTextColor,
       returnKeyType,
-      search,
+      selectionColor,
       secured,
       style,
       value,
@@ -71,7 +71,7 @@ class TextInput extends Component<Props, void> {
         placeholderTextColor={placeholderTextColor || `${DEFAULT_TEXT_COLOR_DARK}80`}
         returnKeyType={returnKeyType || 'done'}
         secureTextEntry={secured}
-        selectionColor={!search ? BRAND_COLOR_RED : 'white'}
+        selectionColor={selectionColor || BRAND_COLOR_RED}
         style={[styles.container, style]}
         underlineColorAndroid="transparent"
         value={value}
@@ -121,9 +121,12 @@ TextInput.propTypes = {
     'route',
     'yahoo',
   ]),
-  search: PropTypes.bool,
+  selectionColor: PropTypes.string,
   secured: PropTypes.bool,
-  style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  style: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.object,
+  ]), // eslint-disable-line react/forbid-prop-types
   value: PropTypes.string,
 }
 

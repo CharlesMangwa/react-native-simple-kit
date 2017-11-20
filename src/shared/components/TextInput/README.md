@@ -1,7 +1,9 @@
 # TextInput ✍️
+
 A generic component for handling user text inputs.
 
 ### API
+
 * autoFocus?: `boolean`,
 * defaultValue?: `string`,
 * keyboardType?: `string`,
@@ -19,6 +21,7 @@ A generic component for handling user text inputs.
 * value?: `any`,
 
 ### Example
+
 ```js
 /* @flow */
 import React from 'react'

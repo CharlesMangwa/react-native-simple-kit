@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "cache-clean": "rm -rf $TMPDIR/react-* && watchman watch-del-all && npm cache clear",
+    "cache-clean": "rm -rf $TMPDIR/react-* && watchman watch-del-all && yarn cache clear",
     "test": "eslint . && flow --show-all-errors && jest"
   },
   "babel": {

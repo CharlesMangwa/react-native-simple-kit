@@ -7,8 +7,8 @@ import { AVENIR_MEDIUM } from '@theme/fonts'
 
 const styles: Object = StyleSheet.create({
   container: {
-    minWidth: rem(160),
-    minHeight: rem(42),
+    width: rem(160),
+    height: rem(42),
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 1,

@@ -1,6 +1,7 @@
 /* @flow */
 
 import {
+  BRAND_COLOR_BLUE,
   BRAND_COLOR_GREEN,
   BRAND_COLOR_RED,
   BRAND_COLOR_YELLOW,
@@ -8,7 +9,7 @@ import {
 } from '@theme/colors'
 
 export type DefaultProps = {
-  color?: 'green' | 'red' | 'yellow' | 'white',
+  color?: 'blue' | 'green' | 'red' | 'yellow' | 'white',
   children?: ?React$Element<any>,
   inactive?: ?boolean,
   onPress?: ?Function,
@@ -19,9 +20,10 @@ export type DefaultProps = {
   to?: ?string,
 }
 
-export type ButtonProps = DefaultProps
+export type Props = DefaultProps
 
 export const brandColors = {
+  blue: BRAND_COLOR_BLUE,
   green: BRAND_COLOR_GREEN,
   red: BRAND_COLOR_RED,
   yellow: BRAND_COLOR_YELLOW,

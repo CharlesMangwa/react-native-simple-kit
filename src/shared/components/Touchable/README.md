@@ -1,13 +1,16 @@
 # Touchable 👇
+
 A generic component for handling touchable items with specific platforms behaviours on iOS & Android.
 
 ### API
+
 * children?: `React$Element<any>`
 * onLongPress?: `Function`
 * onPress?: `Function`
 * style?: `StyleSheet`
 
 ### Example
+
 ```js
 /* @flow */
 import React from 'react'

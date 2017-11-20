@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
 
 
 ### ➜ Rem unit
-This unit represents the font-size of the root element specify with ```DEFAULT_RESPONSIVE_FONT_SIZE``` in ```@theme/fonts```.
+This unit represents the font-size of the root element specify with ```DEFAULT_RESPONSIVE_FONT_SIZE``` in ```@theme/fonts```. As you can guess, this is heavily inspired by the `rem` unit used by Front-End developers: you just pass a `px` value you'd like to see convert into `"rem"`.
 
 #### API
 * ```rem(value: number): number```

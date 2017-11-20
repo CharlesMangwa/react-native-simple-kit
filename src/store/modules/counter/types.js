@@ -1,7 +1,7 @@
 /* @flow */
 
 export type Action = {
-  type: 'INCREMENT' | 'DECREMENT',
+  type: 'INCREMENT' | 'DECREMENT' | 'RESET',
   payload?: {
     counter: number,
   },

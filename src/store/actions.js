@@ -1,3 +1,3 @@
 /* @flow */
 
-// export { login, logout, saveUserInfos } from '@store/modules/user'
+export { increment, decrement, reset } from '@store/modules/counter'

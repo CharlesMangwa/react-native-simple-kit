@@ -3,12 +3,14 @@
 A helper function to render SVGs without hassle.
 
 ### API
+
 * name: `'backButton'`
 * size: `number`
 * actived?: `boolean`
 * defaultColor?: `string`
 
 ### Example
+
 ```jsx
 import React from 'react'
 import { SafeAreaView } from 'react-native'

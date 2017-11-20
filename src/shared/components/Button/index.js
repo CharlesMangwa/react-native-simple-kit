@@ -9,7 +9,7 @@ import { DEFAULT_TEXT_COLOR_DARK } from '@theme/colors'
 import Touchable from '@components/Touchable'
 
 import {
-  type ButtonProps as Props,
+  type Props,
   type DefaultProps,
   brandColors,
 } from './constants'
@@ -20,19 +20,22 @@ class Button extends Component<Props, void> {
 
   static propTypes = {
     children: PropTypes.element,
-    color: PropTypes.oneOf(['green', 'red', 'yellow', 'white']),
+    color: PropTypes.oneOf(['blue', 'green', 'red', 'yellow', 'white']),
     inactive: PropTypes.bool,
     onPress: PropTypes.func,
     replace: PropTypes.bool,
     routeState: PropTypes.object, // eslint-disable-line react/forbid-prop-types
-    style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+    style: PropTypes.oneOfType([
+      PropTypes.number,
+      PropTypes.object,
+    ]), // eslint-disable-line react/forbid-prop-types
     text: PropTypes.string,
     to: PropTypes.string,
   }
 
   static defaultProps: DefaultProps = {
     children: undefined,
-    color: 'green',
+    color: 'red',
     inactive: false,
     onPress: undefined,
     replace: false,

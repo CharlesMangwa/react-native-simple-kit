@@ -2,15 +2,15 @@
 
 import { compose } from 'recompose'
 import { connect } from 'react-redux'
-import { withRouter } from 'react-router'
 
 import type { State } from '@store/types'
+import { increment, decrement, reset } from '@store/actions'
 
 const mapStateToProps = (state: State): Object => ({
-  app: state.app,
+  counter: state.counter,
 })
 
-const mapActionsToProps = (): Object => ({ withRouter }: Object)
+const mapActionsToProps: Object = { increment, decrement, reset }
 
 export default (container: Class<any>): Class<any> =>
   compose(connect(mapStateToProps, mapActionsToProps))(container)

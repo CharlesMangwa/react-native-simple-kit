@@ -1,7 +1,9 @@
 # Icon 💠
+
 A generic component for custom SVG icons.
 
 ### API
+
 * name: `'backButton'`
 * actived?: `boolean`
 * size?: `number`
@@ -10,6 +12,7 @@ A generic component for custom SVG icons.
 * style?: `StyleSheet`
 
 ### Example
+
 ```js
 import React from 'react'
 import Icon from '@components/Icon'

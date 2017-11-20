@@ -45,7 +45,10 @@ Icon.propTypes = {
   defaultColor: PropTypes.string,
   name: PropTypes.string.isRequired,
   size: PropTypes.number.isRequired,
-  style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  style: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.object,
+  ]), // eslint-disable-line react/forbid-prop-types
 }
 
 Icon.defaultProps = {

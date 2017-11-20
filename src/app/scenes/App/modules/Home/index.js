@@ -15,8 +15,7 @@ const Home = (): React$Element<any> => (
   >
     <Text style={styles.text}>Home</Text>
     <Button
-      inactive
-      color="red"
+      inactive color="red"
       onPress={() => console.log('✈️ ➡️ ⚙️')}
       to="/app/settings"
       text="Go to settings"

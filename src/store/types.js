@@ -12,9 +12,10 @@ export type State = {
   history: HistoryState,
 }
 
-export type Actions = AppAction | HistoryAction | CounterAction
+export type ReduxAction = AppAction | HistoryAction | CounterAction
 export type App = AppType
-export type Dispatch = ReduxDispatch<Actions>
+export type Counter = CounterType
+export type Dispatch = ReduxDispatch<ReduxAction>
 export type Location = LocationType
 export type History = HistoryType
-export type Store = ReduxStore<State, Actions>
+export type Store = ReduxStore<State, ReduxAction>

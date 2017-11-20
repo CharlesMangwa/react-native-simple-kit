@@ -1,8 +1,10 @@
 # Button 🔘
+
 A generic button component that handles simple functions or navigation paths into React Router v4 based apps.
 
 ### API
-* color?: `'green' | 'red' | 'yellow' | 'white'`
+
+* color?: `'blue' | 'green' | 'red' | 'yellow' | 'white'`
 * children?: `React$Element<any>`
 * inactive?: `boolean`
 * onPress?: `Function`
@@ -13,6 +15,7 @@ A generic button component that handles simple functions or navigation paths int
 * to?: `string`
 
 ### Example
+
 ```js
 import React from 'react'
 import { SafeAreaView } from 'react-native'
@@ -37,5 +40,8 @@ export default MyComponent
 ```
 
 ## Changelog
+#### Monday, November 20th
+- Add `blue` as a supported color.
+
 #### Thursday, November 16th
 - Initial release. We didn't track changes before this version.
