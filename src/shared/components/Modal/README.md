@@ -1,4 +1,4 @@
-# Modal ⬜️
+# Modal 🔲
 
 A generic component for handling modal based on `react-native-modal`.
 
