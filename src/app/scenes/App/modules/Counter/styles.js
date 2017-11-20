@@ -14,7 +14,17 @@ const styles: Object = StyleSheet.create({
   text: {
     ...AVENIR_LIGHT,
     fontSize: rem(18),
+    marginBottom: rem(15),
     backgroundColor: 'transparent',
+  },
+  modalContentainer: {
+    alignSelf: 'center',
+    width: '90%',
+    height: '60%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 12,
+    backgroundColor: 'white',
   },
 })
 

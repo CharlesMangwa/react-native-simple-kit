@@ -10,7 +10,7 @@ import styles from './styles'
 
 class TextInput extends Component<Props, void> {
   props: Props
-  textInput: ?Component<*>
+  ref: ?Component<*>
 
   static defaultProps: DefaultProps = {
     autoCapitalize: 'none',
@@ -53,7 +53,7 @@ class TextInput extends Component<Props, void> {
     } = this.props
     return (
       <TextInputModule
-        ref={c => (this.textInput = c)}
+        ref={c => (this.ref = c)}
         autoFocus={autoFocus}
         autoCapitalize={autoCapitalize || 'none'}
         blurOnSubmit={true}
