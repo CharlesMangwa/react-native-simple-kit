@@ -25,6 +25,6 @@ jobs:
 
       - run:
           name: Running Tests
-          command: yarn test
+          command: yarn run test-ci
 
 

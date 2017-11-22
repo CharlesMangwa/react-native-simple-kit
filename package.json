@@ -14,7 +14,8 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "cache-clean": "rm -rf $TMPDIR/react-* && watchman watch-del-all && yarn cache clear",
-    "test": "eslint . && flow --show-all-errors && jest"
+    "test": "eslint . && flow --show-all-errors && jest",
+    "test-ci": "eslint . && flow --show-all-errors && jest --coverage && cat ./__tests__/__coverage__/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "babel": {
     "presets": [
@@ -37,7 +38,7 @@
       "/node_modules/"
     ],
     "coverageReporters": [
-      "json"
+      "lcov"
     ],
     "moduleNameMapper": {
       "^image![a-zA-Z0-9$_-]+$": "GlobalImageStub",
@@ -68,6 +69,7 @@
     "babel-eslint": "^8.0.2",
     "babel-preset-flow": "^6.23.0",
     "babel-preset-react-native": "^4.0.0",
+    "coveralls": "^3.0.0",
     "eslint": "^4.11.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-babel": "^4.1.2",
