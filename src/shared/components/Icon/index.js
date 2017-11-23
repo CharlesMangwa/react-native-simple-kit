@@ -8,8 +8,8 @@ import { NEUTRAL_COLOR_50, BRAND_COLOR_GREEN } from '@theme/colors'
 import * as SVGs from './SVGs'
 
 type Props = {
-  actived?: boolean,
-  defaultactivedColor?: string,
+  activated?: boolean,
+  defaultActivatedColor?: string,
   defaultColor?: string,
   name: string,
   size: number,
@@ -17,9 +17,9 @@ type Props = {
 }
 
 const Icon = (props: Props): React$Element<any> => {
-  const { name, style, size, actived, defaultColor, defaultactivedColor } = props
-  const color = actived
-    ? defaultactivedColor || BRAND_COLOR_GREEN
+  const { name, style, size, activated, defaultColor, defaultActivatedColor } = props
+  const color = activated
+    ? defaultActivatedColor || BRAND_COLOR_GREEN
     : defaultColor || NEUTRAL_COLOR_50
 
   let icon
@@ -40,8 +40,8 @@ const Icon = (props: Props): React$Element<any> => {
 }
 
 Icon.propTypes = {
-  actived: PropTypes.bool,
-  defaultactivedColor: PropTypes.string,
+  activated: PropTypes.bool,
+  defaultActivatedColor: PropTypes.string,
   defaultColor: PropTypes.string,
   name: PropTypes.string.isRequired,
   size: PropTypes.number.isRequired,
@@ -52,8 +52,8 @@ Icon.propTypes = {
 }
 
 Icon.defaultProps = {
-  actived: false,
-  defaultactivedColor: BRAND_COLOR_GREEN,
+  activated: false,
+  defaultActivatedColor: BRAND_COLOR_GREEN,
   defaultColor: NEUTRAL_COLOR_50,
   style: undefined,
 }

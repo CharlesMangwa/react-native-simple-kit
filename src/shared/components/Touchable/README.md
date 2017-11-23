@@ -31,5 +31,8 @@ export default MyComponent
 ```
 
 ## Changelog
+#### Wednesday, November 22th
+- Switch to `React.PureComponent`.
+
 #### Thursday, November 16th
 - Initial release. We didn't track changes before this version.

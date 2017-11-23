@@ -5,9 +5,9 @@ A generic component for custom SVG icons.
 ### API
 
 * name: `'backButton'`
-* actived?: `boolean`
+* activated?: `boolean`
 * size?: `number`
-* defaultActivedColor?: `string`
+* defaultActivatedColor?: `string`
 * defaultColor?: `string`
 * style?: `StyleSheet`
 
@@ -29,5 +29,9 @@ export default MyComponent
 ```
 
 ## Changelog
+#### Thursday, November 23th
+- Rename `actived` prop into `activated`.
+- Rename `defaultactivedColor` prop into `defaultActivatedColor`.
+
 #### Wednesday, November 15th
 - Initial release. We didn't track changes before this version.

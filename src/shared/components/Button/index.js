@@ -1,6 +1,6 @@
 /* @flow */
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { Text, View } from 'react-native'
 import { Link } from 'react-router-native'
@@ -15,7 +15,7 @@ import {
 } from './constants'
 import styles from './styles'
 
-class Button extends Component<Props, void> {
+class Button extends PureComponent<Props, void> {
   props: Props
 
   static propTypes = {
@@ -52,37 +52,6 @@ class Button extends Component<Props, void> {
     if (!this.props.to && !this.props.onPress) {
       throw new Error('Button requires at least an `onPress` or `to` prop')
     }
-  }
-
-  shouldComponentUpdate = (nextProps: Props): boolean => {
-    if (nextProps.color !== this.props.color) {
-      return true
-    }
-    if (nextProps.children !== this.props.children) {
-      return true
-    }
-    if (nextProps.inactive !== this.props.inactive) {
-      return true
-    }
-    if (nextProps.onPress !== this.props.onPress) {
-      return true
-    }
-    if (nextProps.replace !== this.props.replace) {
-      return true
-    }
-    if (nextProps.routeState !== this.props.routeState) {
-      return true
-    }
-    if (nextProps.style !== this.props.style) {
-      return true
-    }
-    if (nextProps.text !== this.props.text) {
-      return true
-    }
-    if (nextProps.to !== this.props.to) {
-      return true
-    }
-    return false
   }
 
   render() {

@@ -1,6 +1,7 @@
 import React from 'react'
 import TestRenderer from 'react-test-renderer'
 import ShallowRenderer from 'react-test-renderer/shallow'
+
 import { Text } from 'react-native'
 import { NativeRouter } from 'react-router-native'
 import Button from '@components/Button'
@@ -90,6 +91,20 @@ describe('Generic component: <Button />', () => {
     output.props.onPress()
 
     expect(onPress).toBeCalled()
+  })
+
+  it("throws when no children nor text prop is passed", () => {
+    const renderer = new ShallowRenderer()
+    expect(() =>
+      renderer.render(<Button />),
+    ).toThrowError('Button requires at least 1 children or a `text`s prop')
+  })
+
+  it("throws when no onPress nor to prop is passed", () => {
+    const renderer = new ShallowRenderer()
+    expect(() =>
+      renderer.render(<Button text="Deuces!" />),
+    ).toThrowError("Button requires at least an `onPress` or `to` prop")
   })
 })
 

@@ -40,6 +40,9 @@ export default MyComponent
 ```
 
 ## Changelog
+#### Wednesday, November 22th
+- Switch to `React.PureComponent`.
+
 #### Monday, November 20th
 - Add `blue` as a supported color.
 

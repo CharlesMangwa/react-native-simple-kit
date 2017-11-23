@@ -1,6 +1,6 @@
 /* @flow */
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import {
   Platform,
@@ -24,7 +24,7 @@ type Props = {
   style?: StyleSheet,
 }
 
-class Touchable extends Component<Props, void> {
+class Touchable extends PureComponent<Props, void> {
   props: Props
 
   static propTypes = {
@@ -48,19 +48,6 @@ class Touchable extends Component<Props, void> {
   }
 
   requestAnimationFrame: () => number
-
-  shouldComponentUpdate = (nextProps: Props): boolean => {
-    if (nextProps.children !== this.props.children) {
-      return true
-    }
-    if (nextProps.onPress !== this.props.onPress) {
-      return true
-    }
-    if (nextProps.style !== this.props.children) {
-      return true
-    }
-    return false
-  }
 
   render() {
     const { children, onLongPress, onPress, style } = this.props

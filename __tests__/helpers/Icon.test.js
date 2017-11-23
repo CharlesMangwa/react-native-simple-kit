@@ -10,7 +10,7 @@ describe('Helper function: getIcon', () => {
     expect(tree).toMatchSnapshot()
   })
 
-  it('renders with actived parameter', () => {
+  it('renders with activated parameter', () => {
     const component = renderer.create(getIcon('backButton', 100, true))
     const tree = component.toJSON()
     expect(tree).toMatchSnapshot()
