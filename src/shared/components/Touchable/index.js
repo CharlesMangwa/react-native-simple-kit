@@ -12,7 +12,7 @@ import {
 
 type DefaultProps = {
   children: null,
-  onLongPress: Function,
+  onLongPress: ?Function,
   onPress: Function,
   style: null,
 }
@@ -36,7 +36,7 @@ class Touchable extends PureComponent<Props, void> {
 
   static defaultProps: DefaultProps = {
     children: null,
-    onLongPress: () => null,
+    onLongPress: undefined,
     onPress: () => null,
     style: null,
   }
