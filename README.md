@@ -190,6 +190,27 @@ export class MyClass extends React.Component<Props, State> {
 
 I personally use these 3 tools to keep my code clean, homogeneous, (sometimes 😅) performant and kinda organized. Obviously, this is just a starter kit: it's up to you to make any changes you'd like!
 
+### Jest
+_The tests live inside `/__tests__` & the config in `package.json`_
+
+```shell
+$ jest
+```
+
+RNSK uses Jest to manage unit testing inside the project. The goal is to test at least all the helpers functions & generic components. Make sure to always update your snapshots before pushing your work to the CI runner!
+
+##### Continuous Integration (CI)
+
+```shell
+$ yarn run test-ci    # outputs 👇
+$ eslint . && flow --show-all-errors && jest --coverage && cat ./__tests__/__coverage__/lcov.info  | ./node_modules/coveralls/bin/coveralls.js
+```
+
+This whole test suite is implemented inside CircleCI 2.0 as mentioned earlier. A new job is run in the pipeline after each commit. The output of the latest job is displayed at the top of the current README and lets you know if it `passed` or `failed`. No need to say that the goal is to keep it ✅!
+
+Moreover, RNSK uses `jest --coverage` output to generate a code coverage report that you can use with tools like [Coveralls.io](htps://coveralls.io). Then, we can get a badge which shows our coverage status: [![Coverage Status](https://coveralls.io/repos/github/CharlesMangwa/react-native-simple-kit/badge.svg?branch=master)](https://coveralls.io/github/CharlesMangwa/react-native-simple-kit?branch=master).
+Pretty cool, heh?
+
 ## Use
 
 This is the part where I stop writing and let you explore & have some fun 😁
