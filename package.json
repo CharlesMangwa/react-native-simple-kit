@@ -21,7 +21,20 @@
     "presets": [
       "flow",
       "react-native"
-    ]
+    ],
+    "env": {
+      "production": {
+        "plugins": [
+          "transform-runtime",
+          "transform-remove-console",
+          "transform-flow-strip-types",
+          "transform-react-inline-elements",
+          "transform-react-pure-class-to-function",
+          "minify-constant-folding",
+          "minify-dead-code-elimination"
+        ]
+      }
+    }
   },
   "engines": {
     "node": ">=4",
@@ -52,6 +65,7 @@
     ]
   },
   "dependencies": {
+    "babel-runtime": "^6.26.0",
     "react": "16.0.0",
     "react-native": "0.50.3",
     "react-native-modal": "^4.1.1",
@@ -67,6 +81,13 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.0.2",
+    "babel-plugin-minify-constant-folding": "^0.2.0",
+    "babel-plugin-minify-dead-code-elimination": "^0.2.0",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-plugin-transform-react-inline-elements": "^6.22.0",
+    "babel-plugin-transform-react-pure-class-to-function": "^1.0.1",
+    "babel-plugin-transform-remove-console": "^6.8.5",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-flow": "^6.23.0",
     "babel-preset-react-native": "^4.0.0",
     "coveralls": "^3.0.0",
