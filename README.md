@@ -81,6 +81,7 @@ src
 │   ├── reducers.js
 │   └── types.js
 └── index.js
+...
 ```
 
 ## Components
@@ -168,10 +169,13 @@ type State = {
   isMounted: Status
 }
 
-const MyComponent = (ownProps: Component): React$Element<any> =>
+const MyComponent = (ownProps: Component): React$Element<any> => (
   <View>
-    <Text>{`MyClass is mounted: ${ownProps.status}`}</Text>
+    <Text>
+      {`MyClass is mounted: ${ownProps.status}`}
+    </Text>
   </View>
+)
 
 export class MyClass extends React.Component<Props, State> {
   props: Props
@@ -179,8 +183,9 @@ export class MyClass extends React.Component<Props, State> {
     isMounted: false
   }
 
-  componentDidMount = (): void =>
+  componentDidMount() {
     this.setState((state: State) => ({ isMounted: !state.isMounted }))
+  }
 
   render() {
     return <MyComponent status={this.state.isMounted} />
@@ -213,4 +218,7 @@ Pretty cool, heh?
 
 ## Use
 
-This is the part where I stop writing and let you explore & have some fun 😁
+From this point, it's up to you! This is the part where I stop writing and let you explore & have some fun 👍
+
+## Questions
+If you have any questions, feel free to get in touch on Twitter [@Charles_Mangwa](https://twitter.com/Charles_Mangwa)!

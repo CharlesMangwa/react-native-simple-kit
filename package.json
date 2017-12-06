@@ -14,8 +14,10 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "cache-clean": "rm -rf $TMPDIR/react-* && watchman watch-del-all && yarn cache clear",
-    "test": "eslint . && flow --show-all-errors && jest",
-    "test-ci": "eslint . && flow --show-all-errors && jest --coverage && cat ./__tests__/__coverage__/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+    "lint": "eslint .",
+    "flow": "flow --show-all-errors",
+    "test-ci": "jest --coverage && cat ./__tests__/__coverage__/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "test": "eslint . && flow --show-all-errors && jest"
   },
   "babel": {
     "presets": [
