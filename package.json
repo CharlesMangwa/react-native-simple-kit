@@ -16,7 +16,7 @@
     "cache-clean": "rm -rf $TMPDIR/react-* && watchman watch-del-all && yarn cache clear",
     "lint": "eslint .",
     "flow": "flow --show-all-errors",
-    "test-ci": "jest ---verbose -coverage && cat ./__tests__/__coverage__/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "test-ci": "jest --verbose -coverage && cat ./__tests__/__coverage__/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "test": "eslint . && flow --show-all-errors && jest --verbose"
   },
   "babel": {
