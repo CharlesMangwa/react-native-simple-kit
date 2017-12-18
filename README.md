@@ -33,7 +33,7 @@ See [React Native's Getting Started](https://facebook.github.io/react-native/doc
 
 Just clone the repo and start :
 ```shell
-https://github.com/CharlesMangwa/react-native-simple-kit.git myAwesomeApp
+git clone https://github.com/CharlesMangwa/react-native-simple-kit.git myAwesomeApp
 $ cd myAwesomeApp
 $ yarn                  # Install Node.js components listed in your package.json with Yarn 😺
 $ yarn start            # Let's make some magic!
