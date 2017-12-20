@@ -31,7 +31,7 @@
           "transform-inline-consecutive-adds",
           "transform-minify-booleans",
           "transform-remove-console",
-          "babel-plugin-transform-react-remove-prop-types",
+          "transform-react-remove-prop-types",
           "transform-flow-strip-types"
         ]
       }

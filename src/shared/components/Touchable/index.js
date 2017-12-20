@@ -7,20 +7,20 @@ import {
   StyleSheet,
   TouchableNativeFeedback,
   TouchableOpacity,
-  SafeAreaView,
+  View,
 } from 'react-native'
 
 type DefaultProps = {
-  children: null,
-  onLongPress: ?Function,
-  onPress: Function,
-  style: null,
+  children?: React$Element<any> | Array<React$Element<any>>,
+  onLongPress?: Function,
+  onPress?: Function,
+  style?: StyleSheet,
 }
 
 type Props = {
-  children?: React$Element<any>,
+  children?: React$Element<any> | Array<React$Element<any>>,
   onLongPress?: Function,
-  onPress?: Function,
+  onPress: Function,
   style?: StyleSheet,
 }
 
@@ -28,16 +28,15 @@ class Touchable extends PureComponent<Props, void> {
   props: Props
 
   static propTypes = {
-    children: PropTypes.element,
+    children: PropTypes.oneOfType([PropTypes.element, PropTypes.arrayOf(PropTypes.element)]),
     onLongPress: PropTypes.func,
     onPress: PropTypes.func.isRequired,
     style: PropTypes.any, // eslint-disable-line react/forbid-prop-types
   }
 
   static defaultProps: DefaultProps = {
-    children: null,
+    children: undefined,
     onLongPress: undefined,
-    onPress: () => null,
     style: null,
   }
 
@@ -50,14 +49,16 @@ class Touchable extends PureComponent<Props, void> {
   requestAnimationFrame: () => number
 
   render() {
-    const { children, onLongPress, onPress, style } = this.props
+    const { children, onLongPress, onPress, style, ...remainingProps } = this.props
     return Platform.OS === 'ios' ? (
       <TouchableOpacity
         activeOpacity={0.7}
         onLongPress={onLongPress}
         onPress={onPress}
       >
-        <SafeAreaView style={style}>{children}</SafeAreaView>
+        <View {...remainingProps} style={style}>
+          {children}
+        </View>
       </TouchableOpacity>
     ) : (
       <TouchableNativeFeedback
@@ -66,7 +67,9 @@ class Touchable extends PureComponent<Props, void> {
         onLongPress={onLongPress}
         background={TouchableNativeFeedback.SelectableBackground()}
       >
-        <SafeAreaView style={style}>{children}</SafeAreaView>
+        <View {...remainingProps} style={style}>
+          {children}
+        </View>
       </TouchableNativeFeedback>
     )
   }

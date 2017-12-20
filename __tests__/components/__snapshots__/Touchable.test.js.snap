@@ -25,7 +25,7 @@ exports[`Generic component: <Touchable /> renders correctly 1`] = `
   testID={undefined}
   tvParallaxProperties={undefined}
 >
-  <RCTSafeAreaView
+  <View
     style={null}
   >
     <Text
@@ -35,6 +35,6 @@ exports[`Generic component: <Touchable /> renders correctly 1`] = `
     >
       Hey!
     </Text>
-  </RCTSafeAreaView>
+  </View>
 </View>
 `;
