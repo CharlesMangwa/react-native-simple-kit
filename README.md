@@ -33,7 +33,7 @@ See [React Native's Getting Started](https://facebook.github.io/react-native/doc
 
 Just clone the repo and start :
 ```shell
-https://github.com/CharlesMangwa/react-native-simple-kit.git myAwesomeApp
+git clone https://github.com/CharlesMangwa/react-native-simple-kit.git myAwesomeApp
 $ cd myAwesomeApp
 $ yarn                  # Install Node.js components listed in your package.json with Yarn 😺
 $ yarn start            # Let's make some magic!
@@ -41,7 +41,7 @@ $ yarn start            # Let's make some magic!
 
 ## Motivations
 
-There are mainly 2 reasons why this project exists. One of them is: **evolution**. I've been using React Native since `v0.0.5` back in mid-2014, and my conception of the "best" project structure has always been evolving.
+There are mainly 2 reasons why this project exists. One of them is: **evolution**. I've been using React Native since `v0.5` back in mid-2014, and my conception of the "best" project structure has always been evolving.
 
 That's why from one project to another, I used to copy/paste the whole previous project, remove all the specific code, and then use it as my starter. The another project. More modifications. Copy/paste. Start all over again. As you can understand: I really needed something that I can just fork, use for a project, modify at the root when needed, and...that's it! No need to waste my time removing project specific code, and I'll still have what I consider as a good starter kit.
 
