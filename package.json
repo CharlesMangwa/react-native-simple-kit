@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "cache-clean": "rm -rf $TMPDIR/react-* && watchman watch-del-all && yarn cache clear",
+    "cache-clean": "rm -rf $TMPDIR/react-* && watchman watch-del-all && yarn autoclean --force",
     "lint": "eslint .",
     "flow": "flow --show-all-errors",
     "test-ci": "jest --verbose --coverage && cat ./__tests__/__coverage__/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
@@ -74,7 +74,7 @@
     "react-router": "^4.2.0",
     "react-router-native": "^4.2.0",
     "react-router-navigation": "https://rrn.surge.sh/react-router-navigation-v1.0.0-rc.4.tgz",
-    "react-router-redux": "next",
+    "react-router-redux": "^5.0.0-alpha.9",
     "recompose": "^0.26.0",
     "redux": "^3.7.2",
     "redux-persist": "^4.8.3"
