@@ -9,6 +9,7 @@ import * as SVGs from './SVGs'
 
 type Props = {
   activated?: boolean,
+  children?: React$Element<*> | () => React$Element<*>,
   defaultActivatedColor?: string,
   defaultColor?: string,
   name: string,
@@ -53,6 +54,7 @@ Icon.propTypes = {
 
 Icon.defaultProps = {
   activated: false,
+  children: null,
   defaultActivatedColor: BRAND_COLOR_GREEN,
   defaultColor: NEUTRAL_COLOR_50,
   style: undefined,

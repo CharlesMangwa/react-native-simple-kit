@@ -33,7 +33,7 @@ export const share = (sharedContent: SharedContent): void => {
   })
 }
 
-export const call = (phoneNumber: PhoneNumber): void => (
+export const call = (phoneNumber: PhoneNumber): Promise<*> => (
   Linking.canOpenURL(`tel:${phoneNumber}`)
     .then((supported) => {
       return !supported
@@ -46,7 +46,7 @@ export const call = (phoneNumber: PhoneNumber): void => (
     })
 )
 
-export const email = (address: Email): void => (
+export const email = (address: Email): Promise<*> => (
   Linking.canOpenURL(`mailto:${address}`)
     .then((supported) => {
       return !supported
@@ -59,7 +59,7 @@ export const email = (address: Email): void => (
     })
 )
 
-export const openURL = (url: URL): void => (
+export const openURL = (url: URL): Promise<*> => (
   Linking.canOpenURL(url)
     .then((supported) => {
       return !supported

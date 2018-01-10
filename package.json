@@ -1,6 +1,6 @@
 {
   "name": "RNSK",
-  "version": "1.0.0",
+  "version": "next##",
   "description": "🚀 Get started with React Native and Redux with no effort!",
   "repository": {
     "type": "git",
@@ -67,14 +67,11 @@
   },
   "dependencies": {
     "react": "16.0.0",
-    "react-native": "0.50.4",
+    "react-native": "0.51.0",
     "react-native-modal": "^4.1.1",
+    "react-native-navigation": "^2.0.2078",
     "react-native-svg": "^6.0.0",
     "react-redux": "^5.0.6",
-    "react-router": "^4.2.0",
-    "react-router-native": "^4.2.0",
-    "react-router-navigation": "https://rrn.surge.sh/react-router-navigation-v1.0.0-rc.4.tgz",
-    "react-router-redux": "^5.0.0-alpha.9",
     "recompose": "^0.26.0",
     "redux": "^3.7.2",
     "redux-persist": "^4.8.3"
@@ -96,8 +93,9 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.4.0",
-    "flow-bin": "0.56.0",
+    "flow-bin": "0.57.1",
     "jest": "^21.2.1",
+    "prop-types": "^15.6.0",
     "react-test-renderer": "16.0.0"
   }
 }

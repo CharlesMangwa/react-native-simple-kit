@@ -1,12 +1,18 @@
 # react-native-simple-kit
 
 [![CircleCI](https://circleci.com/gh/CharlesMangwa/react-native-simple-kit.svg?style=shield&circle-token=7207fcf84efb2248759b3c51536c57a61d074712)](https://circleci.com/gh/CharlesMangwa/react-native-simple-kit)
-[![Coverage Status](https://coveralls.io/repos/github/CharlesMangwa/react-native-simple-kit/badge.svg?branch=master)](https://coveralls.io/github/CharlesMangwa/react-native-simple-kit?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/CharlesMangwa/react-native-simple-kit/badge.svg?branch=native-navigation)](https://coveralls.io/github/CharlesMangwa/react-native-simple-kit?branch=master)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![License MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://img.shields.io/badge/License-MIT-brightgreen.svg)
 [![GitHub package version](https://img.shields.io/github/tag/CharlesMangwa/react-native-simple-kit.svg)]()
 
-`react-native-simple-kit` is a starter boilerplate for mobile apps using React Native, Redux and a bunch of other cool tools. This starter is compatible with both iOS and Android out of the box 🤙
+`react-native-simple-kit` is a starter boilerplate for mobile apps using React Native, Redux and a bunch of other cool tools. This starter is compatible with both iOS and Android out of the box, and provides both JS & native-based navigation solutions! 🤙
+
+## Introduction
+
+#### This branch is still in WIP due to the differences brought by the new navigation library that's being implemented here.
+
+RNSK provides 2 different navigation libraries: [React Router Navigation](https://github.com/LeoLeBras/react-router-navigation) & [React Native Navigation](https://wix.github.io/react-native-navigation/v2/). The reason behind this is that they are respectively a JavaScript and a native-based solution. They both have pros & cons so you'll have to pick the one you like the most. The JavaScript one (on [master](https://github.com/CharlesMangwa/react-native-simple-kit/tree/master/)), has a way more flexible API and it's easier to grasp; while the native one (on this [native-navigation](https://github.com/CharlesMangwa/react-native-simple-kit/tree/native-navigation/) branch) is a little bit more cumbersome to use, but offers a better navigation experience to your end consumer. It's up to you!
 
 ## Requirements
 
@@ -14,19 +20,19 @@
 - [React Native CLI](http://facebook.github.io/react-native/docs/getting-started.html) for development
 - [Xcode](https://developer.apple.com/xcode/) `9.0` or newer for iOS development
 - [Android Studio](https://developer.android.com/studio/index.html) `3.0` or newer for Android development
-- [Android SDK](https://developer.android.com/sdk/) `23.0.1` or newer for Android development
+- [Android SDK](https://developer.android.com/sdk/) `25.4.0` or newer for Android development
 - [Android](https://www.android.com/) `5.0` or newer on your Android device to test properly
-- [ESLint](http://eslint.org/) `4.11.0` or newer to lint your code on fly
+- [ESLint](http://eslint.org/) `4.15.0` or newer to lint your code on fly
 
 See [React Native's Getting Started](https://facebook.github.io/react-native/docs/getting-started.html) to install requirement tools.
 
 ## Stack
 
-- [React Native](https://facebook.github.io/react-native/) `0.50.3` for building native apps using React
+- [React Native](https://facebook.github.io/react-native/) `0.51.0` for building native apps using React
 - [Redux](http://redux.js.org/) `3.7.2` a predictable state container for JavaScript apps
 - [Babel](http://babeljs.io/) `6.x.x` for ES6+ support
-- [React Router Navigation](https://github.com/LeoLeBras/react-router-navigation) `1.0.0` a complete navigation library for React Native based on React Router v4
-- [Flow](http://flowtype.org/) `0.56.0` a static type checker for JavaScript
+- [React Native Navigation](https://wix.github.io/react-native-navigation/v2/) `2.0.2083` a complete native navigation solution for React Native
+- [Flow](http://flowtype.org/) `0.57.1` a static type checker for JavaScript
 - [Jest](https://facebook.github.io/jest/) `21.2.1` delightful JavaScript testing
 
 ## Make the magic happen
@@ -43,26 +49,24 @@ $ yarn start            # Let's make some magic!
 
 There are mainly 2 reasons why this project exists. One of them is: **evolution**. I've been using React Native since `v0.5` back in mid-2014, and my conception of the "best" project structure has always been evolving.
 
-That's why from one project to another, I used to copy/paste the whole previous project, remove all the specific code, and then use it as my starter. The another project. More modifications. Copy/paste. Start all over again. As you can understand: I really needed something that I can just fork, use for a project, modify at the root when needed, and...that's it! No need to waste my time removing project specific code, and I'll still have what I consider as a good starter kit.
+That's why from one project to another, I used to copy/paste the whole previous project, remove all the business logic, and then use it as my starter. Then another project. More modifications. Copy/paste. Start all over again. As you can understand: I really needed something that I can just fork, use for a project, modify at the root when needed, and...that's it! No need to waste my time removing project specific code, and I'll still have what I consider as a good starter kit.
 
-That was the first reason. The second one is just: **community**. I think there are people out there who probably need the same thing. Moreover, some of you sent me messages asking what does my typical project structure look like. So here it is!
+That was the first reason. The second one is just: **community**. I think there are some people out there who probably feel the same need. So enjoy!
 
 ## Project structure
 
-This project structure is by no means "**THE**" perfect project structure. It's just the one which is currently making more sense to me than any other else, after several tries. Long story short: I divide my apps by `scenes`, scenes which contain several `modules` that can use that scene's `components`. That's it. Give it a try, you might be surprised how intuitive it could be. Anyhow: feel free to modify this structure and even send some PRs if you find a way to improve it!
+This project structure is by no means "**THE**" perfect project structure. It's just the one I found to be more suitable to the navigation library I'm using here. Give it a try, you might be surprised how intuitive it could be. Anyhow: feel free to modify this structure and even send some PRs if you find a way to improve it! 
 
 ```
 ...
 src
-├── app
-│   ├── scenes
-│   │   └── xxx
-│   │       ├── components
-│   │       ├── modules
-│   │       ├── index.js
-│   │       └── styles.js
-│   └── index.js
 ├── config
+│   └── index.js
+├── containers
+│   ├── xxx
+│   │    ├── components
+│   │    ├── index.js
+│   │    └── styles.js
 │   └── index.js
 ├── helpers
 │   └── xxx
