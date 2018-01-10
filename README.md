@@ -37,12 +37,13 @@ See [React Native's Getting Started](https://facebook.github.io/react-native/doc
 
 ## Make the magic happen
 
-Just clone the repo and start :
+Just clone the repo and start:
 ```shell
-git clone https://github.com/CharlesMangwa/react-native-simple-kit.git myAwesomeApp
+git clone git@github.com:CharlesMangwa/react-native-simple-kit.git myAwesomeApp
 $ cd myAwesomeApp
-$ yarn                  # Install Node.js components listed in your package.json with Yarn 😺
-$ yarn start            # Let's make some magic!
+$ git checkout native-navigation
+$ yarn                  
+$ yarn start
 ```
 
 ## Motivations
@@ -122,7 +123,7 @@ They all constitute the backbone of the `yarn test` command:
 $ eslint . && flow --show-all-errors && jest
 ````
 
-This is run by [CircleCI 2.0](https://circleci.com/gh/CharlesMangwa/react-native-simple-kit) to make sure that we keep everything clean, up & running: [![CircleCI](https://circleci.com/gh/CharlesMangwa/react-native-simple-kit.svg?style=shield&circle-token=7207fcf84efb2248759b3c51536c57a61d074712)]
+This is run by [CircleCI 2.0](https://circleci.com/gh/CharlesMangwa/react-native-simple-kit) to make sure that we keep everything clean, up & running: [![CircleCI](https://circleci.com/gh/CharlesMangwa/react-native-simple-kit/tree/native-navigation.svg?style=shield&circle-token=7207fcf84efb2248759b3c51536c57a61d074712)]
 
 So let's break it down piece by piece.
 
