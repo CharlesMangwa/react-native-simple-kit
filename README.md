@@ -10,7 +10,7 @@
 
 ## Introduction
 
-#### This branch is still in WIP due to the differences brought by the new navigation library that's being implemented here.
+#### ⚠️ This branch is still in WIP due to the differences brought by the new navigation library that's being implemented here. ⚠️
 
 RNSK provides 2 different navigation libraries: [React Router Navigation](https://github.com/LeoLeBras/react-router-navigation) & [React Native Navigation](https://wix.github.io/react-native-navigation/v2/). The reason behind this is that they are respectively a JavaScript and a native-based solution. They both have pros & cons so you'll have to pick the one you like the most. The JavaScript one (on [master](https://github.com/CharlesMangwa/react-native-simple-kit/tree/master/)), has a way more flexible API and it's easier to grasp; while the native one (on this [native-navigation](https://github.com/CharlesMangwa/react-native-simple-kit/tree/native-navigation/) branch) is a little bit more cumbersome to use, but offers a better navigation experience to your end consumer. It's up to you!
 
