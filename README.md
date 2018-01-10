@@ -6,7 +6,11 @@
 [![License MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://img.shields.io/badge/License-MIT-brightgreen.svg)
 [![GitHub package version](https://img.shields.io/github/tag/CharlesMangwa/react-native-simple-kit.svg)]()
 
-`react-native-simple-kit` is a starter boilerplate for mobile apps using React Native, Redux and a bunch of other cool tools. This starter is compatible with both iOS and Android out of the box 🤙
+`react-native-simple-kit` is a starter boilerplate for mobile apps using React Native, Redux and a bunch of other cool tools. This starter is compatible with both iOS and Android out of the box, and provides both JS & native-based navigation solutions! 🤙
+
+## Introduction
+
+RNSK provides 2 different navigation libraries: [React Router Navigation](https://github.com/LeoLeBras/react-router-navigation) & [React Native Navigation](https://wix.github.io/react-native-navigation/v2/). The reason behind this is that they are respectively a JavaScript and a native-based solution. They both have pros & cons so you'll have to pick the one you like the most. The JavaScript one (here on [master](https://github.com/CharlesMangwa/react-native-simple-kit/tree/master/)), has a way more flexible API and it's easier to grasp; while the native one (on [native-navigation](https://github.com/CharlesMangwa/react-native-simple-kit/tree/native-navigation/) branch) is a little bit more cumbersome to use, but offers a better navigation experience to your end consumer. It's up to you!
 
 ## Requirements
 
@@ -31,21 +35,21 @@ See [React Native's Getting Started](https://facebook.github.io/react-native/doc
 
 ## Make the magic happen
 
-Just clone the repo and start :
+Just clone the repo and start (assuming you're using [Yarn](https://yarnpkg.com)):
 ```shell
-git clone https://github.com/CharlesMangwa/react-native-simple-kit.git myAwesomeApp
+$ git clone https://github.com/CharlesMangwa/react-native-simple-kit.git myAwesomeApp
 $ cd myAwesomeApp
-$ yarn                  # Install Node.js components listed in your package.json with Yarn 😺
-$ yarn start            # Let's make some magic!
+$ yarn
+$ yarn start
 ```
 
 ## Motivations
 
 There are mainly 2 reasons why this project exists. One of them is: **evolution**. I've been using React Native since `v0.5` back in mid-2014, and my conception of the "best" project structure has always been evolving.
 
-That's why from one project to another, I used to copy/paste the whole previous project, remove all the specific code, and then use it as my starter. The another project. More modifications. Copy/paste. Start all over again. As you can understand: I really needed something that I can just fork, use for a project, modify at the root when needed, and...that's it! No need to waste my time removing project specific code, and I'll still have what I consider as a good starter kit.
+That's why from one project to another, I used to copy/paste the whole previous project, remove all the business logic, and then use it as my starter. Then another project. More modifications. Copy/paste. Start all over again. As you can understand: I really needed something that I can just fork, use for a project, modify at the root when needed, and...that's it! No need to waste my time removing project specific code, and I'll still have what I consider as a good starter kit.
 
-That was the first reason. The second one is just: **community**. I think there are people out there who probably need the same thing. Moreover, some of you sent me messages asking what does my typical project structure look like. So here it is!
+That was the first reason. The second one is just: **community**. I think there are some people out there who probably feel the same need. So enjoy!
 
 ## Project structure
 
