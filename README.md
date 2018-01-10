@@ -1,7 +1,7 @@
 # react-native-simple-kit
 
-[![CircleCI](https://circleci.com/gh/CharlesMangwa/react-native-simple-kit.svg?style=shield&circle-token=7207fcf84efb2248759b3c51536c57a61d074712)](https://circleci.com/gh/CharlesMangwa/react-native-simple-kit)
-[![Coverage Status](https://coveralls.io/repos/github/CharlesMangwa/react-native-simple-kit/badge.svg?branch=native-navigation)](https://coveralls.io/github/CharlesMangwa/react-native-simple-kit?branch=master)
+[![CircleCI](https://circleci.com/gh/CharlesMangwa/react-native-simple-kit/tree/native-navigation.svg?style=shield&circle-token=7207fcf84efb2248759b3c51536c57a61d074712)](https://circleci.com/gh/CharlesMangwa/react-native-simple-kit)
+[![Coverage Status](https://coveralls.io/repos/github/CharlesMangwa/react-native-simple-kit/badge.svg?branch=native-navigation)](https://coveralls.io/github/CharlesMangwa/react-native-simple-kit?branch=native-navigation)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![License MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://img.shields.io/badge/License-MIT-brightgreen.svg)
 [![GitHub package version](https://img.shields.io/github/tag/CharlesMangwa/react-native-simple-kit.svg)]()
@@ -217,7 +217,7 @@ $ eslint . && flow --show-all-errors && jest --coverage && cat ./__tests__/__cov
 
 This whole test suite is implemented inside CircleCI 2.0 as mentioned earlier. A new job is run in the pipeline after each commit. The output of the latest job is displayed at the top of the current README and lets you know if it `passed` or `failed`. No need to say that the goal is to keep it ✅!
 
-Moreover, RNSK uses `jest --coverage` output to generate a code coverage report that you can use with tools like [Coveralls.io](htps://coveralls.io). Then, we can get a badge which shows our coverage status: [![Coverage Status](https://coveralls.io/repos/github/CharlesMangwa/react-native-simple-kit/badge.svg?branch=master)](https://coveralls.io/github/CharlesMangwa/react-native-simple-kit?branch=master).
+Moreover, RNSK uses `jest --coverage` output to generate a code coverage report that you can use with tools like [Coveralls.io](htps://coveralls.io). Then, we can get a badge which shows our coverage status: [![Coverage Status](https://coveralls.io/repos/github/CharlesMangwa/react-native-simple-kit/badge.svg?branch=native-navigation)](https://coveralls.io/github/CharlesMangwa/react-native-simple-kit?branch=native-navigation).
 Pretty cool, heh?
 
 ## Use
