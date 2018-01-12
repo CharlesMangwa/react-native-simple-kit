@@ -37,7 +37,7 @@ See [React Native's Getting Started](https://facebook.github.io/react-native/doc
 
 ## Make the magic happen
 
-Just clone the repo and start:
+Just clone the repo and start (assuming you're using [Yarn](https://yarnpkg.com)):
 ```shell
 $ git clone https://github.com/CharlesMangwa/react-native-simple-kit.git myAwesomeApp
 $ cd myAwesomeApp
