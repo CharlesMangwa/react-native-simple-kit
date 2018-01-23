@@ -7,12 +7,10 @@ A generic button component that handles simple functions or navigation paths int
 * color?: `'blue' | 'green' | 'red' | 'yellow' | 'white'`
 * children?: `React$Element<any>`
 * inactive?: `boolean`
-* onPress?: `Function`
-* replace?: `boolean`
-* routeState?: `Object`
+* onLongPress?: `Function`
+* onPress: `Function`
 * style?: `StyleSheet`
 * text?: `string`
-* to?: `string`
 
 ### Example
 
@@ -24,14 +22,12 @@ import Button from '@components/Button'
 const MyComponent = (): React$Element<any> => (
   <SafeAreaView style={{ flex: 1 }}>
     <Button
-      inactive color="red"
-      to="/auth/connection"
-      text="Connection"
-    />
-    <Button
-      onPress={() => console.warn('Success! 👍')}
-      replace to="/app"
-      text="Welcome!"
+      color="red"
+      onPress={() => props.navigator.popToRoot({
+        animated: true,
+        animationType: 'fade'
+      })}
+      text="Go back"
     />
   </SafeAreaView>
 )
@@ -40,11 +36,13 @@ export default MyComponent
 ```
 
 ## Changelog
-#### Wednesday, November 22th
+#### Tuesday, January 23rd, 2018
+- Matching API with new routing lib.
+#### Wednesday, November 22th, 2017
 - Switch to `React.PureComponent`.
 
-#### Monday, November 20th
+#### Monday, November 20th, 2017
 - Add `blue` as a supported color.
 
-#### Thursday, November 16th
+#### Thursday, November 16th, 2017
 - Initial release. We didn't track changes before this version.

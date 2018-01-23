@@ -10,7 +10,7 @@ import {
 } from 'react-native'
 import type { StyleObj as StyleSheet } from 'react-native/Libraries/StyleSheet/StyleSheetTypes'
 
-/* @TODO: children should be Array<> not Array<any>,
+/* @TODO: children should be Array<React$Element<*>> not Array<any>,
    but Flow isn't feeling it right now… */
 
 type DefaultProps = {
