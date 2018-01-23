@@ -26,11 +26,11 @@ See [React Native's Getting Started](https://facebook.github.io/react-native/doc
 
 ## Stack
 
-- [React Native](https://facebook.github.io/react-native/) `0.50.3` for building native apps using React
+- [React Native](https://facebook.github.io/react-native/) `0.51.0` for building native apps using React
 - [Redux](http://redux.js.org/) `3.7.2` a predictable state container for JavaScript apps
 - [Babel](http://babeljs.io/) `6.x.x` for ES6+ support
 - [React Router Navigation](https://github.com/LeoLeBras/react-router-navigation) `1.0.0` a complete navigation library for React Native based on React Router v4
-- [Flow](http://flowtype.org/) `0.56.0` a static type checker for JavaScript
+- [Flow](http://flowtype.org/) `0.57.1` a static type checker for JavaScript
 - [Jest](https://facebook.github.io/jest/) `21.2.1` delightful JavaScript testing
 
 ## Make the magic happen
