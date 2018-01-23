@@ -7,6 +7,7 @@ exports[`Generic component: <Button /> renders children if passed 1`] = `
   accessibilityTraits={undefined}
   accessible={true}
   collapsable={undefined}
+  hasTVPreferredFocus={undefined}
   hitSlop={undefined}
   isTVSelectable={true}
   nativeID={undefined}
@@ -26,38 +27,34 @@ exports[`Generic component: <Button /> renders children if passed 1`] = `
   tvParallaxProperties={undefined}
 >
   <View
-    style={null}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#53C000",
+          "borderColor": "#53C000",
+          "borderRadius": 100,
+          "borderWidth": 1,
+          "height": 43.58681250000001,
+          "justifyContent": "center",
+          "width": 166.04500000000002,
+        },
+        Object {
+          "backgroundColor": "#E33258",
+          "borderColor": "#E33258",
+        },
+        false,
+        undefined,
+      ]
+    }
   >
-    <View
-      style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#53C000",
-            "borderColor": "#53C000",
-            "borderRadius": 100,
-            "borderWidth": 1,
-            "height": 43.58681250000001,
-            "justifyContent": "center",
-            "width": 166.04500000000002,
-          },
-          Object {
-            "backgroundColor": "#E33258",
-            "borderColor": "#E33258",
-          },
-          false,
-          undefined,
-        ]
-      }
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
     >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-      >
-        Wassup!
-      </Text>
-    </View>
+      Wassup!
+    </Text>
   </View>
 </View>
 `;
@@ -69,6 +66,7 @@ exports[`Generic component: <Button /> renders correctly 1`] = `
   accessibilityTraits={undefined}
   accessible={true}
   collapsable={undefined}
+  hasTVPreferredFocus={undefined}
   hitSlop={undefined}
   isTVSelectable={true}
   nativeID={undefined}
@@ -88,52 +86,48 @@ exports[`Generic component: <Button /> renders correctly 1`] = `
   tvParallaxProperties={undefined}
 >
   <View
-    style={null}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#53C000",
+          "borderColor": "#53C000",
+          "borderRadius": 100,
+          "borderWidth": 1,
+          "height": 43.58681250000001,
+          "justifyContent": "center",
+          "width": 166.04500000000002,
+        },
+        Object {
+          "backgroundColor": "#E33258",
+          "borderColor": "#E33258",
+        },
+        false,
+        undefined,
+      ]
+    }
   >
-    <View
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
         Array [
           Object {
-            "alignItems": "center",
-            "backgroundColor": "#53C000",
-            "borderColor": "#53C000",
-            "borderRadius": 100,
-            "borderWidth": 1,
-            "height": 43.58681250000001,
-            "justifyContent": "center",
-            "width": 166.04500000000002,
-          },
-          Object {
-            "backgroundColor": "#E33258",
-            "borderColor": "#E33258",
+            "backgroundColor": "transparent",
+            "color": "#fefefe",
+            "fontFamily": "Avenir",
+            "fontSize": 16.6045,
+            "fontWeight": "600",
+            "textAlign": "center",
           },
           false,
-          undefined,
+          false,
         ]
       }
     >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            Object {
-              "backgroundColor": "transparent",
-              "color": "#fefefe",
-              "fontFamily": "Avenir",
-              "fontSize": 16.6045,
-              "fontWeight": "600",
-              "textAlign": "center",
-            },
-            false,
-            false,
-          ]
-        }
-      >
-        Hello!
-      </Text>
-    </View>
+      Hello!
+    </Text>
   </View>
 </View>
 `;
@@ -145,6 +139,7 @@ exports[`Generic component: <Button /> renders correctly with color & inactive p
   accessibilityTraits={undefined}
   accessible={true}
   collapsable={undefined}
+  hasTVPreferredFocus={undefined}
   hitSlop={undefined}
   isTVSelectable={true}
   nativeID={undefined}
@@ -164,57 +159,53 @@ exports[`Generic component: <Button /> renders correctly with color & inactive p
   tvParallaxProperties={undefined}
 >
   <View
-    style={null}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#53C000",
+          "borderColor": "#53C000",
+          "borderRadius": 100,
+          "borderWidth": 1,
+          "height": 43.58681250000001,
+          "justifyContent": "center",
+          "width": 166.04500000000002,
+        },
+        Object {
+          "backgroundColor": "#E33258",
+          "borderColor": "#E33258",
+        },
+        Object {
+          "backgroundColor": "transparent",
+          "borderColor": "#E33258",
+        },
+        undefined,
+      ]
+    }
   >
-    <View
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
         Array [
           Object {
-            "alignItems": "center",
-            "backgroundColor": "#53C000",
-            "borderColor": "#53C000",
-            "borderRadius": 100,
-            "borderWidth": 1,
-            "height": 43.58681250000001,
-            "justifyContent": "center",
-            "width": 166.04500000000002,
-          },
-          Object {
-            "backgroundColor": "#E33258",
-            "borderColor": "#E33258",
-          },
-          Object {
             "backgroundColor": "transparent",
-            "borderColor": "#E33258",
+            "color": "#fefefe",
+            "fontFamily": "Avenir",
+            "fontSize": 16.6045,
+            "fontWeight": "600",
+            "textAlign": "center",
           },
-          undefined,
+          false,
+          Object {
+            "color": "#E33258",
+          },
         ]
       }
     >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            Object {
-              "backgroundColor": "transparent",
-              "color": "#fefefe",
-              "fontFamily": "Avenir",
-              "fontSize": 16.6045,
-              "fontWeight": "600",
-              "textAlign": "center",
-            },
-            false,
-            Object {
-              "color": "#E33258",
-            },
-          ]
-        }
-      >
-        Feel free to leave a ⭐!
-      </Text>
-    </View>
+      Feel free to leave a ⭐!
+    </Text>
   </View>
 </View>
 `;
@@ -226,6 +217,7 @@ exports[`Generic component: <Button /> renders correctly with color prop 1`] = `
   accessibilityTraits={undefined}
   accessible={true}
   collapsable={undefined}
+  hasTVPreferredFocus={undefined}
   hitSlop={undefined}
   isTVSelectable={true}
   nativeID={undefined}
@@ -245,52 +237,48 @@ exports[`Generic component: <Button /> renders correctly with color prop 1`] = `
   tvParallaxProperties={undefined}
 >
   <View
-    style={null}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#53C000",
+          "borderColor": "#53C000",
+          "borderRadius": 100,
+          "borderWidth": 1,
+          "height": 43.58681250000001,
+          "justifyContent": "center",
+          "width": 166.04500000000002,
+        },
+        Object {
+          "backgroundColor": "#FFAD1D",
+          "borderColor": "#FFAD1D",
+        },
+        false,
+        undefined,
+      ]
+    }
   >
-    <View
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
         Array [
           Object {
-            "alignItems": "center",
-            "backgroundColor": "#53C000",
-            "borderColor": "#53C000",
-            "borderRadius": 100,
-            "borderWidth": 1,
-            "height": 43.58681250000001,
-            "justifyContent": "center",
-            "width": 166.04500000000002,
-          },
-          Object {
-            "backgroundColor": "#FFAD1D",
-            "borderColor": "#FFAD1D",
+            "backgroundColor": "transparent",
+            "color": "#fefefe",
+            "fontFamily": "Avenir",
+            "fontSize": 16.6045,
+            "fontWeight": "600",
+            "textAlign": "center",
           },
           false,
-          undefined,
+          false,
         ]
       }
     >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            Object {
-              "backgroundColor": "transparent",
-              "color": "#fefefe",
-              "fontFamily": "Avenir",
-              "fontSize": 16.6045,
-              "fontWeight": "600",
-              "textAlign": "center",
-            },
-            false,
-            false,
-          ]
-        }
-      >
-        Hope you like what you see so far
-      </Text>
-    </View>
+      Hope you like what you see so far
+    </Text>
   </View>
 </View>
 `;
@@ -302,6 +290,7 @@ exports[`Generic component: <Button /> renders with inactive prop 1`] = `
   accessibilityTraits={undefined}
   accessible={true}
   collapsable={undefined}
+  hasTVPreferredFocus={undefined}
   hitSlop={undefined}
   isTVSelectable={true}
   nativeID={undefined}
@@ -321,57 +310,53 @@ exports[`Generic component: <Button /> renders with inactive prop 1`] = `
   tvParallaxProperties={undefined}
 >
   <View
-    style={null}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#53C000",
+          "borderColor": "#53C000",
+          "borderRadius": 100,
+          "borderWidth": 1,
+          "height": 43.58681250000001,
+          "justifyContent": "center",
+          "width": 166.04500000000002,
+        },
+        Object {
+          "backgroundColor": "#E33258",
+          "borderColor": "#E33258",
+        },
+        Object {
+          "backgroundColor": "transparent",
+          "borderColor": "#E33258",
+        },
+        undefined,
+      ]
+    }
   >
-    <View
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
         Array [
           Object {
-            "alignItems": "center",
-            "backgroundColor": "#53C000",
-            "borderColor": "#53C000",
-            "borderRadius": 100,
-            "borderWidth": 1,
-            "height": 43.58681250000001,
-            "justifyContent": "center",
-            "width": 166.04500000000002,
-          },
-          Object {
-            "backgroundColor": "#E33258",
-            "borderColor": "#E33258",
-          },
-          Object {
             "backgroundColor": "transparent",
-            "borderColor": "#E33258",
+            "color": "#fefefe",
+            "fontFamily": "Avenir",
+            "fontSize": 16.6045,
+            "fontWeight": "600",
+            "textAlign": "center",
           },
-          undefined,
+          false,
+          Object {
+            "color": "#E33258",
+          },
         ]
       }
     >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            Object {
-              "backgroundColor": "transparent",
-              "color": "#fefefe",
-              "fontFamily": "Avenir",
-              "fontSize": 16.6045,
-              "fontWeight": "600",
-              "textAlign": "center",
-            },
-            false,
-            Object {
-              "color": "#E33258",
-            },
-          ]
-        }
-      >
-        Having a good day?
-      </Text>
-    </View>
+      Having a good day?
+    </Text>
   </View>
 </View>
 `;

@@ -14,7 +14,7 @@ type Email = string
 type SharedContent = {
   title: string,
   url: string,
-  content: string,
+  // content: string,
 }
 
 type PhoneNumber = number
@@ -22,10 +22,10 @@ type PhoneNumber = number
 type URL = string
 
 export const share = (sharedContent: SharedContent): void => {
-  const { title, content, url } = sharedContent
+  const { title, url } = sharedContent
   Share.share({
     title,
-    message: content,
+    // message: content,
     url,
   }, {
     dialogTitle: 'Partager',

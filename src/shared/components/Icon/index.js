@@ -54,7 +54,7 @@ Icon.propTypes = {
 
 Icon.defaultProps = {
   activated: false,
-  children: null,
+  children: undefined,
   defaultActivatedColor: BRAND_COLOR_GREEN,
   defaultColor: NEUTRAL_COLOR_50,
   style: undefined,

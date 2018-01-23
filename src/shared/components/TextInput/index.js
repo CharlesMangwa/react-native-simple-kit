@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { TextInput as TextInputModule, StyleSheet } from 'react-native'
+import { TextInput as TextInputModule } from 'react-native'
 
 import { BRAND_COLOR_RED, DEFAULT_TEXT_COLOR_DARK } from '@theme/colors'
 import type { DefaultProps, Props } from './types'
@@ -27,7 +27,7 @@ class TextInput extends Component<Props, void> {
     returnKeyType: 'done',
     selectionColor: undefined,
     secured: false,
-    style: StyleSheet.flatten(null),
+    style: undefined,
     value: undefined,
   }
 

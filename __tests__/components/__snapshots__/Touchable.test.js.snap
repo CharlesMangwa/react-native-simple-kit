@@ -7,6 +7,7 @@ exports[`Generic component: <Touchable /> renders correctly 1`] = `
   accessibilityTraits={undefined}
   accessible={true}
   collapsable={undefined}
+  hasTVPreferredFocus={undefined}
   hitSlop={undefined}
   isTVSelectable={true}
   nativeID={undefined}
@@ -26,7 +27,7 @@ exports[`Generic component: <Touchable /> renders correctly 1`] = `
   tvParallaxProperties={undefined}
 >
   <View
-    style={null}
+    style={undefined}
   >
     <Text
       accessible={true}

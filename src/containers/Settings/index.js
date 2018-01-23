@@ -18,7 +18,7 @@ const Settings = (): React$Element<any> => (
     <Button
       color="red"
       style={StyleSheet.flatten({ flexDirection: 'row-reverse' })}
-      to="/app"
+      onPress={() => console.warn('Coming soon!')}
       text="  Go back home"
     >
       {getIcon('backButton', 15, false, 'white')}

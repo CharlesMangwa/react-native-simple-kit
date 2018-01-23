@@ -13,7 +13,7 @@ describe('Generic component: <Touchable />', () => {
     renderer = new ShallowRenderer()
 
     component = TestRenderer.create(
-      <Touchable>
+      <Touchable onPress={() => onPress()}>
         <Text>Hey!</Text>
       </Touchable>,
     )

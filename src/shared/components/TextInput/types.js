@@ -1,5 +1,7 @@
 /* @flow */
 
+import type { StyleObj as StyleSheet } from 'react-native/Libraries/StyleSheet/StyleSheetTypes'
+
 export type DefaultProps = {
   autoCapitalize: string,
   autoFocus: boolean,
@@ -15,7 +17,7 @@ export type DefaultProps = {
   returnKeyType: string,
   selectionColor?: string,
   secured: boolean,
-  style: StyleSheet,
+  style?: StyleSheet,
   value?: string,
 }
 

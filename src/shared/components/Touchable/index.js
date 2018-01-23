@@ -4,21 +4,24 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import {
   Platform,
-  StyleSheet,
   TouchableNativeFeedback,
   TouchableOpacity,
   View,
 } from 'react-native'
+import type { StyleObj as StyleSheet } from 'react-native/Libraries/StyleSheet/StyleSheetTypes'
+
+/* @TODO: children should be Array<> not Array<any>,
+   but Flow isn't feeling it right now… */
 
 type DefaultProps = {
-  children?: React$Element<any> | Array<React$Element<any>>,
+  children?: ?React$Element<*> | Array<*>,
   onLongPress?: Function,
   onPress?: Function,
   style?: StyleSheet,
 }
 
 type Props = {
-  children?: React$Element<any> | Array<React$Element<any>>,
+  children?: ?React$Element<*> | Array<*>,
   onLongPress?: Function,
   onPress: Function,
   style?: StyleSheet,
@@ -28,7 +31,10 @@ class Touchable extends PureComponent<Props, void> {
   props: Props
 
   static propTypes = {
-    children: PropTypes.oneOfType([PropTypes.element, PropTypes.arrayOf(PropTypes.element)]),
+    children: PropTypes.oneOfType([
+      PropTypes.element,
+      PropTypes.arrayOf(PropTypes.element),
+    ]),
     onLongPress: PropTypes.func,
     onPress: PropTypes.func.isRequired,
     style: PropTypes.any, // eslint-disable-line react/forbid-prop-types
@@ -37,7 +43,7 @@ class Touchable extends PureComponent<Props, void> {
   static defaultProps: DefaultProps = {
     children: undefined,
     onLongPress: undefined,
-    style: null,
+    style: undefined,
   }
 
   componentWillMount() {
@@ -49,7 +55,13 @@ class Touchable extends PureComponent<Props, void> {
   requestAnimationFrame: () => number
 
   render() {
-    const { children, onLongPress, onPress, style, ...remainingProps } = this.props
+    const {
+      children,
+      onLongPress,
+      onPress,
+      style,
+      ...remainingProps
+    } = this.props
     return Platform.OS === 'ios' ? (
       <TouchableOpacity
         activeOpacity={0.7}

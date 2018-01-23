@@ -10,17 +10,16 @@ import {
 
 export type DefaultProps = {
   color?: 'blue' | 'green' | 'red' | 'yellow' | 'white',
-  children?: ?React$Element<any>,
+  children?: ?React$Element<*>,
   inactive?: ?boolean,
-  onPress?: ?Function,
-  replace?: ?boolean,
-  routeState: ?Object,
+  onLongPress?: Function,
   style?: ?StyleSheet,
   text?: ?string,
-  to?: ?string,
 }
 
-export type Props = DefaultProps
+export type Props = DefaultProps & {
+  onPress: Function,
+}
 
 export const brandColors = {
   blue: BRAND_COLOR_BLUE,
