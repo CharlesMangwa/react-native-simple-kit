@@ -1,5 +1,6 @@
 /* @flow */
 
+import { REHYDRATE } from 'redux-persist/constants'
 import type { Action, History, HistoryState } from './types'
 
 const CHANGE_HISTORY = 'CHANGE_HISTORY'
@@ -23,6 +24,12 @@ const initialState: HistoryState = {
 
 export default function (state: HistoryState = initialState, action: Action): HistoryState {
   switch (action.type) {
+    case REHYDRATE: {
+      const persistedState = action.payload && action.payload.history
+      if (persistedState)
+        return { ...state, ...persistedState }
+      return { ...state }
+    }
     case INITIALYZE_HISTORY:
     case CHANGE_HISTORY: {
       const { location, index, entries } = action.payload.history

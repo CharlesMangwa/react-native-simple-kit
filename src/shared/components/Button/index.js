@@ -46,12 +46,10 @@ class Button extends PureComponent<Props, void> {
   }
 
   componentWillMount() {
-    if (!this.props.children && !this.props.text) {
+    if (!this.props.children && !this.props.text)
       throw new Error('Button requires at least 1 children or a `text`s prop')
-    }
-    if (!this.props.to && !this.props.onPress) {
+    if (!this.props.to && !this.props.onPress)
       throw new Error('Button requires at least an `onPress` or `to` prop')
-    }
   }
 
   render() {

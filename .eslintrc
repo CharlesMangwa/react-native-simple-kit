@@ -30,7 +30,7 @@
   "rules": {
     "arrow-body-style": 0,
     "brace-style": ["error", "stroustrup"],
-    "curly": ["error", "multi-line"],
+    "curly": ["error", "multi-or-nest"],
     "jsx-a11y/accessible-emoji": 0,
     "jsx-a11y/anchor-is-valid": ["warn", { "aspects": ["invalidHref"] }],
     "jsx-a11y/href-no-hash": "off",

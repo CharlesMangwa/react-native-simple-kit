@@ -73,7 +73,7 @@
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
     "react-router-native": "^4.2.0",
-    "react-router-navigation": "https://rrn.surge.sh/react-router-navigation-v1.0.0-rc.4.tgz",
+    "react-router-navigation": "^1.0.0-rc.4",
     "react-router-redux": "^5.0.0-alpha.9",
     "recompose": "^0.26.0",
     "redux": "^3.7.2",

@@ -10,7 +10,7 @@ const RESET = 'RESET'
 export default function (state: Counter = 0, action: Action): Counter {
   switch (action.type) {
     case REHYDRATE: {
-      const persistedState = action.payload ? action.payload.counter : null
+      const persistedState = action.payload && action.payload.counter
       if (persistedState) return persistedState
       return state
     }

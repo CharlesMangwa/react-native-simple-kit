@@ -76,10 +76,12 @@ export const startNavigation = (coordinates: Coordinates): void => {
   let url
 
   if (Platform.OS === 'ios') {
-    url = `https://maps.apple.com/?q=${coordinates.name}&sll=${coordinates.latitude},${coordinates.longitude}`
+    url = `https://maps.apple.com/?q=${coordinates.name}&sll=` +
+      `${coordinates.latitude},${coordinates.longitude}`
   }
   else {
-    url = `https://maps.google.com/maps?q=${coordinates.name}&sll=${coordinates.latitude},${coordinates.longitude}`
+    url = `https://maps.google.com/maps?q=${coordinates.name}&sll=` +
+      `${coordinates.latitude},${coordinates.longitude}`
   }
 
   Linking.canOpenURL(url)

@@ -34,9 +34,8 @@ class Launch extends Component<Props, void> {
     const { app, history } = nextProps
     if (app.isHydrated && !this.isRedirecting) {
       this.isRedirecting = true
-      if (this.redirectDelay > 250) {
+      if (this.redirectDelay > 250)
         history.replace('/app')
-      }
       else {
         setTimeout((): void => {
           history.replace('/app')

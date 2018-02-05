@@ -41,9 +41,8 @@ class Touchable extends PureComponent<Props, void> {
   }
 
   componentWillMount() {
-    if (!this.props.children) {
+    if (!this.props.children)
       throw new Error('Touchable requires at least 1 children')
-    }
   }
 
   requestAnimationFrame: () => number

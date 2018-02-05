@@ -604,6 +604,13 @@ babel-plugin-transform-class-properties@^6.18.0, babel-plugin-transform-class-pr
     babel-runtime "^6.22.0"
     babel-template "^6.24.1"
 
+babel-plugin-transform-define@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-define/-/babel-plugin-transform-define-1.3.0.tgz#94c5f9459c810c738cc7c50cbd44a31829d6f319"
+  dependencies:
+    lodash "4.17.4"
+    traverse "0.6.6"
+
 babel-plugin-transform-es2015-arrow-functions@^6.5.0, babel-plugin-transform-es2015-arrow-functions@^6.8.0:
   version "6.22.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-es2015-arrow-functions/-/babel-plugin-transform-es2015-arrow-functions-6.22.0.tgz#452692cb711d5f79dc7f85e440ce41b9f244d221"
@@ -3226,13 +3233,13 @@ lodash.templatesettings@^3.0.0:
     lodash._reinterpolate "^3.0.0"
     lodash.escape "^3.0.0"
 
+lodash@4.17.4, lodash@^4.14.0, lodash@^4.15.0, lodash@^4.16.6, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0, lodash@^4.6.1:
+  version "4.17.4"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
+
 lodash@^3.5.0:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
-
-lodash@^4.14.0, lodash@^4.15.0, lodash@^4.16.6, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0, lodash@^4.6.1:
-  version "4.17.4"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
 log-driver@^1.2.5:
   version "1.2.5"
@@ -3982,11 +3989,17 @@ react-native-svg@^6.0.0:
     github-download "^0.5.0"
     lodash "^4.16.6"
 
-react-native-tab-view@0.0.67, react-native-tab-view@^0.0.67:
-  version "0.0.67"
-  resolved "https://registry.yarnpkg.com/react-native-tab-view/-/react-native-tab-view-0.0.67.tgz#cdd146fe5e5d4baff6c89f2d5d0b15fa23db39d0"
+react-native-tab-view@0.0.73:
+  version "0.0.73"
+  resolved "https://registry.yarnpkg.com/react-native-tab-view/-/react-native-tab-view-0.0.73.tgz#698dc8864b045edda7e8706d612d4e1877305bbf"
   dependencies:
-    prop-types "^15.5.8"
+    prop-types "^15.6.0"
+
+react-native-tab-view@^0.0.70:
+  version "0.0.70"
+  resolved "https://registry.yarnpkg.com/react-native-tab-view/-/react-native-tab-view-0.0.70.tgz#1dd2ded32acd0cb6bfef38d26e53675db733b37b"
+  dependencies:
+    prop-types "^15.5.10"
 
 react-native@0.51.0:
   version "0.51.0"
@@ -4046,16 +4059,17 @@ react-native@0.51.0:
     xmldoc "^0.4.0"
     yargs "^9.0.0"
 
-react-navigation@1.0.0-beta.12:
-  version "1.0.0-beta.12"
-  resolved "https://registry.yarnpkg.com/react-navigation/-/react-navigation-1.0.0-beta.12.tgz#cf0f04ffbf9fefe41f5c5a1dab92106b48a29f0a"
+react-navigation@1.0.0-beta.22:
+  version "1.0.0-beta.22"
+  resolved "https://registry.yarnpkg.com/react-navigation/-/react-navigation-1.0.0-beta.22.tgz#be7a7a066f94a37d4eeeff01bacffabdc66c57e7"
   dependencies:
+    babel-plugin-transform-define "^1.3.0"
     clamp "^1.0.1"
     hoist-non-react-statics "^2.2.0"
     path-to-regexp "^1.7.0"
     prop-types "^15.5.10"
     react-native-drawer-layout-polyfill "^1.3.2"
-    react-native-tab-view "^0.0.67"
+    react-native-tab-view "^0.0.70"
 
 react-proxy@^1.1.7:
   version "1.1.8"
@@ -4082,12 +4096,19 @@ react-router-native@^4.2.0:
     prop-types "^15.5.4"
     react-router "^4.2.0"
 
-"react-router-navigation@https://rrn.surge.sh/react-router-navigation-v1.0.0-rc.4.tgz":
+react-router-navigation-core@1.0.0-rc.4:
   version "1.0.0-rc.4"
-  resolved "https://rrn.surge.sh/react-router-navigation-v1.0.0-rc.4.tgz#0766485928adedb6c89c0ec1f86eb032cfd13ab5"
+  resolved "https://registry.yarnpkg.com/react-router-navigation-core/-/react-router-navigation-core-1.0.0-rc.4.tgz#67210831f8d01081ecc0337e7b21b8f585fdce77"
   dependencies:
-    react-native-tab-view "0.0.67"
-    react-navigation "1.0.0-beta.12"
+    react-navigation "1.0.0-beta.22"
+
+react-router-navigation@^1.0.0-rc.4:
+  version "1.0.0-rc.4"
+  resolved "https://registry.yarnpkg.com/react-router-navigation/-/react-router-navigation-1.0.0-rc.4.tgz#7340467c94222c71ee4ce3c175f4acb288ec1ae7"
+  dependencies:
+    react-native-tab-view "0.0.73"
+    react-navigation "1.0.0-beta.22"
+    react-router-navigation-core "1.0.0-rc.4"
 
 react-router-redux@^5.0.0-alpha.9:
   version "5.0.0-alpha.9"
@@ -4832,6 +4853,10 @@ tough-cookie@^2.3.2, tough-cookie@~2.3.0, tough-cookie@~2.3.3:
 tr46@~0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/tr46/-/tr46-0.0.3.tgz#8184fd347dac9cdc185992f3a6622e14b9d9ab6a"
+
+traverse@0.6.6:
+  version "0.6.6"
+  resolved "https://registry.yarnpkg.com/traverse/-/traverse-0.6.6.tgz#cbdf560fd7b9af632502fed40f918c157ea97137"
 
 trim-right@^1.0.1:
   version "1.0.1"
