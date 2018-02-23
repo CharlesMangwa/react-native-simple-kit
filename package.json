@@ -18,8 +18,7 @@
     "flow": "flow --show-all-errors",
     "jest": "jest --verbose",
     "test-ci": "jest --verbose --coverage && cat ./__tests__/__coverage__/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
-    "test": "eslint . && flow --show-all-errors && jest --verbose",
-    "precommit": "yarn lint && yarn flow && yarn jest"
+    "test": "yarn eslint && yarn flow && yarn jest"
   },
   "babel": {
     "presets": [
