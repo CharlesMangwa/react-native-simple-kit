@@ -16,9 +16,9 @@ RNSK provides 2 different navigation libraries: [React Router Navigation](https:
 
 - [Node](https://nodejs.org) `6` or newer
 - [React Native CLI](http://facebook.github.io/react-native/docs/getting-started.html) for development
-- [Xcode](https://developer.apple.com/xcode/) `9.0` or newer for iOS development
+- [Xcode](https://developer.apple.com/xcode/) `9.2` or newer for iOS development
 - [Android Studio](https://developer.android.com/studio/index.html) `3.0` or newer for Android development
-- [Android SDK](https://developer.android.com/sdk/) `23.0.1` or newer for Android development
+- [Android SDK](https://developer.android.com/sdk/) `25` for Android development
 - [Android](https://www.android.com/) `5.0` or newer on your Android device to test properly
 - [ESLint](http://eslint.org/) `4.11.0` or newer to lint your code on fly
 
@@ -26,11 +26,11 @@ See [React Native's Getting Started](https://facebook.github.io/react-native/doc
 
 ## Stack
 
-- [React Native](https://facebook.github.io/react-native/) `0.51.0` for building native apps using React
+- [React Native](https://facebook.github.io/react-native/) `0.53.3` for building native apps using React
 - [Redux](http://redux.js.org/) `3.7.2` a predictable state container for JavaScript apps
 - [Babel](http://babeljs.io/) `6.x.x` for ES6+ support
 - [React Router Navigation](https://github.com/LeoLeBras/react-router-navigation) `1.0.0` a complete navigation library for React Native based on React Router v4
-- [Flow](http://flowtype.org/) `0.57.1` a static type checker for JavaScript
+- [Flow](http://flowtype.org/) `0.63.0` a static type checker for JavaScript
 - [Jest](https://facebook.github.io/jest/) `21.2.1` delightful JavaScript testing
 
 ## Make the magic happen
