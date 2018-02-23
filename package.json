@@ -16,8 +16,10 @@
     "cache-clean": "rm -rf $TMPDIR/react-* && watchman watch-del-all && yarn autoclean --force",
     "lint": "eslint .",
     "flow": "flow --show-all-errors",
+    "jest": "jest --verbose",
     "test-ci": "jest --verbose --coverage && cat ./__tests__/__coverage__/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
-    "test": "eslint . && flow --show-all-errors && jest --verbose"
+    "test": "eslint . && flow --show-all-errors && jest --verbose",
+    "precommit": "yarn lint && yarn flow && yarn jest"
   },
   "babel": {
     "presets": [
@@ -29,7 +31,6 @@
         "plugins": [
           "minify-dead-code-elimination",
           "transform-inline-consecutive-adds",
-          "transform-minify-booleans",
           "transform-remove-console",
           "transform-react-remove-prop-types",
           "transform-flow-strip-types"
