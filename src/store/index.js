@@ -4,7 +4,7 @@ import { AsyncStorage } from 'react-native'
 import { applyMiddleware, combineReducers, createStore } from 'redux'
 import { persistStore } from 'redux-persist'
 import { routerMiddleware } from 'react-router-redux'
-import { history } from 'RNSK'
+import { history } from '../index'
 
 import type { Store } from './types'
 import * as reducers from './reducers'

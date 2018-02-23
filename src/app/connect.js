@@ -9,5 +9,5 @@ const mapStateToProps = (state: State): Object => ({
   persistedLocation: state.history && state.history.location,
 })
 
-export default (container: Class<any>): Class<any> =>
+export default (container: Class<any> | Function): Class<any> =>
   compose(connect(mapStateToProps))(container)
