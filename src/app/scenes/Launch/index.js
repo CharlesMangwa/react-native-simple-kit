@@ -10,8 +10,8 @@ import connect from './connect'
 import styles from './styles'
 
 type Props = {
-  app: App,
-  history: History,
+  app: App, // eslint-disable-line
+  history: History, // eslint-disable-line
 }
 
 class Launch extends Component<Props, void> {
