@@ -24,6 +24,10 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       - run:
+          name: Running Prettier
+          command: yarn run lint-staged
+
+      - run:
           name: Running Linter
           command: yarn run lint
 
@@ -33,6 +37,6 @@ jobs:
 
       - run:
           name: Running Tests
-          command: yarn run test-ci
+          command: yarn run test
 
 

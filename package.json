@@ -14,17 +14,17 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "cache-clean": "rm -rf $TMPDIR/react-* && watchman watch-del-all && yarn autoclean --force",
-    "lint": "eslint .",
+    "lint": "eslint . --fix",
     "flow": "flow --show-all-errors",
     "jest": "jest --verbose",
-    "test-ci": "jest --verbose --coverage && cat ./__tests__/__coverage__/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
-    "test": "yarn lint && yarn flow && yarn jest",
-    "precommit": "lint-staged",
+    "test": "jest --verbose --coverage && cat ./__tests__/__coverage__/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "prettier": "prettier --config .prettierrc --parser flow --write \"*.js\"",
+    "precommit": "lint-staged && yarn lint && yarn flow && yarn jest",
     "postcommit": "git update-index --again"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": [
-      "yarn test -- --fix",
+    "src/**/*.{js,jsx}": [
+      "yarn prettier",
       "git add"
     ]
   },

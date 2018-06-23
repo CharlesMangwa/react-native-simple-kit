@@ -4,9 +4,11 @@
     "airbnb",
     "plugin:flowtype/recommended",
     "plugin:prettier/recommended",
-    "plugin:react/recommended"
+    "prettier",
+    "prettier/flowtype",
+    "prettier/react"
   ],
-  "plugins": ["babel", "react", "flowtype"],
+  "plugins": ["babel", "react", "flowtype", "prettier"],
   "env": {
     "browser": true,
     "jest": true,
@@ -26,12 +28,11 @@
   },
   "rules": {
     "arrow-body-style": 0,
-    "brace-style": ["error", "stroustrup"],
-    "curly": ["error", "multi-or-nest"],
     "jsx-a11y/accessible-emoji": 0,
     "jsx-a11y/anchor-is-valid": ["warn", { "aspects": ["invalidHref"] }],
     "jsx-a11y/href-no-hash": "off",
     "jsx-a11y/img-has-alt": 0,
+    "flowtype/space-after-type-colon": [ 2, "always", { "allowLineBreak": true } ],
     "function-paren-newline": 0,
     "import/extensions": 0,
     "import/no-extraneous-dependencies": 0,
@@ -51,6 +52,7 @@
     "no-underscore-dangle": 0,
     "no-return-assign": 0,
     "object-curly-newline": 0,
+    "prettier/prettier": "error",
     "radix": ["error", "as-needed"],
     "react/jsx-boolean-value": 0,
     "react/jsx-filename-extension": 0,

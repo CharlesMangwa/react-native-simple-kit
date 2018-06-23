@@ -23,72 +23,66 @@ type URL = string
 
 export const share = (sharedContent: SharedContent): void => {
   const { title, content, url } = sharedContent
-  Share.share({
-    title,
-    message: content,
-    url,
-  }, {
-    dialogTitle: 'Partager',
-    tintColor: BRAND_COLOR_GREEN,
-  })
+  Share.share(
+    {
+      title,
+      message: content,
+      url,
+    },
+    {
+      dialogTitle: 'Partager',
+      tintColor: BRAND_COLOR_GREEN,
+    }
+  )
 }
 
-export const call = (phoneNumber: PhoneNumber): void => (
+export const call = (phoneNumber: PhoneNumber): void =>
   Linking.canOpenURL(`tel:${phoneNumber}`)
-    .then((supported) => {
+    .then(supported => {
       return !supported
         ? `We can't open the following phone number 😯: ${phoneNumber}`
         : Linking.openURL(`tel:${phoneNumber}`)
     })
-    .catch((error) => {
+    .catch(error => {
       console.log(error)
       Alert.alert('Something went wrong during the redirection 😯…')
     })
-)
-
-export const email = (address: Email): void => (
+export const email = (address: Email): void =>
   Linking.canOpenURL(`mailto:${address}`)
-    .then((supported) => {
+    .then(supported => {
       return !supported
         ? Alert.alert(`We can't open the following email 😯: ${address}`)
         : Linking.openURL(`mailto:${address}`)
     })
-    .catch((error) => {
+    .catch(error => {
       console.log(error)
       Alert.alert('Something went wrong during the redirection 😯…')
     })
-)
-
-export const openURL = (url: URL): void => (
+export const openURL = (url: URL): void =>
   Linking.canOpenURL(url)
-    .then((supported) => {
+    .then(supported => {
       return !supported
         ? Alert.alert(`We can't open the following URL 😯: "${url}"`)
         : Linking.openURL(url)
     })
-    .catch((error) => {
+    .catch(error => {
       console.log(error)
       Alert.alert('Something went wrong during the redirection 😯…')
     })
-)
-
 export const startNavigation = (coordinates: Coordinates): void => {
   let url
-
   if (Platform.OS === 'ios') {
-    url = `https://maps.apple.com/?q=${coordinates.name}&sll=` +
+    url =
+      `https://maps.apple.com/?q=${coordinates.name}&sll=` +
+      `${coordinates.latitude},${coordinates.longitude}`
+  } else {
+    url =
+      `https://maps.google.com/maps?q=${coordinates.name}&sll=` +
       `${coordinates.latitude},${coordinates.longitude}`
   }
-  else {
-    url = `https://maps.google.com/maps?q=${coordinates.name}&sll=` +
-      `${coordinates.latitude},${coordinates.longitude}`
-  }
-
   Linking.canOpenURL(url)
-    .then((supported) => {
-      return !supported
-        ? null
-        : Linking.openURL(url)
+    .then(supported => {
+      return !supported ? null : Linking.openURL(url)
     })
     .catch(e => console.log(e))
 }

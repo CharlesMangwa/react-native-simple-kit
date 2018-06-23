@@ -8,14 +8,8 @@ exports[`Generic component: <TextInput /> renders correctly 1`] = `
   blurOnSubmit={true}
   clearButtonMode="always"
   dataDetectorTypes="all"
-  defaultValue={undefined}
   keyboardType="default"
   multiline={false}
-  onBlur={undefined}
-  onChangeText={undefined}
-  onContentSizeChange={undefined}
-  onFocus={undefined}
-  onSubmitEditing={undefined}
   placeholder="I'm rendered \\\\o/"
   placeholderTextColor="#33333380"
   returnKeyType="done"
@@ -40,6 +34,5 @@ exports[`Generic component: <TextInput /> renders correctly 1`] = `
     ]
   }
   underlineColorAndroid="transparent"
-  value={undefined}
 />
 `;

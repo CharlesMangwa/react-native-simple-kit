@@ -15,12 +15,12 @@ RNSK provides 2 different navigation libraries: [React Router Navigation](https:
 
 ## Requirements
 
-- [Node](https://nodejs.org) `6` or newer
+- [Node](https://nodejs.org) `8` or newer
 - [React Native CLI](http://facebook.github.io/react-native/docs/getting-started.html) for development
-- [Xcode](https://developer.apple.com/xcode/) `9.2` or newer for iOS development
+- [Xcode](https://developer.apple.com/xcode/) `9.3` or newer for iOS development
 - [Android Studio](https://developer.android.com/studio/index.html) `3.0` or newer for Android development
 - [Android SDK](https://developer.android.com/sdk/) `25` for Android development
-- [Android](https://www.android.com/) `5.0` or newer on your Android device to test properly
+- [Android](https://www.android.com/) `7.0` or newer on your Android device to test properly
 - [ESLint](http://eslint.org/) `4.11.0` or newer to lint your code on fly
 
 See [React Native's Getting Started](https://facebook.github.io/react-native/docs/getting-started.html) to install requirement tools.
@@ -136,7 +136,7 @@ _This config lives inside `.eslintrc`_
 $ eslint .
 ```
 
-The lint rules are based on **Airbnb, Flow & React configs**, plus some custom tweaks. The purpose of this tool is to keep a constant style in the codebase. Make sure to keep it in the green, and watch out while using [Prettier](https://github.com/prettier/prettier): it may bring unforeseen changes.
+The lint rules are based on **Airbnb, Flow & React configs**, plus some custom tweaks. The purpose of this tool is to keep a constant style in the codebase. Make sure to keep it in the green, and watch out while using [Prettier](https://github.com/prettier/prettier): it may bring unforeseen changes. That's why you should make sure to have Prettier installed on your IDE just in case. You can also run `yarn prettier` to automatically prettify your entire codebase!
 
 ### Flow
 

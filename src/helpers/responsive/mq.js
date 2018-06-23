@@ -3,11 +3,16 @@
 import { Dimensions } from 'react-native'
 
 type StyleSheet = {
-  [key: string]: {
-    [key: string]: string | number
-  } | string | number
+  [key: string]:
+    | {
+        [key: string]: string | number,
+      }
+    | string
+    | number,
 }
-type Breakpoints = { [key: 'maxHeight' | 'minHeight' | 'maxWidth' | 'minWidth']: number }
+type Breakpoints = {
+  [key: 'maxHeight' | 'minHeight' | 'maxWidth' | 'minWidth']: number,
+}
 type Input = StyleSheet
 type Output = StyleSheet
 
@@ -19,7 +24,10 @@ export const mq = (breakpoints: Breakpoints, input: Input): Output => {
   const maxWidthCondition = maxWidth ? width < maxWidth : true
   const minHeightCondition = minHeight ? height > minHeight : true
   const maxHeightCondition = maxHeight ? height < maxHeight : true
-  return minWidthCondition && maxWidthCondition && minHeightCondition && maxHeightCondition
+  return minWidthCondition &&
+    maxWidthCondition &&
+    minHeightCondition &&
+    maxHeightCondition
     ? input
     : {}
 }

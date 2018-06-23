@@ -4,7 +4,6 @@ import { StyleSheet } from 'react-native'
 import { vw, vh } from '@helpers/responsive'
 
 const styles: Object = StyleSheet.create({
-
   container: {
     position: 'absolute',
     zIndex: 1000,

@@ -1,9 +1,11 @@
-
 /* @flow */
 
 import { StyleSheet } from 'react-native'
 import { rem } from '@helpers/responsive'
-import { DEFAULT_BACKGROUND_COLOR, DEFAULT_TEXT_COLOR_DARK } from '@theme/colors'
+import {
+  DEFAULT_BACKGROUND_COLOR,
+  DEFAULT_TEXT_COLOR_DARK,
+} from '@theme/colors'
 import { AVENIR_REGULAR } from '@theme/fonts'
 
 const styles: Object = StyleSheet.create({

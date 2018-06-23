@@ -2,7 +2,7 @@ declare module 'history/createMemoryHistory' {
   declare module.exports: any;
 }
 
-declare module 'redux-persist/constants' {
+declare module 'redux-persist/integration/react' {
   declare module.exports: any;
 }
 

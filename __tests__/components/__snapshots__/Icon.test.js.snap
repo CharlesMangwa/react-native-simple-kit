@@ -7,7 +7,6 @@ exports[`Generic component: <Icon /> renders activated version correctly 1`] = `
   defaultColor="#b8b8b8"
   name="backButton"
   size={15}
-  style={undefined}
 >
   <Svg />
 </RCTSafeAreaView>
@@ -20,7 +19,6 @@ exports[`Generic component: <Icon /> renders correctly 1`] = `
   defaultColor="#b8b8b8"
   name="backButton"
   size={15}
-  style={undefined}
 >
   <Svg />
 </RCTSafeAreaView>
@@ -33,7 +31,6 @@ exports[`Generic component: <Icon /> renders with activated version with custom 
   defaultColor="#b8b8b8"
   name="backButton"
   size={15}
-  style={undefined}
 >
   <Svg />
 </RCTSafeAreaView>
@@ -46,7 +43,6 @@ exports[`Generic component: <Icon /> renders with defaultColor correctly 1`] = `
   defaultColor="#333333"
   name="backButton"
   size={15}
-  style={undefined}
 >
   <Svg />
 </RCTSafeAreaView>

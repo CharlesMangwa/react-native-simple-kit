@@ -2,16 +2,8 @@
 
 exports[`Generic component: <Button /> renders children if passed 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -23,10 +15,10 @@ exports[`Generic component: <Button /> renders children if passed 1`] = `
       "opacity": 1,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View
+    color="red"
+    inactive={false}
     style={null}
   >
     <View
@@ -65,16 +57,8 @@ exports[`Generic component: <Button /> renders children if passed 1`] = `
 
 exports[`Generic component: <Button /> renders correctly 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -86,11 +70,12 @@ exports[`Generic component: <Button /> renders correctly 1`] = `
       "opacity": 1,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View
+    color="red"
+    inactive={false}
     style={null}
+    text="Hello!"
   >
     <View
       style={
@@ -142,16 +127,8 @@ exports[`Generic component: <Button /> renders correctly 1`] = `
 
 exports[`Generic component: <Button /> renders correctly with color & inactive props 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -163,11 +140,12 @@ exports[`Generic component: <Button /> renders correctly with color & inactive p
       "opacity": 1,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View
+    color="red"
+    inactive={true}
     style={null}
+    text="Feel free to leave a ⭐!"
   >
     <View
       style={
@@ -224,16 +202,8 @@ exports[`Generic component: <Button /> renders correctly with color & inactive p
 
 exports[`Generic component: <Button /> renders correctly with color prop 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -245,11 +215,12 @@ exports[`Generic component: <Button /> renders correctly with color prop 1`] = `
       "opacity": 1,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View
+    color="yellow"
+    inactive={false}
     style={null}
+    text="Hope you like what you see so far"
   >
     <View
       style={
@@ -301,16 +272,8 @@ exports[`Generic component: <Button /> renders correctly with color prop 1`] = `
 
 exports[`Generic component: <Button /> renders with inactive prop 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
   accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
   isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
   onResponderRelease={[Function]}
@@ -322,11 +285,12 @@ exports[`Generic component: <Button /> renders with inactive prop 1`] = `
       "opacity": 1,
     }
   }
-  testID={undefined}
-  tvParallaxProperties={undefined}
 >
   <View
+    color="red"
+    inactive={true}
     style={null}
+    text="Having a good day?"
   >
     <View
       style={

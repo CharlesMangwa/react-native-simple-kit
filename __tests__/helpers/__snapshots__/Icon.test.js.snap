@@ -7,7 +7,6 @@ exports[`Helper function: getIcon renders correctly 1`] = `
   defaultColor="#b8b8b8"
   name="backButton"
   size={100}
-  style={undefined}
 >
   <Svg />
 </RCTSafeAreaView>
@@ -20,7 +19,6 @@ exports[`Helper function: getIcon renders with activated parameter 1`] = `
   defaultColor="#b8b8b8"
   name="backButton"
   size={100}
-  style={undefined}
 >
   <Svg />
 </RCTSafeAreaView>
@@ -33,7 +31,6 @@ exports[`Helper function: getIcon renders with color parameter 1`] = `
   defaultColor="#122E46"
   name="backButton"
   size={100}
-  style={undefined}
 >
   <Svg />
 </RCTSafeAreaView>
