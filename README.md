@@ -28,11 +28,11 @@ See [React Native's Getting Started](https://facebook.github.io/react-native/doc
 ## Stack
 
 - [React Native](https://facebook.github.io/react-native/) `0.55.4` for building native apps using React
-- [Redux](http://redux.js.org/) `3.7.2` a predictable state container for JavaScript apps
+- [Redux](http://redux.js.org/) `4.0.0` a predictable state container for JavaScript apps
 - [Babel](http://babeljs.io/) `6.x.x` for ES6+ support
 - [React Router Navigation](https://github.com/LeoLeBras/react-router-navigation) `1.0.0` a complete navigation library for React Native based on React Router v4
-- [Flow](http://flowtype.org/) `0.63.0` a static type checker for JavaScript
-- [Jest](https://facebook.github.io/jest/) `21.2.1` delightful JavaScript testing
+- [Flow](http://flowtype.org/) `0.75.0` a static type checker for JavaScript
+- [Jest](https://facebook.github.io/jest/) `23.1.0` delightful JavaScript testing
 
 ## Make the magic happen
 
@@ -114,29 +114,38 @@ Make sure to check their individual documentation if you want to see more: [`/sr
 
 Tests have been split into several tools & steps. Basically, with RNSK you'll deal with:
 
-* **ESLint**, which makes sure that you keep the same patterns throughout the app
-* **Flow**, which enables static type checking in your JavaScript code
+* **Prettier/ESLint**, which makes sure that you keep the same code formatting inside the app
+* **Flow**, which enables static type checking in your JavaScript
 * **Jest**, which runs your unit tests
 
-They all constitute the backbone of the `yarn test` command:
+They all constitute the backbone of the command ran before each commit:
 
 ```shell
-$ eslint . && flow --show-all-errors && jest
+$ lint-staged && yarn lint && yarn flow && yarn jest
 ````
 
-This is run by [CircleCI 2.0](https://circleci.com/gh/CharlesMangwa/react-native-simple-kit) to make sure that we keep everything clean, up & running: [![CircleCI](https://circleci.com/gh/CharlesMangwa/react-native-simple-kit.svg?style=shield&circle-token=7207fcf84efb2248759b3c51536c57a61d074712)]
+This is run by [CircleCI 2.0](https://circleci.com/gh/CharlesMangwa/react-native-simple-kit) to make sure that we keep everything clean & harmonious: ![CircleCI](https://circleci.com/gh/CharlesMangwa/react-native-simple-kit.svg?style=shield&circle-token=7207fcf84efb2248759b3c51536c57a61d074712). So let's break it down piece by piece.
 
-So let's break it down piece by piece.
+
+### Prettier
+
+_This config lives inside `.prettierrc`_
+
+```shell
+$ prettier --config .prettierrc --parser flow --write \"*.js\"
+```
+
+Based on the ESlint & its own config, Prettier will be running on every single `.js` & `.jsx` file inside the codebase in order to format your code.
 
 ### ESLint
 
 _This config lives inside `.eslintrc`_
 
 ```shell
-$ eslint .
+$ eslint . --fix
 ```
 
-The lint rules are based on **Airbnb, Flow & React configs**, plus some custom tweaks. The purpose of this tool is to keep a constant style in the codebase. Make sure to keep it in the green, and watch out while using [Prettier](https://github.com/prettier/prettier): it may bring unforeseen changes. That's why you should make sure to have Prettier installed on your IDE just in case. You can also run `yarn prettier` to automatically prettify your entire codebase!
+The lint rules are based on **Airbnb, Flow & React configs**, plus some custom tweaks. The purpose of this tool is to keep a constant style in the codebase. Make sure to keep it in the green, and watch out while using [Prettier](https://github.com/prettier/prettier): it may bring unforeseen changes. 
 
 ### Flow
 
@@ -204,21 +213,22 @@ I personally use these 3 tools to keep my code clean, homogeneous, (sometimes �
 _The tests live inside `/__tests__` & the config in `package.json`_
 
 ```shell
-$ jest
+$ jest --verbose
 ```
 
 RNSK uses Jest to manage unit testing inside the project. The goal is to test at least all the helpers functions & generic components. Make sure to always update your snapshots before pushing your work to the CI runner!
 
 ##### Continuous Integration (CI)
 
+_This config lives inside `.circleci/config.yml`_
+
 ```shell
-$ yarn run test-ci    # outputs 👇
-$ eslint . && flow --show-all-errors && jest --coverage && cat ./__tests__/__coverage__/lcov.info  | ./node_modules/coveralls/bin/coveralls.js
+$ jest --verbose --coverage && cat ./__tests__/__coverage__/lcov.info  | ./node_modules/coveralls/bin/coveralls.js
 ```
 
 This whole test suite is implemented inside CircleCI 2.0 as mentioned earlier. A new job is run in the pipeline after each commit. The output of the latest job is displayed at the top of the current README and lets you know if it `passed` or `failed`. No need to say that the goal is to keep it ✅!
 
-Moreover, RNSK uses `jest --coverage` output to generate a code coverage report that you can use with tools like [Coveralls.io](htps://coveralls.io). Then, we can get a badge which shows our coverage status: [![Coverage Status](https://coveralls.io/repos/github/CharlesMangwa/react-native-simple-kit/badge.svg?branch=master)](https://coveralls.io/github/CharlesMangwa/react-native-simple-kit?branch=master).
+Moreover, RNSK uses `jest --verbose --coverage` output to generate a code coverage report that you can use with tools like [Coveralls.io](htps://coveralls.io). Then, we can get a badge which shows our coverage status: [![Coverage Status](https://coveralls.io/repos/github/CharlesMangwa/react-native-simple-kit/badge.svg?branch=master)](https://coveralls.io/github/CharlesMangwa/react-native-simple-kit?branch=master).
 Pretty cool, heh?
 
 ## Use
