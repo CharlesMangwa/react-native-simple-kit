@@ -8,7 +8,7 @@ import Button from '@components/Button'
 import background from '@assets/images/background.png'
 import styles from './styles'
 
-const Settings = (): React$Element<any> => (
+const Settings = (): React$Element<*> => (
   <ImageBackground
     resizeMode="cover"
     style={styles.container}

@@ -7,7 +7,7 @@ import Button from '@components/Button'
 import background from '@assets/images/background.png'
 import styles from './styles'
 
-const Home = (): React$Element<any> => (
+const Home = (): React$Element<*> => (
   <ImageBackground
     resizeMode="cover"
     style={styles.container}
@@ -15,7 +15,8 @@ const Home = (): React$Element<any> => (
   >
     <Text style={styles.text}>Home</Text>
     <Button
-      inactive color="red"
+      inactive
+      color="red"
       onPress={() => console.log('✈️ ➡️ ⚙️')}
       to="/app/settings"
       text="Go to settings"

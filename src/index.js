@@ -1,21 +1,24 @@
 /* @flow */
 
 import React from 'react'
+import { NativeRouter } from 'react-router-native'
+import { PersistGate } from 'redux-persist/integration/react'
 import { Provider } from 'react-redux'
-import { ConnectedRouter } from 'react-router-redux'
-import createHistory from 'history/createMemoryHistory'
+import createMemoryHistory from 'history/createMemoryHistory'
 
-import type { History } from '@store/types'
+import type { History } from '@types'
 import Root from '@app'
-import store from '@store'
+import store, { persistor } from '@redux'
 
-export const history: History = createHistory()
+export const history: History = createMemoryHistory()
 
-const Core = (): React$Element<any> => (
+const Core = (): React$Element<*> => (
   <Provider store={store}>
-    <ConnectedRouter history={history}>
-      <Root />
-    </ConnectedRouter>
+    <PersistGate loading={null} persistor={persistor}>
+      <NativeRouter>
+        <Root />
+      </NativeRouter>
+    </PersistGate>
   </Provider>
 )
 

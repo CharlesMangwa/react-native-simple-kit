@@ -25,7 +25,9 @@ export type History = {
   length: number,
   location: Location,
   action: HistoryAction,
-  listen(callback: (location: Location, action: HistoryAction) => void): () => void,
+  listen(
+    callback: (location: Location, action: HistoryAction) => void
+  ): () => void,
   push(path: string | LocationShape, state?: any): void,
   replace(path: string | LocationShape, state?: any): void,
   go(n: number): void,
@@ -33,7 +35,6 @@ export type History = {
   goForward(): void,
   canGo?: (n: number) => boolean,
   block(callback: (location: Location, action: HistoryAction) => boolean): void,
-  // createMemoryHistory
   index?: number,
   entries?: Array<Location>,
 }

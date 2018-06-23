@@ -16,7 +16,7 @@ import React from 'react'
 import { SafeAreaView } from 'react-native'
 import getIcon from '@helpers/icon'
 
-const MyComponent = (): React$Element<any> => (
+const MyComponent = (): React$Element<*> => (
   <SafeAreaView style={{ flex: 1 }}>
     {getIcon('backButton', 15, false, 'white')}
   </SafeAreaView>

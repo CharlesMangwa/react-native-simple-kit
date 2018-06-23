@@ -5,7 +5,7 @@ A generic button component that handles simple functions or navigation paths int
 ### API
 
 * color?: `'blue' | 'green' | 'red' | 'yellow' | 'white'`
-* children?: `React$Element<any>`
+* children?: `React$Element<*>`
 * inactive?: `boolean`
 * onPress?: `Function`
 * replace?: `boolean`
@@ -21,7 +21,7 @@ import React from 'react'
 import { SafeAreaView } from 'react-native'
 import Button from '@components/Button'
 
-const MyComponent = (): React$Element<any> => (
+const MyComponent = (): React$Element<*> => (
   <SafeAreaView style={{ flex: 1 }}>
     <Button
       inactive color="red"
@@ -40,6 +40,9 @@ export default MyComponent
 ```
 
 ## Changelog
+#### Saturday, June 23rd
+- Refactoring for React 16.3+
+
 #### Wednesday, November 22th
 - Switch to `React.PureComponent`.
 

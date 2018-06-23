@@ -1,7 +1,7 @@
 /* @flow */
 
 type AnimationConfig =
-  'slideInDown'
+  | 'slideInDown'
   | 'slideInUp'
   | 'slideInLeft'
   | 'slideInRight'
@@ -21,8 +21,8 @@ export type Props = {
   backdropOpacity?: number,
   backdropTransitionInTiming?: number,
   backdropTransitionOutTiming?: number,
-  children?: () => React$Element<any> | React$Element<any>,
-  content?: () => React$Element<any> | React$Element<any>,
+  children?: () => React$Element<*> | React$Element<*>,
+  content?: () => React$Element<*> | React$Element<*>,
   useNativeDriver?: boolean,
   isVisible: boolean,
   onClosePressed: Function,

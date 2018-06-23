@@ -1,13 +1,13 @@
 /* @flow */
 
-import { REHYDRATE } from 'redux-persist/constants'
 import type { Action, Counter } from './types'
 
 const INCREMENT = 'INCREMENT'
 const DECREMENT = 'DECREMENT'
 const RESET = 'RESET'
+const REHYDRATE = 'persist/REHYDRATE'
 
-export default function (state: Counter = 0, action: Action): Counter {
+export default function(state: Counter = 0, action: Action): Counter {
   switch (action.type) {
     case REHYDRATE: {
       const persistedState = action.payload && action.payload.counter

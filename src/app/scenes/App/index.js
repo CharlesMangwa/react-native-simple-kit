@@ -1,11 +1,11 @@
 /* @flow */
 
-import React from 'react'
-import { SafeAreaView, StatusBar } from 'react-native'
+import React, { Component } from 'react'
+import { View, StatusBar } from 'react-native'
 import { Switch, Route, Redirect } from 'react-router'
 import { BottomNavigation, Tab } from 'react-router-navigation'
 
-import type { Location } from '@store/types'
+import type { Location } from '@types'
 import { BRAND_COLOR_RED } from '@theme/colors'
 import { Counter, Home, Settings } from '@App/modules'
 
@@ -15,41 +15,41 @@ type Props = {
   location: Location,
 }
 
-const App = (props: Props): React$Element<any> => (
-  <SafeAreaView style={styles.container}>
-    <StatusBar backgroundColor={BRAND_COLOR_RED} />
-    <Switch location={props.location}>
-      <Route
-        exact path="/app"
-        render={(): React$Element<any> => <Redirect to="/app/home" />}
-      />
-      <Route
-        path="/app/(home)?"
-        render={(): React$Element<any> => (
-          <BottomNavigation
-            tabBarStyle={{ backgroundColor: 'white' }}
-            tabActiveTintColor={BRAND_COLOR_RED}
-          >
-            <Tab
-              path="/app/home"
-              component={Home}
-              label="Home"
-            />
-            <Tab
-              path="/app/counter"
-              component={Counter}
-              label="Counter"
-            />
-            <Tab
-              path="/app/settings"
-              component={Settings}
-              label="Settings"
-            />
-          </BottomNavigation>
-        )}
-      />
-    </Switch>
-  </SafeAreaView>
-)
+class RedirectContent extends Component<*> {
+  shouldComponentUpdate = () => false
 
+  render = () => <Redirect to="/app/home" />
+}
+
+class AppContent extends Component<Props> {
+  shouldComponentUpdate(nextProps) {
+    const { location } = this.props
+    if (location.pathname !== nextProps.location.pathname) return true
+    return false
+  }
+
+  render() {
+    return (
+      <BottomNavigation
+        tabBarStyle={{ backgroundColor: 'white' }}
+        tabActiveTintColor={BRAND_COLOR_RED}
+      >
+        <Tab path="/app/home" component={Home} label="Home" />
+        <Tab path="/app/counter" component={Counter} label="Counter" />
+        <Tab path="/app/settings" component={Settings} label="Settings" />
+      </BottomNavigation>
+    )
+  }
+}
+
+const App = ({ location }: Props): React$Element<*> => (
+  // @FIXME: SafeAreaView be trippin' lately 😒…
+  <View style={styles.container}>
+    <StatusBar backgroundColor={BRAND_COLOR_RED} />
+    <Switch location={location}>
+      <Route exact path="/app" component={RedirectContent} />
+      <Route path="/app/(home)?" component={AppContent} />
+    </Switch>
+  </View>
+)
 export default App

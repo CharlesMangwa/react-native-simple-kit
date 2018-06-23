@@ -17,7 +17,7 @@ import React from 'react'
 import { TouchableWithoutFeedback, Text } from 'react-native'
 import { share } from '@helpers/linking'
 
-const MyComponent = (): React$Element<any> => (
+const MyComponent = (): React$Element<*> => (
   <TouchableWithoutFeedback onPress={() => share({
     title: 'Example',
     url: 'http://example.com',
@@ -45,7 +45,7 @@ import React from 'react'
 import { TouchableWithoutFeedback, Text } from 'react-native'
 import { call } from '@helpers/linking'
 
-const MyComponent = (): React$Element<any> => (
+const MyComponent = (): React$Element<*> => (
   <TouchableWithoutFeedback onPress={() => call('0607080910')}>
     <Text>Call me</Text>
   </TouchableWithoutFeedback>
@@ -69,7 +69,7 @@ import React from 'react'
 import { TouchableWithoutFeedback, Text } from 'react-native'
 import { email } from '@helpers/linking'
 
-const MyComponent = (): React$Element<any> => (
+const MyComponent = (): React$Element<*> => (
   <TouchableWithoutFeedback onPress={() => email('hello@spotern.com')}>
     <Text>Email me</Text>
   </TouchableWithoutFeedback>
@@ -93,7 +93,7 @@ import React from 'react'
 import { TouchableWithoutFeedback, Text } from 'react-native'
 import { openURL } from '@helpers/linking'
 
-const MyComponent = (): React$Element<any> => (
+const MyComponent = (): React$Element<*> => (
   <TouchableWithoutFeedback onPress={() => openURL('spotern.com')}>
     <Text>Open the URL</Text>
   </TouchableWithoutFeedback>
@@ -124,7 +124,7 @@ const onPress = () =>
     name: 'Spotern',
   })
 
-const MyComponent = (): React$Element<any> => {
+const MyComponent = (): React$Element<*> => {
   return (
     <TouchableWithoutFeedback onPress={onPress}>
       <Text>Go to location</Text>

@@ -1,63 +1,41 @@
 /* @flow */
 
 import React, { Component } from 'react'
-import { ActivityIndicator, ImageBackground } from 'react-native'
-import { BRAND_COLOR_RED } from '@theme/colors'
+import { ActivityIndicator, StatusBar, View } from 'react-native'
 
-import type { App, History } from '@store/types'
-import backgroundImage from '@assets/images/background.png'
+import type { App, History } from '@types'
+import { BRAND_COLOR_RED } from '@theme/colors'
 import connect from './connect'
 import styles from './styles'
 
 type Props = {
-  app: App, // eslint-disable-line
-  history: History, // eslint-disable-line
+  app: App,
+  history: History,
 }
 
-class Launch extends Component<Props, void> {
-  props: Props
-  isRedirecting: boolean = false
-  redirectDelay: number = 0
-
-  componentDidMount = (): void => {
+class Launch extends Component<Props> {
+  componentDidMount() {
     this.initializeApp(this.props)
-    setInterval((): void => {
-      this.redirectDelay += 250
-    }, 250)
   }
 
-  componentWillReceiveProps = (nextProps: Props): void => {
-    this.initializeApp(nextProps)
+  componentDidUpdate() {
+    this.initializeApp(this.props)
   }
 
-  initializeApp = (nextProps: Props): void => {
-    const { app, history } = nextProps
-    if (app.isHydrated && !this.isRedirecting) {
-      this.isRedirecting = true
-      if (this.redirectDelay > 250)
+  initializeApp = async ({ app, history }: Props) => {
+    if (app.isHydrated) {
+      setTimeout(() => {
         history.replace('/app')
-      else {
-        setTimeout((): void => {
-          history.replace('/app')
-        }, (250 - this.redirectDelay))
-      }
+      }, 125)
     }
   }
 
-  shouldComponentUpdate = (): boolean => false
-
   render() {
     return (
-      <ImageBackground
-        resizeMode="cover"
-        style={styles.container}
-        source={backgroundImage}
-      >
-        <ActivityIndicator
-          size="large"
-          color={BRAND_COLOR_RED}
-        />
-      </ImageBackground>
+      <View style={styles.container}>
+        <StatusBar barStyle="light-content" backgroundColor={BRAND_COLOR_RED} />
+        <ActivityIndicator size="large" color="white" />
+      </View>
     )
   }
 }

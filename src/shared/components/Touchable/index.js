@@ -1,4 +1,5 @@
 /* @flow */
+/* eslint camelcase: 0 */
 
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
@@ -11,27 +12,28 @@ import {
 } from 'react-native'
 
 type DefaultProps = {
-  children?: React$Element<any> | Array<React$Element<any>>,
+  children?: React$Element<*> | Array<React$Element<*>>,
   onLongPress?: Function,
   onPress?: Function,
   style?: StyleSheet,
 }
 
 type Props = {
-  children?: React$Element<any> | Array<React$Element<any>>,
+  children?: React$Element<*> | Array<React$Element<*>>,
   onLongPress?: Function,
   onPress: Function,
   style?: StyleSheet,
 }
 
-class Touchable extends PureComponent<Props, void> {
-  props: Props
-
+class Touchable extends PureComponent<Props> {
   static propTypes = {
-    children: PropTypes.oneOfType([PropTypes.element, PropTypes.arrayOf(PropTypes.element)]),
+    children: PropTypes.oneOfType([
+      PropTypes.element,
+      PropTypes.arrayOf(PropTypes.element),
+    ]),
     onLongPress: PropTypes.func,
     onPress: PropTypes.func.isRequired,
-    style: PropTypes.any, // eslint-disable-line react/forbid-prop-types
+    style: PropTypes.any, // eslint-disable-line
   }
 
   static defaultProps: DefaultProps = {
@@ -40,15 +42,19 @@ class Touchable extends PureComponent<Props, void> {
     style: null,
   }
 
-  componentWillMount() {
-    if (!this.props.children)
-      throw new Error('Touchable requires at least 1 children')
+  UNSAFE_componentWillMount() {
+    const { children } = this.props
+    if (!children) throw new Error('Touchable requires at least 1 children')
   }
 
-  requestAnimationFrame: () => number
-
   render() {
-    const { children, onLongPress, onPress, style, ...remainingProps } = this.props
+    const {
+      children,
+      onLongPress,
+      onPress,
+      style,
+      ...remainingProps
+    } = this.props
     return Platform.OS === 'ios' ? (
       <TouchableOpacity
         activeOpacity={0.7}

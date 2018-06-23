@@ -2,7 +2,7 @@
 
 import { StyleSheet } from 'react-native'
 import { vh, vw } from '@helpers/responsive'
-import { NEUTRAL_COLOR_00 } from '@theme/colors'
+import { BRAND_COLOR_RED } from '@theme/colors'
 
 const styles: Object = StyleSheet.create({
   container: {
@@ -11,7 +11,7 @@ const styles: Object = StyleSheet.create({
     height: vh(100),
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: NEUTRAL_COLOR_00,
+    backgroundColor: BRAND_COLOR_RED,
   },
 })
 

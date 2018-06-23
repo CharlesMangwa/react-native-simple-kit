@@ -28,7 +28,7 @@ import React from 'react'
 import { StyleSheet, View } from 'react-native'
 import TextInput from '@components/TextInput'
 
-const MyComponent = (): React$Element<any> => (
+const MyComponent = (): React$Element<*> => (
   <View>
     /* Option A */
     <TextInput
@@ -45,5 +45,8 @@ export default MyComponent
 ```
 
 ## Changelog
+#### Saturday, June 23rd
+- Refactoring for React 16.3+
+
 #### Thursday, November 16th
 - Initial release. We didn't track changes before this version.

@@ -1,48 +1,54 @@
 /* @flow */
 
-import React from 'react'
-import { Switch, Route, Redirect, withRouter } from 'react-router'
+import React, { Component } from 'react'
+import { Switch, Route, Redirect } from 'react-router'
 import { Navigation, Card } from 'react-router-navigation'
 
-import App from '@scenes/App'
-import Launch from '@scenes/Launch'
+import AppScene from '@scenes/App'
+import LaunchScene from '@scenes/Launch'
 
-import type { History, Location } from '@store/types'
-import { initialyzeHistory, changeHistory } from '@store/actions'
-import connect from './connect'
+const Root = (): React$Element<*> => {
+  class App extends Component<*> {
+    shouldComponentUpdate(nextProps) {
+      const { location } = this.props // eslint-disable-line
+      if (location.pathname !== nextProps.location.pathname) return true
+      return false
+    }
 
-type Props = {
-  dispatch: Function,
-  history: History,
-  persistedLocation: Location,
-}
+    render = () => <AppScene {...this.props} />
+  }
 
-const Root = (props: Props): React$Element<any> => {
-  const { dispatch, history, persistedLocation } = props
+  class Launch extends Component<*> {
+    shouldComponentUpdate = () => false
 
-  dispatch(initialyzeHistory(history))
-  history.listen(() => dispatch(changeHistory(history)))
+    render = () => <LaunchScene {...this.props} />
+  }
 
-  if (persistedLocation)
-    console.log(`The user left the app being on this route: ${persistedLocation.pathname}`)
+  class RedirectContent extends Component<*> {
+    shouldComponentUpdate = () => false
+
+    render = () => <Redirect to="/launch" />
+  }
+
+  class RootContent extends Component<*> {
+    shouldComponentUpdate = () => false
+
+    render() {
+      return (
+        <Navigation hideNavBar>
+          <Card path="/launch" component={Launch} />
+          <Card path="/app" component={App} />
+        </Navigation>
+      )
+    }
+  }
 
   return (
     <Switch>
-      <Route
-        exact path="/"
-        render={(): React$Element<any> => <Redirect to="/launch" />}
-      />
-      <Route
-        path="/"
-        render={(): React$Element<any> => (
-          <Navigation hideNavBar>
-            <Card path="/launch" component={Launch} />
-            <Card path="/app" component={App} />
-          </Navigation>
-        )}
-      />
+      <Route exact path="/" component={RedirectContent} />
+      <Route path="/" component={RootContent} />
     </Switch>
   )
 }
 
-export default withRouter(connect(Root))
+export default Root

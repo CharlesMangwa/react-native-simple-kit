@@ -1,6 +1,6 @@
 {
   "name": "RNSK",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "🚀 Get started with React Native and Redux with no effort!",
   "repository": {
     "type": "git",
@@ -18,7 +18,15 @@
     "flow": "flow --show-all-errors",
     "jest": "jest --verbose",
     "test-ci": "jest --verbose --coverage && cat ./__tests__/__coverage__/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
-    "test": "yarn lint && yarn flow && yarn jest"
+    "test": "yarn lint && yarn flow && yarn jest",
+    "precommit": "lint-staged",
+    "postcommit": "git update-index --again"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "yarn test -- --fix",
+      "git add"
+    ]
   },
   "babel": {
     "presets": [
@@ -66,38 +74,42 @@
     ]
   },
   "dependencies": {
-    "react": "16.2.0",
-    "react-native": "^0.53.3",
-    "react-native-modal": "^4.1.1",
+    "react": "16.3.1",
+    "react-native": "0.55.4",
+    "react-native-modal": "6.1.0",
     "react-native-svg": "^6.0.0",
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
     "react-router-native": "^4.2.0",
     "react-router-navigation": "^1.0.0-rc.4",
     "react-router-redux": "^5.0.0-alpha.9",
-    "recompose": "^0.26.0",
-    "redux": "^3.7.2",
-    "redux-persist": "^4.8.3"
+    "recompose": "^0.27.1",
+    "redux": "^4.0.0",
+    "redux-persist": "^5.10.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.2",
-    "babel-plugin-minify-dead-code-elimination": "^0.2.0",
+    "babel-plugin-minify-dead-code-elimination": "^0.4.3",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
-    "babel-plugin-transform-inline-consecutive-adds": "^0.2.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.10",
     "babel-plugin-transform-remove-console": "^6.8.5",
     "babel-preset-flow": "^6.23.0",
     "babel-preset-react-native": "^4.0.0",
     "coveralls": "^3.0.0",
     "eslint": "^4.11.0",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-babel": "^4.1.2",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-babel": "^5.1.0",
     "eslint-plugin-flowtype": "^2.39.1",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-prettier": "^2.6.1",
     "eslint-plugin-react": "^7.4.0",
-    "flow-bin": "0.63.0",
-    "jest": "^21.2.1",
-    "react-test-renderer": "16.0.0"
+    "flow-bin": "0.75.0",
+    "husky": "^0.14.3",
+    "jest": "^23.1.0",
+    "lint-staged": "^7.2.0",
+    "prettier": "^1.13.5",
+    "react-test-renderer": "16.3.1"
   }
 }

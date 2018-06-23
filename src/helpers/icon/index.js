@@ -7,8 +7,8 @@ const getIcon = (
   name: string,
   size: number,
   activated?: boolean,
-  defaultColor?: string,
-): React$Element<any> => (
+  defaultColor?: string
+): React$Element<*> => (
   <Icon
     activated={activated}
     defaultActivatedColor={activated ? defaultColor : undefined}

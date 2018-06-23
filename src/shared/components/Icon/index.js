@@ -16,15 +16,23 @@ type Props = {
   style?: ?Array<?StyleSheet> | StyleSheet,
 }
 
-const Icon = (props: Props): React$Element<any> => {
-  const { name, style, size, activated, defaultColor, defaultActivatedColor } = props
+const Icon = (props: Props): React$Element<*> => {
+  const {
+    name,
+    style,
+    size,
+    activated,
+    defaultColor,
+    defaultActivatedColor,
+  } = props
   const color = activated
     ? defaultActivatedColor || BRAND_COLOR_GREEN
     : defaultColor || NEUTRAL_COLOR_50
 
   let icon
   switch (name) {
-    case 'backButton': icon = SVGs.Back
+    case 'backButton':
+      icon = SVGs.Back
       break
     default: {
       icon = createElement(SafeAreaView, { ...props })
@@ -45,10 +53,7 @@ Icon.propTypes = {
   defaultColor: PropTypes.string,
   name: PropTypes.string.isRequired,
   size: PropTypes.number.isRequired,
-  style: PropTypes.oneOfType([
-    PropTypes.number,
-    PropTypes.object,
-  ]), // eslint-disable-line react/forbid-prop-types
+  style: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
 }
 
 Icon.defaultProps = {

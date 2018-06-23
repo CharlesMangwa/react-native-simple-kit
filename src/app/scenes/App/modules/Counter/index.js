@@ -1,9 +1,9 @@
 /* @flow */
 
-import React, { Component } from 'react'
+import React, { Component, createRef } from 'react'
 import { ImageBackground, Text, View } from 'react-native'
 
-import type { Counter as CounterType, ReduxAction } from '@store/types'
+import type { Counter as CounterType, ReduxAction } from '@types'
 import { BRAND_COLOR_RED } from '@theme/colors'
 import background from '@assets/images/background.png'
 
@@ -27,49 +27,56 @@ type State = {
 }
 
 class Counter extends Component<Props, State> {
-  props: Props
   state: State = {
     isModalVisible: false,
     password: null,
   }
-  textInput: ?Class<any>
 
-  _handleModalState = (): void =>
-    this.setState((state: State) => ({ isModalVisible: !state.isModalVisible }))
+  textInput = createRef()
 
-  // counter, increment & decrement are used here for (Redux) demo purposes only.
+  _handleModalState = () =>
+    this.setState(state => ({
+      isModalVisible: !state.isModalVisible,
+    }))
+
+  // counter, increment & decrement are used for (Redux) demo purposes only.
   // You can perform the exact same thing with just React's state & setState.
-  _renderModalContent = (): React$Element<any> => (
-    <View style={styles.modalContainer}>
-      <Text style={styles.modalTitle}>{this.props.counter}</Text>
-      <View style={styles.modalButtonsWrapper}>
-        <Button
-          color="blue"
-          onPress={this.props.decrement}
-          text="-"
-          style={styles.modalButton}
-        />
-        <Button
-          onPress={this.props.increment}
-          text="+"
-          style={styles.modalButton}
-        />
+  _renderModalContent = (): React$Element<*> => {
+    const { counter, decrement, increment, reset } = this.props
+    return (
+      <View style={styles.modalContainer}>
+        <Text style={styles.modalTitle}>{counter}</Text>
+        <View style={styles.modalButtonsWrapper}>
+          <Button
+            color="blue"
+            onPress={decrement}
+            text="-"
+            style={styles.modalButton}
+          />
+          <Button onPress={increment} text="+" style={styles.modalButton} />
+        </View>
+        <Button color="white" onPress={reset} text="Reset" />
       </View>
-      <Button color="white" onPress={this.props.reset} text="Reset" />
-    </View>
-  )
+    )
+  }
 
   _onChangeText = (password: string): void =>
     this.setState(() => ({ password }))
 
   _onSubmit = (): void => {
-    if (this.state.password === '101') {
-      this.setState(() => ({ isModalVisible: true }))
-      if (this.textInput) this.textInput.ref.clear()
+    const { isModalVisible, password } = this.state
+    if (password === '101' && !isModalVisible) {
+      this.setState(
+        () => ({ isModalVisible: true }),
+        () => {
+          // @FIXME: Everything sounds good…but it doesn't work 🙁
+          if (this.textInput.current) this.textInput.current.ref.current.clear()
+        }
+      )
     }
   }
-
   render() {
+    const { isModalVisible } = this.state
     return (
       <ImageBackground
         resizeMode="cover"
@@ -78,7 +85,7 @@ class Counter extends Component<Props, State> {
       >
         <Text style={styles.text}>Counter</Text>
         <TextInput
-          ref={(c: any) => (this.textInput = c)}
+          ref={this.textInput}
           onChangeText={this._onChangeText}
           keyboardType="numeric"
           placeholder="Type '101' to enter"
@@ -87,7 +94,7 @@ class Counter extends Component<Props, State> {
         />
         <Modal
           animationIn="slideInDown"
-          isVisible={this.state.isModalVisible}
+          isVisible={isModalVisible}
           content={this._renderModalContent}
           onClosePressed={this._handleModalState}
         />
@@ -95,5 +102,4 @@ class Counter extends Component<Props, State> {
     )
   }
 }
-
 export default connect(Counter)

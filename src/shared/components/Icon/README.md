@@ -17,7 +17,7 @@ A generic component for custom SVG icons.
 import React from 'react'
 import Icon from '@components/Icon'
 
-const MyComponent = (): React$Element<any> => (
+const MyComponent = (): React$Element<*> => (
   <Icon
     name="backButton"
     defaultColor="red"

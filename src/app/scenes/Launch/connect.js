@@ -4,13 +4,18 @@ import { compose } from 'recompose'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router'
 
-import type { State } from '@store/types'
+import type { State } from '@types'
 
 const mapStateToProps = (state: State): Object => ({
   app: state.app,
 })
 
-const mapActionsToProps = (): Object => ({ withRouter }: Object)
+const mapActionsToProps = { withRouter }
 
-export default (container: Class<any>): Class<any> =>
-  compose(connect(mapStateToProps, mapActionsToProps))(container)
+export default (container: Class<*>): Class<*> =>
+  compose(
+    connect(
+      mapStateToProps,
+      mapActionsToProps
+    )
+  )(container)

@@ -3,13 +3,10 @@
   "extends": [
     "airbnb",
     "plugin:flowtype/recommended",
+    "plugin:prettier/recommended",
     "plugin:react/recommended"
   ],
-  "plugins": [
-    "babel",
-    "react",
-    "flowtype"
-  ],
+  "plugins": ["babel", "react", "flowtype"],
   "env": {
     "browser": true,
     "jest": true,
@@ -40,18 +37,27 @@
     "import/no-extraneous-dependencies": 0,
     "import/no-unresolved": 0,
     "import/prefer-default-export": 0,
-    "object-curly-newline": 0,
+    "max-len": [
+      "error",
+      { "code": 80 },
+      { "ignoreStrings": true },
+      { "ignoreUrls": true }
+    ],
     "no-console": 0,
     "no-confusing-arrow": 0,
     "no-floating-decimal": 0,
+    "nonblock-statement-body-position": ["error", "any"],
     "no-nested-ternary": 0,
     "no-underscore-dangle": 0,
     "no-return-assign": 0,
+    "object-curly-newline": 0,
     "radix": ["error", "as-needed"],
     "react/jsx-boolean-value": 0,
     "react/jsx-filename-extension": 0,
     "react/jsx-max-props-per-line": [1, { "maximum": 7 }],
     "react/jsx-wrap-multilines": 0,
+    "react/no-did-mount-set-state": 0,
+    "react/no-multi-comp": 0,
     "react/sort-comp": 0,
     "semi": [2, "never"]
   }

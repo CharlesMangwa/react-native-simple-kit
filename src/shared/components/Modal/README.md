@@ -6,8 +6,8 @@ A generic component for handling modal based on `react-native-modal`.
 
 #### Basic
 
-* children?: `() => React$Element<any> | React$Element<any>`
-* content?: `() => React$Element<any> | React$Element<any>`
+* children?: `() => React$Element<*> | React$Element<*>`
+* content?: `() => React$Element<*> | React$Element<*>`
 * isVisible: `boolean`
 * onClosePressed: `Function`
 * style?: `StyleSheet`
@@ -24,7 +24,7 @@ import React from 'react'
 import { SafeAreaView, Text } from 'react-native'
 import Infos from '@components/Infos'
 
-const MyComponent = (props: Object): React$Element<any> => (
+const MyComponent = (props: Object): React$Element<*> => (
   <SafeAreaView>
     <Modal
       isVisible
@@ -38,5 +38,8 @@ export default MyComponent
 ```
 
 ## Changelog
+#### Saturday, June 23rd
+- Enable swipe down to dismiss feature.
+
 #### Monday, November 20th
 - Initial release. We didn't track changes before this version.

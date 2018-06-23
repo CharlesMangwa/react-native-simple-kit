@@ -8,32 +8,62 @@ import ModalModule from 'react-native-modal'
 import type { Props } from './types'
 import styles from './styles'
 
-const Modal = (props: Props): React$Element<any> => (
+const Modal = ({
+  animationIn,
+  animationInTiming,
+  animationOut,
+  animationOutTiming,
+  avoidKeyboard,
+  backdropColor,
+  backdropOpacity,
+  backdropTransitionInTiming,
+  backdropTransitionOutTiming,
+  children,
+  content,
+  isVisible,
+  onClosePressed,
+  onHide,
+  onShow,
+  style,
+  useNativeDriver,
+}: Props): React$Element<*> => (
   <ModalModule
-    animationIn={props.animationIn}
-    animationInTiming={props.animationInTiming}
-    animationOut={props.animationOut}
-    animationOutTiming={props.animationOutTiming}
-    avoidKeyboard={props.avoidKeyboard}
-    backdropColor={props.backdropColor}
-    backdropOpacity={props.backdropOpacity}
-    backdropTransitionInTiming={props.backdropTransitionInTiming}
-    backdropTransitionOutTiming={props.backdropTransitionOutTiming}
-    isVisible={props.isVisible}
-    onBackButtonPress={props.onClosePressed}
-    onBackdropPress={props.onClosePressed}
-    onModalShow={props.onShow}
-    onModalHide={props.onHide}
-    style={StyleSheet.flatten([styles.container, props.style])}
-    useNativeDriver={props.useNativeDriver}
+    animationIn={animationIn}
+    animationInTiming={animationInTiming}
+    animationOut={animationOut}
+    animationOutTiming={animationOutTiming}
+    avoidKeyboard={avoidKeyboard}
+    backdropColor={backdropColor}
+    backdropOpacity={backdropOpacity}
+    backdropTransitionInTiming={backdropTransitionInTiming}
+    backdropTransitionOutTiming={backdropTransitionOutTiming}
+    isVisible={isVisible}
+    onBackButtonPress={onClosePressed}
+    onBackdropPress={onClosePressed}
+    onModalShow={onShow}
+    onModalHide={onHide}
+    onSwipe={onClosePressed}
+    swipeDirection="down"
+    style={StyleSheet.flatten([styles.container, style])}
+    useNativeDriver={useNativeDriver}
   >
-    {props.content ? props.content() : props.children}
+    {content ? content() : children}
   </ModalModule>
 )
 
 Modal.propTypes = {
-  animationIn: PropTypes.oneOf(['slideInDown', 'slideInUp', 'slideInLeft', 'slideInRight']),
-  animationOut: PropTypes.oneOf(['slideOutDown', 'slideOutUp', 'slideOutLeft', 'slideOutRigh']),
+  animationIn: PropTypes.oneOf([
+    'slideInDown',
+    'slideInUp',
+    'slideInLeft',
+    'slideInRight',
+  ]),
+  animationOut: PropTypes.oneOf([
+    'slideOutDown',
+    'slideOutUp',
+    'slideOutLeft',
+    'slideOutRigh',
+  ]),
   animationInTiming: PropTypes.number,
   animationOutTiming: PropTypes.number,
   avoidKeyboard: PropTypes.bool,

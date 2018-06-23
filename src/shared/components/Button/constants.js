@@ -10,7 +10,7 @@ import {
 
 export type DefaultProps = {
   color?: 'blue' | 'green' | 'red' | 'yellow' | 'white',
-  children?: ?React$Element<any>,
+  children?: ?React$Element<*>,
   inactive?: ?boolean,
   onPress?: ?Function,
   replace?: ?boolean,

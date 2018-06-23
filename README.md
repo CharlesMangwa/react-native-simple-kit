@@ -4,6 +4,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/CharlesMangwa/react-native-simple-kit/badge.svg?branch=master)](https://coveralls.io/github/CharlesMangwa/react-native-simple-kit?branch=master)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![License MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://img.shields.io/badge/License-MIT-brightgreen.svg)
+[![Code style: Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![GitHub package version](https://img.shields.io/github/tag/CharlesMangwa/react-native-simple-kit.svg)]()
 
 `react-native-simple-kit` is a starter boilerplate for mobile apps using React Native, Redux and a bunch of other cool tools. This starter is compatible with both iOS and Android out of the box, and provides both JS & native-based navigation solutions! 🤙
@@ -26,7 +27,7 @@ See [React Native's Getting Started](https://facebook.github.io/react-native/doc
 
 ## Stack
 
-- [React Native](https://facebook.github.io/react-native/) `0.53.3` for building native apps using React
+- [React Native](https://facebook.github.io/react-native/) `0.55.4` for building native apps using React
 - [Redux](http://redux.js.org/) `3.7.2` a predictable state container for JavaScript apps
 - [Babel](http://babeljs.io/) `6.x.x` for ES6+ support
 - [React Router Navigation](https://github.com/LeoLeBras/react-router-navigation) `1.0.0` a complete navigation library for React Native based on React Router v4
@@ -75,15 +76,16 @@ src
 │   ├── assets
 │   ├── components
 │   └── theme
-├── store
+├── redux
 │   ├── modules
 │   │   └── xxx
 │   │       ├── index.js
 │   │       └── types.js
 │   ├── actions.js
 │   ├── index.js
-│   ├── reducers.js
-│   └── types.js
+│   └── reducers.js
+├── types
+│   └── index.js
 └── index.js
 ...
 ```
@@ -110,7 +112,7 @@ Make sure to check their individual documentation if you want to see more: [`/sr
 
 ## Tests
 
-Tests have been splitted into several tools & steps. Basically, with RNSK you'll deal with:
+Tests have been split into several tools & steps. Basically, with RNSK you'll deal with:
 
 * **ESLint**, which makes sure that you keep the same patterns throughout the app
 * **Flow**, which enables static type checking in your JavaScript code
@@ -156,7 +158,7 @@ The idea is: whenever you use a function, a module, a class, etc, you have to ty
 import React from 'react'
 import { View, Text } from 'react-native'
 
-import { History, Location } from '@store/types'
+import { History, Location } from '@types'
 
 type Status = boolean
 
@@ -173,7 +175,7 @@ type State = {
   isMounted: Status
 }
 
-const MyComponent = (ownProps: Component): React$Element<any> => (
+const MyComponent = (ownProps: Component): React$Element<*> => (
   <View>
     <Text>
       {`MyClass is mounted: ${ownProps.status}`}
@@ -182,7 +184,6 @@ const MyComponent = (ownProps: Component): React$Element<any> => (
 )
 
 export class MyClass extends React.Component<Props, State> {
-  props: Props
   state: State = {
     isMounted: false
   }

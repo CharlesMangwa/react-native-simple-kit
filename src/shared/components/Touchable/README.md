@@ -4,7 +4,7 @@ A generic component for handling touchable items with specific platforms behavio
 
 ### API
 
-* children?: `React$Element<any>`
+* children?: `React$Element<*>`
 * onLongPress?: `Function`
 * onPress?: `Function`
 * style?: `StyleSheet`
@@ -17,7 +17,7 @@ import React from 'react'
 import { Alert, StyleSheet, Text } from 'react-native'
 import Touchable from '@components/Touchable'
 
-const MyComponent = (): React$Element<any> => (
+const MyComponent = (): React$Element<*> => (
   <Touchable
     onLongPress={(): void => Alert.alert('👋')}
     onPress={(): void => Alert.alert('🤝')}
@@ -31,6 +31,9 @@ export default MyComponent
 ```
 
 ## Changelog
+#### Saturday, June 23rd
+- Refactoring for React 16.3+
+
 #### Wednesday, November 22th
 - Switch to `React.PureComponent`.
 

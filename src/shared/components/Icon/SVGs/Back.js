@@ -9,7 +9,7 @@ type Props = {
   size: number,
 }
 
-const Back = ({ color, size }: Props): React$Element<any> => {
+const Back = ({ color, size }: Props): React$Element<*> => {
   const ratio = 16 / 13
   return (
     <Svg width={size * ratio} height={size} viewBox="0 0 16 13">
