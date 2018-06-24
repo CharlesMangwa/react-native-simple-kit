@@ -16,7 +16,7 @@ RNSK currently provides 3 different navigation libraries: [React Router Navigati
 
 The 1st JavaScript library (on [master](https://github.com/CharlesMangwa/react-native-simple-kit/tree/master/)), has a way more flexible API and it's easier to grasp; while the native one (on [native-navigation](https://github.com/CharlesMangwa/react-native-simple-kit/tree/native-navigation/) branch) is a little bit more cumbersome to use, but offers a better navigation experience to your end consumer.
 
-Finally, this branch does implement the 3rd one, React Navigation, coupled with GraphQL (through Apollo Client)!
+Finally, this branch does implement the 3rd one, React Navigation, coupled with [GraphQL](https://graphql.org/) through [Apollo Client](https://www.apollographql.com/docs/react/)!
 
 ## Requirements
 
@@ -35,7 +35,7 @@ See [React Native's Getting Started](https://facebook.github.io/react-native/doc
 - [React Native](https://facebook.github.io/react-native/) `0.55.4` for building native apps using React
 - [Redux](http://redux.js.org/) `4.0.0` a predictable state container for JavaScript apps
 - [Babel](http://babeljs.io/) `6.x.x` for ES6+ support
-- [React Navigation](https://github.com/react-navigation/react-navigation) `2.5.2` a complete navigation library for React Native based on React Router v4
+- [React Navigation](https://github.com/react-navigation/react-navigation) `2.5.2`, for routing and navigation
 - [Apollo Client](https://github.com/apollographql/apollo-client) `2.3.5` a fully-featured, production ready caching GraphQL client for every UI framework and GraphQL server
 - [Flow](http://flowtype.org/) `0.75.0` a static type checker for JavaScript
 - [Jest](https://facebook.github.io/jest/) `23.1.0` delightful JavaScript testing
@@ -132,7 +132,7 @@ src
 * [```🔘 <Button />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/master/src/shared/components/Button)
 * [```💠 <Icon />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/master/src/shared/components/Icon)
 * [```🔲 <Modal />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/master/src/shared/components/Modal)
-* * [```✂️ <Mutation />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/master/src/shared/components/Mutation)
+* [```✂️ <Mutation />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/master/src/shared/components/Mutation)
 * [```🔎 <Query />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/master/src/shared/components/Query)
 * [```✍️ <TextInput />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/master/src/shared/components/TextInput)
 * [```👇 <Touchable />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/master/src/shared/components/Touchable)
