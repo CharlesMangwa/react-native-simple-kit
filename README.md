@@ -129,24 +129,24 @@ src
 ## Components
 
 `react-native-simple-kit` (RNSK) comes with a bunch of components, ready to use right out the box! You can have fun with:
-* [```🔘 <Button />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/master/src/shared/components/Button)
-* [```💠 <Icon />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/master/src/shared/components/Icon)
-* [```🔲 <Modal />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/master/src/shared/components/Modal)
-* [```✂️ <Mutation />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/master/src/shared/components/Mutation)
-* [```🔎 <Query />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/master/src/shared/components/Query)
-* [```✍️ <TextInput />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/master/src/shared/components/TextInput)
-* [```👇 <Touchable />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/master/src/shared/components/Touchable)
+* [```🔘 <Button />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/shared/components/Button)
+* [```💠 <Icon />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/shared/components/Icon)
+* [```🔲 <Modal />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/shared/components/Modal)
+* [```✂️ <Mutation />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/shared/components/Mutation)
+* [```🔎 <Query />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/shared/components/Query)
+* [```✍️ <TextInput />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/shared/components/TextInput)
+* [```👇 <Touchable />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/shared/components/Touchable)
 
-Make sure to check their individual documentation if you want to see more: [`/src/shared/components`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/master/src/shared/components).
+Make sure to check their individual documentation if you want to see more: [`/src/shared/components`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/shared/components).
 
 ## Helpers
 
 Just like the components, you also have a bunch of helpers that can be useful to you as a React Native developer. You have access to:
-* [```💠 Icon```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/master/src/helpers/icon)
-* [```🔗 Linking (call, email, openURL, share, startNavigation)```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/master/src/helpers/linking)
-* [```📱 Responsive (mq, rem, vh, vw)```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/master/src/helpers/responsive)
+* [```💠 Icon```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/helpers/icon)
+* [```🔗 Linking (call, email, openURL, share, startNavigation)```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/helpers/linking)
+* [```📱 Responsive (mq, rem, vh, vw)```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/helpers/responsive)
 
-Make sure to check their individual documentation if you want to see more: [`/src/helpers`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/master/src/helpers).
+Make sure to check their individual documentation if you want to see more: [`/src/helpers`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/helpers).
 
 ## Tests
 
