@@ -3,15 +3,18 @@ import TestRenderer from 'react-test-renderer'
 import ShallowRenderer from 'react-test-renderer/shallow'
 
 import { Text } from 'react-native'
-import { NativeRouter } from 'react-router-native'
 import Button from '@components/Button'
 
 describe('Generic component: <Button />', () => {
+  let navigation = { navigate: jest.fn() }
+
+  beforeEach(() => {
+    navigation = { navigate: jest.fn() }
+  })
+
   it('renders correctly', () => {
     const component = TestRenderer.create(
-      <NativeRouter>
-        <Button onPress={() => jest.fn()} text="Hello!" />
-      </NativeRouter>,
+      <Button navigation={navigation} onPress={() => jest.fn()} text="Hello!" />
     )
     const tree = component.toJSON()
     expect(tree).toMatchSnapshot()
@@ -19,11 +22,9 @@ describe('Generic component: <Button />', () => {
 
   it('renders children if passed', () => {
     const component = TestRenderer.create(
-      <NativeRouter>
-        <Button onPress={() => jest.fn()}>
-          <Text>Wassup!</Text>
-        </Button>
-      </NativeRouter>,
+      <Button navigation={navigation} onPress={() => jest.fn()}>
+        <Text>Wassup!</Text>
+      </Button>
     )
     const tree = component.toJSON()
     expect(tree).toMatchSnapshot()
@@ -31,9 +32,12 @@ describe('Generic component: <Button />', () => {
 
   it('renders with inactive prop', () => {
     const component = TestRenderer.create(
-      <NativeRouter>
-        <Button inactive onPress={() => jest.fn()} text="Having a good day?" />
-      </NativeRouter>,
+      <Button
+        inactive
+        navigation={navigation}
+        onPress={() => jest.fn()}
+        text="Having a good day?"
+      />
     )
     const tree = component.toJSON()
     expect(tree).toMatchSnapshot()
@@ -41,13 +45,12 @@ describe('Generic component: <Button />', () => {
 
   it('renders correctly with color prop', () => {
     const component = TestRenderer.create(
-      <NativeRouter>
-        <Button
-          color="yellow"
-          onPress={() => jest.fn()}
-          text="Hope you like what you see so far"
-        />
-      </NativeRouter>,
+      <Button
+        color="yellow"
+        navigation={navigation}
+        onPress={() => jest.fn()}
+        text="Hope you like what you see so far"
+      />
     )
     const tree = component.toJSON()
     expect(tree).toMatchSnapshot()
@@ -55,14 +58,13 @@ describe('Generic component: <Button />', () => {
 
   it('renders correctly with color & inactive props', () => {
     const component = TestRenderer.create(
-      <NativeRouter>
-        <Button
-          inactive
-          color="red"
-          onPress={() => jest.fn()}
-          text="Feel free to leave a ⭐!"
-        />
-      </NativeRouter>,
+      <Button
+        inactive
+        color="red"
+        navigation={navigation}
+        onPress={() => jest.fn()}
+        text="Feel free to leave a ⭐!"
+      />
     )
     const tree = component.toJSON()
     expect(tree).toMatchSnapshot()
@@ -73,7 +75,11 @@ describe('Generic component: <Button />', () => {
     const onPress = jest.fn()
 
     renderer.render(
-      <Button onPress={() => onPress()} text="And submit a PR if need!" />,
+      <Button
+        onPress={() => onPress()}
+        navigation={navigation}
+        text="And submit a PR if need!"
+      />
     )
 
     const output = renderer.getRenderOutput()
@@ -85,18 +91,14 @@ describe('Generic component: <Button />', () => {
   it('throws when no children nor text prop is passed', () => {
     const renderer = new ShallowRenderer()
     expect(() => renderer.render(<Button />)).toThrowError(
-      'Button requires at least 1 children or a `text`s prop',
+      'Button requires at least 1 children or a `text`s prop'
     )
   })
 
-  it('throws when no onPress nor to prop is passed', () => {
+  it('throws when no navigation={navigation} onPress nor to prop is passed', () => {
     const renderer = new ShallowRenderer()
     expect(() => renderer.render(<Button text="Deuces!" />)).toThrowError(
-      'Button requires at least an `onPress` or `to` prop',
+      'Button requires at least an `navigation={navigation} onPress` or `to` prop'
     )
-  })
-
-  it('calls defaultProps when needed', () => {
-
   })
 })

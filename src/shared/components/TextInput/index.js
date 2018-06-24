@@ -4,7 +4,7 @@ import React, { Component, createRef } from 'react'
 import PropTypes from 'prop-types'
 import { TextInput as TextInputModule, StyleSheet } from 'react-native'
 
-import { BRAND_COLOR_RED, DEFAULT_TEXT_COLOR_DARK } from '@theme/colors'
+import { BRAND_COLOR_RED, DEFAULT_TEXT_COLOR } from '@theme/colors'
 import type { DefaultProps, Props } from './types'
 import styles from './styles'
 
@@ -67,9 +67,7 @@ class TextInput extends Component<Props> {
         onFocus={onFocus}
         onSubmitEditing={onSubmitEditing}
         placeholder={placeholder || ''}
-        placeholderTextColor={
-          placeholderTextColor || `${DEFAULT_TEXT_COLOR_DARK}80`
-        }
+        placeholderTextColor={placeholderTextColor || `${DEFAULT_TEXT_COLOR}80`}
         returnKeyType={returnKeyType || 'done'}
         secureTextEntry={secured}
         selectionColor={selectionColor || BRAND_COLOR_RED}

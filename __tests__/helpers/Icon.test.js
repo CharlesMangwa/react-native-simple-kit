@@ -18,7 +18,7 @@ describe('Helper function: getIcon', () => {
 
   it('renders with color parameter', () => {
     const component = renderer.create(
-      getIcon('backButton', 100, false, '#122E46'),
+      getIcon('backButton', 100, false, '#122E46')
     )
     const tree = component.toJSON()
     expect(tree).toMatchSnapshot()

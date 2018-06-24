@@ -13,7 +13,7 @@ describe('Generic component: <Icon />', () => {
 
   it('renders activated version correctly', () => {
     const component = TestRenderer.create(
-      <Icon activated name="backButton" size={15} />,
+      <Icon activated name="backButton" size={15} />
     )
     const tree = component.toJSON()
     expect(tree).toMatchSnapshot()
@@ -26,7 +26,7 @@ describe('Generic component: <Icon />', () => {
         defaultActivatedColor="#5AADEB"
         name="backButton"
         size={15}
-      />,
+      />
     )
     const tree = component.toJSON()
     expect(tree).toMatchSnapshot()
@@ -34,7 +34,7 @@ describe('Generic component: <Icon />', () => {
 
   it('renders with defaultColor correctly', () => {
     const component = TestRenderer.create(
-      <Icon defaultColor="#333333" name="backButton" size={15} />,
+      <Icon defaultColor="#333333" name="backButton" size={15} />
     )
     const tree = component.toJSON()
     expect(tree).toMatchSnapshot()
@@ -43,7 +43,7 @@ describe('Generic component: <Icon />', () => {
   it("throws when the required SVG doesn't exist", () => {
     const renderer = new ShallowRenderer()
     expect(() =>
-      renderer.render(<Icon name="throw me an error!" size={15} />),
+      renderer.render(<Icon name="throw me an error!" size={15} />)
     ).toThrowError('Invalid SVG name: throw me an error!')
   })
 })

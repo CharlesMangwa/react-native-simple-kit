@@ -4,12 +4,11 @@ A generic button component that handles simple functions or navigation paths int
 
 ### API
 
-* color?: `'blue' | 'green' | 'red' | 'yellow' | 'white'`
+* color?: `'blue' | 'green' | 'red' | 'yellow' | 'white' | string`
 * children?: `React$Element<*>`
 * inactive?: `boolean`
 * onPress?: `Function`
-* replace?: `boolean`
-* routeState?: `Object`
+* params?: `Object`
 * style?: `StyleSheet`
 * text?: `string`
 * to?: `string`
@@ -24,13 +23,13 @@ import Button from '@components/Button'
 const MyComponent = (): React$Element<*> => (
   <SafeAreaView style={{ flex: 1 }}>
     <Button
-      inactive color="red"
-      to="/auth/connection"
+      color="#FF9900"
+      to="Settings"
       text="Connection"
     />
     <Button
       onPress={() => console.warn('Success! 👍')}
-      replace to="/app"
+      to="Home"
       text="Welcome!"
     />
   </SafeAreaView>
@@ -40,8 +39,11 @@ export default MyComponent
 ```
 
 ## Changelog
+#### Sunday, June 24th
+- Remove useless props & add support for any color.
+
 #### Saturday, June 23rd
-- Refactoring for React 16.3+
+- Refactoring for React 16.3+.
 
 #### Wednesday, November 22th
 - Switch to `React.PureComponent`.

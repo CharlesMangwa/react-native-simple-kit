@@ -3,17 +3,20 @@
 import React, { Component } from 'react'
 import { ActivityIndicator, StatusBar, View } from 'react-native'
 
-import type { App, History } from '@types'
+import type { App, Navigation, User } from '@types'
 import { BRAND_COLOR_RED } from '@theme/colors'
 import connect from './connect'
 import styles from './styles'
 
 type Props = {
   app: App,
-  history: History,
+  currentUser: User,
+  navigation: Navigation,
 }
 
 class Launch extends Component<Props> {
+  static defaultProps = {}
+
   componentDidMount() {
     this.initializeApp(this.props)
   }
@@ -22,10 +25,12 @@ class Launch extends Component<Props> {
     this.initializeApp(this.props)
   }
 
-  initializeApp = async ({ app, history }: Props) => {
+  initializeApp = async ({ app, currentUser, navigation }: Props) => {
     if (app.isHydrated) {
       setTimeout(() => {
-        history.replace('/app')
+        navigation.navigate(
+          !app.isAuthentified || currentUser === {} ? 'Auth' : 'App'
+        )
       }, 125)
     }
   }

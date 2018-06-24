@@ -2,7 +2,7 @@
 
 import React, { createElement } from 'react'
 import PropTypes from 'prop-types'
-import { SafeAreaView } from 'react-native'
+import { View } from 'react-native'
 
 import { NEUTRAL_COLOR_50, BRAND_COLOR_GREEN } from '@theme/colors'
 import * as SVGs from './SVGs'
@@ -34,16 +34,25 @@ const Icon = (props: Props): React$Element<*> => {
     case 'backButton':
       icon = SVGs.Back
       break
+    case 'home':
+      icon = SVGs.Home
+      break
+    case 'people':
+      icon = SVGs.People
+      break
+    case 'profile':
+      icon = SVGs.Profile
+      break
     default: {
-      icon = createElement(SafeAreaView, { ...props })
+      icon = createElement(View, { ...props })
       throw new Error(`Invalid SVG name: ${name}`)
     }
   }
 
   return (
-    <SafeAreaView {...props} style={style}>
+    <View {...props} style={style}>
       {createElement(icon, { color, size })}
-    </SafeAreaView>
+    </View>
   )
 }
 

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Generic component: <Icon /> renders activated version correctly 1`] = `
-<RCTSafeAreaView
+<View
   activated={true}
   defaultActivatedColor="#53C000"
   defaultColor="#b8b8b8"
@@ -9,11 +9,11 @@ exports[`Generic component: <Icon /> renders activated version correctly 1`] = `
   size={15}
 >
   <Svg />
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Generic component: <Icon /> renders correctly 1`] = `
-<RCTSafeAreaView
+<View
   activated={false}
   defaultActivatedColor="#53C000"
   defaultColor="#b8b8b8"
@@ -21,11 +21,11 @@ exports[`Generic component: <Icon /> renders correctly 1`] = `
   size={15}
 >
   <Svg />
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Generic component: <Icon /> renders with activated version with custom color correctly 1`] = `
-<RCTSafeAreaView
+<View
   activated={true}
   defaultActivatedColor="#5AADEB"
   defaultColor="#b8b8b8"
@@ -33,11 +33,11 @@ exports[`Generic component: <Icon /> renders with activated version with custom 
   size={15}
 >
   <Svg />
-</RCTSafeAreaView>
+</View>
 `;
 
 exports[`Generic component: <Icon /> renders with defaultColor correctly 1`] = `
-<RCTSafeAreaView
+<View
   activated={false}
   defaultActivatedColor="#53C000"
   defaultColor="#333333"
@@ -45,5 +45,5 @@ exports[`Generic component: <Icon /> renders with defaultColor correctly 1`] = `
   size={15}
 >
   <Svg />
-</RCTSafeAreaView>
+</View>
 `;

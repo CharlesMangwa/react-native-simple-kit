@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React from 'react'
 import TestRenderer from 'react-test-renderer'
 import ShallowRenderer from 'react-test-renderer/shallow'
@@ -15,16 +17,13 @@ describe('Generic component: <Touchable />', () => {
     component = TestRenderer.create(
       <Touchable>
         <Text>Hey!</Text>
-      </Touchable>,
+      </Touchable>
     )
 
     renderer.render(
-      <Touchable
-        onLongPress={() => onLongPress()}
-        onPress={() => onPress()}
-      >
+      <Touchable onLongPress={() => onLongPress()} onPress={() => onPress()}>
         <Text>Doing well?</Text>
-      </Touchable>,
+      </Touchable>
     )
     output = renderer.getRenderOutput()
   })
@@ -49,7 +48,7 @@ describe('Generic component: <Touchable />', () => {
   it('throws an error when no children is passed', () => {
     const renderer = new ShallowRenderer()
     expect(() => renderer.render(<Touchable />)).toThrowError(
-      'Touchable requires at least 1 children',
+      'Touchable requires at least 1 children'
     )
   })
 })

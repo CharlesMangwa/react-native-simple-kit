@@ -4,7 +4,7 @@ A generic component for custom SVG icons.
 
 ### API
 
-* name: `'backButton'`
+* name: `'backButton' | 'home' | 'people' | 'profile'`
 * activated?: `boolean`
 * size?: `number`
 * defaultActivatedColor?: `string`
@@ -29,6 +29,9 @@ export default MyComponent
 ```
 
 ## Changelog
+#### Sunday, June 24th
+- Add `home`, `people` & `profile` icons.
+
 #### Thursday, November 23th
 - Rename `actived` prop into `activated`.
 - Rename `defaultactivedColor` prop into `defaultActivatedColor`.

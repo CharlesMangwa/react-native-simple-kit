@@ -7,20 +7,22 @@ import {
   BRAND_COLOR_YELLOW,
   NEUTRAL_COLOR_00,
 } from '@theme/colors'
+import type { Navigation } from '@types'
 
 export type DefaultProps = {
-  color?: 'blue' | 'green' | 'red' | 'yellow' | 'white',
+  color?: 'blue' | 'green' | 'red' | 'yellow' | 'white' | string,
   children?: ?React$Element<*>,
   inactive?: ?boolean,
   onPress?: ?Function,
-  replace?: ?boolean,
-  routeState: ?Object,
+  params?: Object,
   style?: ?StyleSheet,
   text?: ?string,
   to?: ?string,
 }
 
-export type Props = DefaultProps
+export type Props = DefaultProps & {
+  navigation: Navigation,
+}
 
 export const brandColors = {
   blue: BRAND_COLOR_BLUE,

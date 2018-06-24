@@ -55,7 +55,7 @@ class Counter extends Component<Props, State> {
           />
           <Button onPress={increment} text="+" style={styles.modalButton} />
         </View>
-        <Button color="white" onPress={reset} text="Reset" />
+        <Button color="#000" onPress={reset} text="Reset" />
       </View>
     )
   }

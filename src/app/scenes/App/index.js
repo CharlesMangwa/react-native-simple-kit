@@ -1,55 +1,58 @@
 /* @flow */
 
-import React, { Component } from 'react'
-import { View, StatusBar } from 'react-native'
-import { Switch, Route, Redirect } from 'react-router'
-import { BottomNavigation, Tab } from 'react-router-navigation'
+import { createBottomTabNavigator } from 'react-navigation'
 
-import type { Location } from '@types'
-import { BRAND_COLOR_RED } from '@theme/colors'
-import { Counter, Home, Settings } from '@App/modules'
+import { CounterScreen, HomeScreen, SettingsScreen } from '@App/modules'
+import { BRAND_COLOR_RED, NEUTRAL_COLOR_50 } from '@theme/colors'
+import { AVENIR_REGULAR } from '@theme/fonts'
+import getIcon from '@helpers/icon'
 
-import styles from './styles'
-
-type Props = {
-  location: Location,
-}
-
-class RedirectContent extends Component<*> {
-  shouldComponentUpdate = () => false
-
-  render = () => <Redirect to="/app/home" />
-}
-
-class AppContent extends Component<Props> {
-  shouldComponentUpdate(nextProps) {
-    const { location } = this.props
-    if (location.pathname !== nextProps.location.pathname) return true
-    return false
+export default createBottomTabNavigator(
+  {
+    Home: {
+      screen: HomeScreen,
+      path: '',
+      navigationOptions: {
+        tabBarLabel: 'Home',
+        tabBarAccessibilityLabel: 'Home screen',
+        tabBarIcon: ({ focused, tintColor }) =>
+          getIcon('home', 22, focused, tintColor),
+      },
+    },
+    Counter: {
+      screen: CounterScreen,
+      path: 'counter',
+      navigationOptions: {
+        tabBarLabel: 'Counter',
+        tabBarAccessibilityLabel: 'Counter screen',
+        tabBarIcon: ({ focused, tintColor }) =>
+          getIcon('people', 22, focused, tintColor),
+      },
+    },
+    Settings: {
+      screen: SettingsScreen,
+      path: 'settings',
+      navigationOptions: {
+        tabBarLabel: 'Settings',
+        tabBarAccessibilityLabel: 'Settings screen',
+        tabBarIcon: ({ focused, tintColor }) =>
+          getIcon('profile', 22, focused, tintColor),
+      },
+    },
+  },
+  {
+    initialRouteName: 'Home',
+    tabBarOptions: {
+      activeTintColor: BRAND_COLOR_RED,
+      inactiveTintColor: NEUTRAL_COLOR_50,
+      labelStyle: {
+        ...AVENIR_REGULAR,
+        fontSize: 12,
+      },
+      style: {
+        backgroundColor: 'white',
+        paddingTop: 5,
+      },
+    },
   }
-
-  render() {
-    return (
-      <BottomNavigation
-        tabBarStyle={{ backgroundColor: 'white' }}
-        tabActiveTintColor={BRAND_COLOR_RED}
-      >
-        <Tab path="/app/home" component={Home} label="Home" />
-        <Tab path="/app/counter" component={Counter} label="Counter" />
-        <Tab path="/app/settings" component={Settings} label="Settings" />
-      </BottomNavigation>
-    )
-  }
-}
-
-const App = ({ location }: Props): React$Element<*> => (
-  // @FIXME: SafeAreaView be trippin' lately 😒…
-  <View style={styles.container}>
-    <StatusBar backgroundColor={BRAND_COLOR_RED} />
-    <Switch location={location}>
-      <Route exact path="/app" component={RedirectContent} />
-      <Route path="/app/(home)?" component={AppContent} />
-    </Switch>
-  </View>
 )
-export default App

@@ -21,10 +21,10 @@ export const NEUTRAL_COLOR_95: Color = '#121214'
 export const NEUTRAL_COLOR_100: Color = '#121212'
 
 // Default colors
-export const DEFAULT_TEXT_COLOR: Color = NEUTRAL_COLOR_00
-export const DEFAULT_TEXT_COLOR_DARK: Color = NEUTRAL_COLOR_80
+export const DEFAULT_TEXT_COLOR: Color = NEUTRAL_COLOR_80
+export const DEFAULT_TEXT_COLOR_LIGHT: Color = NEUTRAL_COLOR_00
 export const DEFAULT_ICON_COLOR: Color = NEUTRAL_COLOR_35
-export const DEFAULT_BACKGROUND_COLOR: Color = NEUTRAL_COLOR_10
+export const DEFAULT_BACKGROUND_COLOR: Color = NEUTRAL_COLOR_00
 
 // Specific colors
 export const BRAND_COLOR_BLUE: Color = '#41AFE6'

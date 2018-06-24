@@ -18,7 +18,7 @@ const Home = (): React$Element<*> => (
       inactive
       color="red"
       onPress={() => console.log('✈️ ➡️ ⚙️')}
-      to="/app/settings"
+      to="Settings"
       text="Go to settings"
     />
   </ImageBackground>

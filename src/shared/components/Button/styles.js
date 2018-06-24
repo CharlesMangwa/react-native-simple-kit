@@ -2,7 +2,7 @@
 
 import { StyleSheet } from 'react-native'
 import { rem } from '@helpers/responsive'
-import { BRAND_COLOR_GREEN, DEFAULT_TEXT_COLOR } from '@theme/colors'
+import { BRAND_COLOR_GREEN, DEFAULT_TEXT_COLOR_LIGHT } from '@theme/colors'
 import { AVENIR_MEDIUM } from '@theme/fonts'
 
 const styles: Object = StyleSheet.create({
@@ -20,7 +20,7 @@ const styles: Object = StyleSheet.create({
     ...AVENIR_MEDIUM,
     fontSize: rem(16),
     textAlign: 'center',
-    color: DEFAULT_TEXT_COLOR,
+    color: DEFAULT_TEXT_COLOR_LIGHT,
     backgroundColor: 'transparent',
   },
 })
