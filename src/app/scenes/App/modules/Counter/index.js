@@ -7,9 +7,7 @@ import type { Counter as CounterType, ReduxAction } from '@types'
 import { BRAND_COLOR_RED } from '@theme/colors'
 import background from '@assets/images/background.png'
 
-import Button from '@components/Button'
-import Modal from '@components/Modal'
-import TextInput from '@components/TextInput'
+import { Button, Modal, TextInput } from '@components'
 
 import connect from './connect'
 import styles from './styles'

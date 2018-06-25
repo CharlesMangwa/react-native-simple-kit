@@ -4,8 +4,9 @@ import React from 'react'
 import { ImageBackground, StyleSheet, Text } from 'react-native'
 
 import type { Navigation, ReduxAction } from '@types'
+import { Button } from '@components'
+
 import getIcon from '@helpers/icon'
-import Button from '@components/Button'
 import background from '@assets/images/background.png'
 
 import connect from './connect'

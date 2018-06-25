@@ -4,7 +4,8 @@ import React from 'react'
 import { StyleSheet, View } from 'react-native'
 
 import type { Navigation, ReduxAction, User } from '@types'
-import Button from '@components/Button'
+import { Button } from '@components'
+
 import connect from '@Auth/connect'
 import styles from './styles'
 

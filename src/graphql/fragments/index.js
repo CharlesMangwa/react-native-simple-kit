@@ -5,20 +5,14 @@ import { Component } from 'react'
 import { propType } from 'graphql-anywhere'
 import gql from 'graphql-tag'
 
+/** This is just here for learning purposes,
+ *  not used in the app.
+ */
+
 class RNSK extends Component<*> {
   static fragments = {
-    hero: gql`
-      fragment RNSKHero on User {
-        id
-        name
-        friends {
-          name
-          appearsIn
-        }
-      }
-    `,
     review: gql`
-      fragment RNSKReview on User {
+      fragment RNSKReview on Review {
         stars
         commentary
       }
@@ -26,7 +20,6 @@ class RNSK extends Component<*> {
   }
 
   static propTypes = {
-    hero: propType(RNSK.fragments.hero).isRequired,
     review: propType(RNSK.fragments.review).isRequired,
   }
 }

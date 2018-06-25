@@ -10,7 +10,7 @@ type iPhoneXType = {
   statusBarPadding: 24,
 }
 
-// StarWars API example on Apollo Launchpad - https://launchpad.graphql.com/mpjk0plp9
+// StarWars API from Apollo Launchpad - https://launchpad.graphql.com/mpjk0plp9
 export const API = 'https://mpjk0plp9.lp.gql.zone/graphql'
 export const SUBSCRIPTIONS_API =
   'wss://subscriptions.graph.cool/v1/PUT_YOUR_OWN_ENDPOINT_HERE'

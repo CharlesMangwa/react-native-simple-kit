@@ -82,6 +82,8 @@ export type Human = Character & {
   starships: Starships,
 }
 
+export type Hero = Human
+
 export type PageInfo = {
   startCursor: number,
   endCursor: number,
