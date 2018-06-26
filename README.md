@@ -1,12 +1,12 @@
 # react-native-simple-kit
 
 [![CircleCI](https://circleci.com/gh/CharlesMangwa/react-native-simple-kit.svg?style=shield&circle-token=7207fcf84efb2248759b3c51536c57a61d074712)](https://circleci.com/gh/CharlesMangwa/react-native-simple-kit)
-[![Coverage Status](https://coveralls.io/repos/github/CharlesMangwa/react-native-simple-kit/badge.svg?branch=react-navigation-graphql)](https://coveralls.io/github/CharlesMangwa/react-native-simple-kit?branch=react-navigation-graphql)
+[![Coverage Status](https://coveralls.io/repos/github/CharlesMangwa/react-native-simple-kit/badge.svg?branch=react-navigation)](https://coveralls.io/github/CharlesMangwa/react-native-simple-kit?branch=react-navigation)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![License MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://img.shields.io/badge/License-MIT-brightgreen.svg)
 [![GitHub package version](https://img.shields.io/badge/version-1.1.0-blue.svg)]()
 [![Code style: Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-[![RNSK branch: react-navigation-graphql](https://img.shields.io/badge/ℹ_RNSK-react--navigation--graphql-7020f5.svg)]()
+[![RNSK branch: react-navigation](https://img.shields.io/badge/ℹ_RNSK-react--navigation-7020f5.svg)]()
 
 `react-native-simple-kit` is a starter boilerplate for mobile apps using React Native, Redux and a bunch of other cool tools. This starter is compatible with both iOS and Android out of the box, and provides both JS & native-based navigation solutions! 🤙
 
@@ -16,7 +16,7 @@ RNSK currently provides 3 different navigation libraries: [React Router Navigati
 
 The 1st JavaScript library (on [master](https://github.com/CharlesMangwa/react-native-simple-kit/tree/master/)), has a way more flexible API and it's easier to grasp; while the native one (on [native-navigation](https://github.com/CharlesMangwa/react-native-simple-kit/tree/native-navigation/) branch) is a little bit more cumbersome to use, but offers a better navigation experience to your end consumer.
 
-Finally, this branch does implement the 3rd one, React Navigation, coupled with [GraphQL](https://graphql.org/) through [Apollo Client](https://www.apollographql.com/docs/react/)!
+You have the [react-navigation-graphql](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-navigation/) branch that implements the 3rd navigation library, React Navigation, coupled with [GraphQL](https://graphql.org/) through [Apollo Client](https://www.apollographql.com/docs/react/). And last but not least, this current branch where you still have React Navigation, but without GraphQL.
 
 ## Requirements
 
@@ -36,7 +36,6 @@ See [React Native's Getting Started](https://facebook.github.io/react-native/doc
 - [Redux](http://redux.js.org/) `4.0.0` a predictable state container for JavaScript apps
 - [Babel](http://babeljs.io/) `6.x.x` for ES6+ support
 - [React Navigation](https://github.com/react-navigation/react-navigation) `2.5.2`, for routing and navigation
-- [Apollo Client](https://github.com/apollographql/apollo-client) `2.3.5` a fully-featured, production ready caching GraphQL client for every UI framework and GraphQL server
 - [Flow](http://flowtype.org/) `0.75.0` a static type checker for JavaScript
 - [Jest](https://facebook.github.io/jest/) `23.1.0` delightful JavaScript testing
 
@@ -46,6 +45,7 @@ Just clone the repo and start (assuming you're using [Yarn](https://yarnpkg.com)
 ```shell
 $ git clone https://github.com/CharlesMangwa/react-native-simple-kit.git myAwesomeApp
 $ cd myAwesomeApp
+$ git checkout react-navigation
 $ yarn
 $ yarn start
 ```
@@ -60,54 +60,32 @@ That was the first reason. The second one is just: **community**. I think there 
 
 ## Project structure
 
-This project structure is by no means "**THE**" perfect project structure. It's just the one which is currently making more sense to me than any other else, after several tries. Long story short: I divide my apps by `scenes`, scenes which contain several `modules` that can use that scene's `components`. That's it. Give it a try, you might be surprised how intuitive it could be. Anyhow: feel free to modify this structure and even send some PRs if you find a way to improve it!
+This project structure is by no means "**THE**" perfect project structure. It's just the one which is currently making more sense to me than any other else, after several tries. Long story short: I divide my apps by scenes, subdivided into "modules" that can use that scene's `components` (ie: `src > app > Auth > SignIn > component `). That's it. Give it a try, you might be surprised how intuitive it could be. Anyhow: feel free to modify this structure and even send some PRs if you find a way to improve it! BTw, you'll also notice that given on the branch you're, the structure isn't always the same: I took whatever makes more sense to me given the context (mainly the navigation library used).
 
 ```
 ...
 src
 ├── app
-│   ├── scenes
-│   │   ├── xxx
-│   │   │   ├── modules (?)
-│   │   │   │   └──  xxx
-│   │   │   │        ├── components
-│   │   │   │        │   └──  xxx
-│   │   │   │        │        ├── index.js
-│   │   │   │        │        └── styles.js
-│   │   │   │        ├── connect.js
-│   │   │   │        ├── index.js
-│   │   │   │        └── styles.js
-│   │   │   ├── connect.js (?)
-│   │   │   ├── index.js
-│   │   │   └── styles.js
-│   │   └── index.js
-│   └── index.js
+│   └── xxx
+│        ├── xxx
+│        │   ├── components
+│        │   │   └──  xxx
+│        │   │        ├── index.js
+│        │   │        └── styles.js
+│        │   ├── connect.js
+│        │   ├── index.js
+│        │   └── styles.js
+│        ├── connect.js
+│        ├── index.js
+│        └── styles.js
 ├── config
 │   └── index.js
-├── graphql
-│   ├── fragments
-│   │   └── index.js
-│   ├── mutations
-│   │   ├── index.js
-│   │   └── xxx.js
-│   ├── queries
-│   │   ├── index.js
-│   │   └── xxx.js
-│   ├── store
-│   │   ├── app
-│   │   │   └── index.js
-│   │   ├── network
-│   │   │   └── index.js
-│   │   ├── user
-│   │   │   └── index.js
-│   │   └── index.js
-│   ├── subscriptions
-│   │   ├── index.js
-│   │   └── xxx.js
-│   └── setup.js
 ├── helpers
 │   └── xxx
 │       └── index.js
+├── navigation
+│   ├── xxx.js
+│   └── index.js
 ├── redux
 │   ├── modules
 │   │   └── xxx
@@ -129,24 +107,23 @@ src
 ## Components
 
 `react-native-simple-kit` (RNSK) comes with a bunch of components, ready to use right out the box! You can have fun with:
-* [```🔘 <Button />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/shared/components/Button)
-* [```💠 <Icon />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/shared/components/Icon)
-* [```🔲 <Modal />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/shared/components/Modal)
-* [```✂️ <Mutation />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/shared/components/Mutation)
-* [```🔎 <Query />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/shared/components/Query)
-* [```✍️ <TextInput />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/shared/components/TextInput)
-* [```👇 <Touchable />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/shared/components/Touchable)
+* [```🔘 <Button />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components/Button)
+* [```💠 <Icon />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components/Icon)
+* [```🔲 <Modal />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components/Modal)
+* [```✍️ <TextInput />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components/TextInput)
+* [```👇 <Touchable />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components/Touchable)
 
-Make sure to check their individual documentation if you want to see more: [`/src/shared/components`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/shared/components).
+Make sure to check their individual documentation if you want to see more: [`/src/shared/components`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components).
 
 ## Helpers
 
 Just like the components, you also have a bunch of helpers that can be useful to you as a React Native developer. You have access to:
-* [```💠 Icon```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/helpers/icon)
-* [```🔗 Linking (call, email, openURL, share, startNavigation)```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/helpers/linking)
-* [```📱 Responsive (mq, rem, vh, vw)```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/helpers/responsive)
+* [```🎨 Colors (rgba)```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/helpers/colors)
+* [```💠 Icon```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/helpers/icon)
+* [```🔗 Linking (call, email, openURL, share, startNavigation)```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/helpers/linking)
+* [```📱 Responsive (mq, rem, vh, vw)```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/helpers/responsive)
 
-Make sure to check their individual documentation if you want to see more: [`/src/helpers`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/helpers).
+Make sure to check their individual documentation if you want to see more: [`/src/helpers`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/helpers).
 
 ## Tests
 
@@ -274,7 +251,7 @@ $ jest --verbose --coverage && cat ./__tests__/__coverage__/lcov.info  | ./node_
 
 This whole test suite is implemented inside CircleCI 2.0 as mentioned earlier. A new job is run in the pipeline after each commit. The output of the latest job is displayed at the top of the current README and lets you know if it `passed` or `failed`. No need to say that the goal is to keep it ✅!
 
-Moreover, RNSK uses `jest --verbose --coverage` output to generate a code coverage report that you can use with tools like [Coveralls.io](htps://coveralls.io). Then, we can get a badge which shows our coverage status: [![Coverage Status](https://coveralls.io/repos/github/CharlesMangwa/react-native-simple-kit/badge.svg?branch=react-navigation-graphql)](https://coveralls.io/github/CharlesMangwa/react-native-simple-kit?branch=react-navigation-graphql).
+Moreover, RNSK uses `jest --verbose --coverage` output to generate a code coverage report that you can use with tools like [Coveralls.io](htps://coveralls.io). Then, we can get a badge which shows our coverage status: [![Coverage Status](https://coveralls.io/repos/github/CharlesMangwa/react-native-simple-kit/badge.svg?branch=react-navigation)](https://coveralls.io/github/CharlesMangwa/react-native-simple-kit?branch=react-navigation).
 Pretty cool, heh?
 
 ## Use

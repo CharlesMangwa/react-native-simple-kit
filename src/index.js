@@ -2,31 +2,42 @@
 
 import React, { Component } from 'react'
 import { ActionSheetProvider } from '@expo/react-native-action-sheet'
-import { AppState } from 'react-native'
-import { ApolloProvider } from 'react-apollo'
+import {
+  ActivityIndicator,
+  AppState,
+  StatusBar,
+  StyleSheet,
+  View,
+} from 'react-native'
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
 
-import Root from '@app'
+import Navigation from '@navigation'
 import reduxStore, { persistor } from '@redux'
-import { client, setupApollo } from '@graphql/setup'
+import { BRAND_COLOR_RED } from '@theme/colors'
+import { vh, vw } from '@helpers/responsive'
 
 type State = {
   appState: 'active' | 'background' | 'inactive',
-  isRehydratingStore: boolean,
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    width: vw(100),
+    height: vh(100),
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: BRAND_COLOR_RED,
+  },
+})
 
 class Core extends Component<void, State> {
   state = {
     appState: AppState.currentState,
-    isRehydratingStore: true,
   }
 
-  async componentDidMount() {
-    setupApollo().then(() =>
-      this.setState(() => ({ isRehydratingStore: false }))
-    )
-
+  componentDidMount() {
     AppState.addEventListener('change', this._handleAppStateChange)
   }
 
@@ -42,19 +53,22 @@ class Core extends Component<void, State> {
       this.setState(() => ({ appState: nextAppState }))
   }
 
+  _renderLoader = () => (
+    <View style={styles.container}>
+      <StatusBar barStyle="light-content" backgroundColor={BRAND_COLOR_RED} />
+      <ActivityIndicator size="large" color="white" />
+    </View>
+  )
+
   render() {
-    const { isRehydratingStore } = this.state
-    if (isRehydratingStore) return null
     return (
-      <ApolloProvider client={client}>
-        <Provider store={reduxStore}>
-          <PersistGate loading={null} persistor={persistor}>
-            <ActionSheetProvider>
-              <Root />
-            </ActionSheetProvider>
-          </PersistGate>
-        </Provider>
-      </ApolloProvider>
+      <Provider store={reduxStore}>
+        <PersistGate loading={this._renderLoader} persistor={persistor}>
+          <ActionSheetProvider>
+            <Navigation />
+          </ActionSheetProvider>
+        </PersistGate>
+      </Provider>
     )
   }
 }

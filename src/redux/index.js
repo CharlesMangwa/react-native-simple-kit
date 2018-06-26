@@ -1,19 +1,19 @@
 /* @flow */
 
-import { AsyncStorage } from 'react-native'
 import { /* applyMiddleware, */ combineReducers, createStore } from 'redux'
 import { persistReducer, persistStore } from 'redux-persist'
-// import { routerMiddleware } from 'react-router-redux'
-// import { foo } from './foo'
+import storage from 'redux-persist/lib/storage'
+// import foo from './foo'
 
 import type { Store } from '@types'
 import * as reducers from './reducers'
 
-// const fooMiddleware: Function = routerMiddleware(foo)
+// const fooMiddleware = barSomething(foo)
 
 const persistConfig = {
   key: 'root',
-  storage: AsyncStorage,
+  storage,
+  whitelist: ['app', 'counter', 'user'],
 }
 
 const persistedReducer = persistReducer(
