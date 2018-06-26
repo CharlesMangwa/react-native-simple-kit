@@ -4,12 +4,12 @@ import { AsyncStorage } from 'react-native'
 import { /* applyMiddleware, */ combineReducers, createStore } from 'redux'
 import { persistReducer, persistStore } from 'redux-persist'
 // import { routerMiddleware } from 'react-router-redux'
-// import { history } from 'RNSK/src'
+// import { foo } from './foo'
 
 import type { Store } from '@types'
 import * as reducers from './reducers'
 
-// const historyMiddleware: Function = routerMiddleware(history)
+// const fooMiddleware: Function = routerMiddleware(foo)
 
 const persistConfig = {
   key: 'root',
@@ -23,7 +23,7 @@ const persistedReducer = persistReducer(
 
 const store: Store = createStore(
   persistedReducer
-  // applyMiddleware(historyMiddleware),
+  // applyMiddleware(fooMiddleware),
 )
 
 const persistor = persistStore(store)
