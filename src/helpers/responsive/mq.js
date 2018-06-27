@@ -18,7 +18,7 @@ type Output = StyleSheet
 
 const { width, height } = Dimensions.get('window')
 
-export const mq = (breakpoints: Breakpoints, input: Input): Output => {
+const mq = (breakpoints: Breakpoints, input: Input): Output => {
   const { minWidth, maxWidth, minHeight, maxHeight } = breakpoints
   const minWidthCondition = minWidth ? width > minWidth : true
   const maxWidthCondition = maxWidth ? width < maxWidth : true
@@ -31,3 +31,5 @@ export const mq = (breakpoints: Breakpoints, input: Input): Output => {
     ? input
     : {}
 }
+
+export default mq

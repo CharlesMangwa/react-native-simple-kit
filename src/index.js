@@ -32,6 +32,13 @@ const styles = StyleSheet.create({
   },
 })
 
+const Loader = (): React$Element<*> => (
+  <View style={styles.container}>
+    <StatusBar barStyle="light-content" backgroundColor={BRAND_COLOR_RED} />
+    <ActivityIndicator size="large" color="white" />
+  </View>
+)
+
 class Core extends Component<void, State> {
   state = {
     appState: AppState.currentState,
@@ -53,17 +60,10 @@ class Core extends Component<void, State> {
       this.setState(() => ({ appState: nextAppState }))
   }
 
-  _renderLoader = () => (
-    <View style={styles.container}>
-      <StatusBar barStyle="light-content" backgroundColor={BRAND_COLOR_RED} />
-      <ActivityIndicator size="large" color="white" />
-    </View>
-  )
-
   render() {
     return (
       <Provider store={reduxStore}>
-        <PersistGate loading={this._renderLoader} persistor={persistor}>
+        <PersistGate loading={<Loader />} persistor={persistor}>
           <ActionSheetProvider>
             <Navigation />
           </ActionSheetProvider>

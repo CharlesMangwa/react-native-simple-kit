@@ -60,7 +60,7 @@ That was the first reason. The second one is just: **community**. I think there 
 
 ## Project structure
 
-This project structure is by no means "**THE**" perfect project structure. It's just the one which is currently making more sense to me than any other else, after several tries. Long story short: I divide my apps by scenes, subdivided into "modules" that can use that scene's `components` (ie: `src > app > Auth > SignIn > component `). That's it. Give it a try, you might be surprised how intuitive it could be. Anyhow: feel free to modify this structure and even send some PRs if you find a way to improve it! BTw, you'll also notice that given on the branch you're, the structure isn't always the same: I took whatever makes more sense to me given the context (mainly the navigation library used).
+This project structure is by no means "**THE**" perfect project structure. It's just the one which is currently making more sense to me than any other else, after several tries. Long story short: I divide my apps by scenes, subdivided into "modules" that can use that scene's `components` (ie: `src > app > Auth > SignIn > component `). That's it. Give it a try, you might be surprised how intuitive it could be. Anyhow: feel free to modify this structure and even send some PRs if you find a way to improve it! Btw, you'll also notice that given on the branch you're, the structure isn't always the same: I took whatever makes more sense to me given the context (mainly the navigation library used).
 
 ```
 ...
