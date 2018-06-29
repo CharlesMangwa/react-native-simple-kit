@@ -1,6 +1,6 @@
 /* @flow */
 
-import React, { Component, createRef } from 'react'
+import React, { Component } from 'react'
 import { ImageBackground, Text, View } from 'react-native'
 
 import type { Counter as CounterType, ReduxAction } from '@types'
@@ -30,7 +30,7 @@ class Counter extends Component<Props, State> {
     password: null,
   }
 
-  textInput = createRef()
+  textInput: ?Object
 
   _handleModalState = () =>
     this.setState(state => ({
@@ -67,7 +67,7 @@ class Counter extends Component<Props, State> {
         () => ({ isModalVisible: true }),
         () => {
           // @FIXME: Everything sounds good...but it doesn't work 🙁
-          if (this.textInput.current) this.textInput.current.ref.current.clear()
+          if (this.textInput) this.textInput.ref.clear()
         }
       )
     }
