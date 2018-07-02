@@ -108,6 +108,7 @@ src
 
 `react-native-simple-kit` (RNSK) comes with a bunch of components, ready to use right out the box! You can have fun with:
 * [```🔘 <Button />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components/Button)
+* [```📱 <Device />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components/Device)
 * [```💠 <Icon />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components/Icon)
 * [```🔲 <Modal />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components/Modal)
 * [```✍️ <TextInput />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components/TextInput)

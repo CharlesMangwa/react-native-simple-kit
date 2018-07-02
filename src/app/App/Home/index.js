@@ -3,7 +3,7 @@
 import React from 'react'
 import { ImageBackground, StyleSheet, Text } from 'react-native'
 
-import { Button } from '@components'
+import { Button, Device } from '@components'
 
 import background from '@assets/images/background.png'
 import styles from './styles'
@@ -14,6 +14,7 @@ const Home = () => (
     style={styles.container}
     source={background}
   >
+    <Device.Consumer>{data => console.log(data)}</Device.Consumer>
     <Text style={styles.text}>Home</Text>
     <Button
       inactive

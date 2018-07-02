@@ -5,6 +5,9 @@ import { ActionSheetProvider } from '@expo/react-native-action-sheet'
 import {
   ActivityIndicator,
   AppState,
+  Dimensions,
+  NetInfo,
+  Platform,
   StatusBar,
   StyleSheet,
   View,
@@ -14,11 +17,15 @@ import { PersistGate } from 'redux-persist/integration/react'
 
 import Navigation from '@navigation'
 import reduxStore, { persistor } from '@redux'
+import { Device } from '@components'
 import { BRAND_COLOR_RED } from '@theme/colors'
 import { vh, vw } from '@helpers/responsive'
 
+type AppStateType = 'active' | 'background' | 'inactive'
+
 type State = {
-  appState: 'active' | 'background' | 'inactive',
+  appState: AppStateType,
+  isConnected: ?boolean,
 }
 
 const styles = StyleSheet.create({
@@ -42,30 +49,45 @@ const Loader = (): React$Element<*> => (
 class Core extends Component<void, State> {
   state = {
     appState: AppState.currentState,
+    isConnected: undefined,
   }
 
   componentDidMount() {
+    NetInfo.isConnected
+      .fetch()
+      .then(isConnected => this.setState(() => ({ isConnected })))
     AppState.addEventListener('change', this._handleAppStateChange)
+    NetInfo.removeEventListener('connectionChange', this._handleNetInfoChange)
   }
 
   componentWillUnmount() {
     AppState.removeEventListener('change', this._handleAppStateChange)
+    NetInfo.removeEventListener('connectionChange', this._handleNetInfoChange)
   }
 
-  _handleAppStateChange = async (
-    nextAppState: 'active' | 'background' | 'inactive'
-  ) => {
-    const { appState } = this.state
-    if (appState.match(/inactive|background/) && nextAppState === 'active')
-      this.setState(() => ({ appState: nextAppState }))
-  }
+  _handleAppStateChange = (nextAppState: AppStateType) =>
+    this.setState(() => ({ appState: nextAppState }))
+
+  _handleNetInfoChange = (isConnected: boolean) =>
+    this.setState(() => ({ isConnected }))
 
   render() {
+    const { appState, isConnected } = this.state
     return (
       <Provider store={reduxStore}>
         <PersistGate loading={<Loader />} persistor={persistor}>
           <ActionSheetProvider>
-            <Navigation />
+            <Device.Provider
+              value={{
+                appState,
+                isConnected,
+                height: Dimensions.get('window').height,
+                platform: Platform.OS,
+                width: Dimensions.get('window').width,
+              }}
+            >
+              <Navigation />
+            </Device.Provider>
           </ActionSheetProvider>
         </PersistGate>
       </Provider>
