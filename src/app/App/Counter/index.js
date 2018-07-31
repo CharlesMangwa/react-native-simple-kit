@@ -72,6 +72,7 @@ class Counter extends Component<Props, State> {
       )
     }
   }
+
   render() {
     const { isModalVisible } = this.state
     return (

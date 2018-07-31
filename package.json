@@ -19,7 +19,7 @@
     "jest": "jest --verbose",
     "test": "jest --verbose --coverage && cat ./__tests__/__coverage__/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "prettier": "prettier --config .prettierrc --parser flow --write \"*.js\"",
-    "precommit": "lint-staged && yarn lint && yarn flow && yarn jest",
+    "precommit": "lint-staged && yarn lint && git add . && yarn flow && yarn jest",
     "postcommit": "git update-index --again"
   },
   "lint-staged": {
@@ -89,6 +89,7 @@
     "babel-eslint": "^8.0.2",
     "babel-plugin-minify-dead-code-elimination": "^0.4.3",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-plugin-transform-inline-consecutive-adds": "^0.4.3",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.10",
     "babel-plugin-transform-remove-console": "^6.8.5",
     "babel-preset-flow": "^6.23.0",

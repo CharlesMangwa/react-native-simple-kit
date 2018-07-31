@@ -58,6 +58,7 @@ class Touchable extends Component<Props> {
     return Platform.OS === 'ios' ? (
       <TouchableOpacity
         activeOpacity={0.7}
+        delayLongPress={200}
         onLongPress={onLongPress}
         onPress={onPress}
       >
@@ -68,6 +69,7 @@ class Touchable extends Component<Props> {
     ) : (
       <TouchableNativeFeedback
         useForeground
+        delayLongPress={200}
         onPress={onPress}
         onLongPress={onLongPress}
         background={TouchableNativeFeedback.SelectableBackground()}
