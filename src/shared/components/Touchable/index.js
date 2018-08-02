@@ -15,6 +15,7 @@ type DefaultProps = {
   children?: React$Element<*> | Array<React$Element<*>>,
   onLongPress?: Function,
   onPress?: Function,
+  ripple?: { color: string, borderless: boolean },
   style?: StyleSheet,
 }
 
@@ -22,6 +23,7 @@ type Props = {
   children?: React$Element<*> | Array<React$Element<*>>,
   onLongPress?: Function,
   onPress: Function,
+  ripple?: { color: string, borderless: boolean },
   style?: StyleSheet,
 }
 
@@ -33,12 +35,17 @@ class Touchable extends Component<Props> {
     ]),
     onLongPress: PropTypes.func,
     onPress: PropTypes.func.isRequired,
+    ripple: PropTypes.shape({
+      color: PropTypes.string.isRequired,
+      borderless: PropTypes.bool.isRequired,
+    }),
     style: PropTypes.any, // eslint-disable-line
   }
 
   static defaultProps: DefaultProps = {
     children: undefined,
     onLongPress: undefined,
+    ripple: undefined,
     style: null,
   }
 
@@ -52,6 +59,7 @@ class Touchable extends Component<Props> {
       children,
       onLongPress,
       onPress,
+      ripple,
       style,
       ...remainingProps
     } = this.props
@@ -72,7 +80,11 @@ class Touchable extends Component<Props> {
         delayLongPress={200}
         onPress={onPress}
         onLongPress={onLongPress}
-        background={TouchableNativeFeedback.SelectableBackground()}
+        background={
+          ripple
+            ? TouchableNativeFeedback.Ripple(ripple.color, ripple.borderless)
+            : TouchableNativeFeedback.SelectableBackground()
+        }
       >
         <View {...remainingProps} style={style}>
           {children}

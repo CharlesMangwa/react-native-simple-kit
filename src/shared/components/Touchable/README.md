@@ -7,6 +7,7 @@ A generic component for handling touchable items with specific platforms behavio
 * children?: `React$Element<*>`
 * onLongPress?: `Function`
 * onPress?: `Function`
+* ripple?: `{ color: string, borderless: boolean }`
 * style?: `StyleSheet`
 
 ### Example
@@ -21,6 +22,7 @@ const MyComponent = (): React$Element<*> => (
   <Touchable
     onLongPress={(): void => Alert.alert('👋')}
     onPress={(): void => Alert.alert('🤝')}
+    ripple={{ color: #FF990080, borderless: true }}
     style={StyleSheet.flatten({ backgroundColor: 'pink' })}
   >
     <Text>Hello my dear!</Text>
@@ -31,6 +33,9 @@ export default MyComponent
 ```
 
 ## Changelog
+#### Thursday, August 2nd
+- Implement ripple effect support.
+
 #### Saturday, June 23rd
 - Refactoring for React 16.3+
 
