@@ -18,7 +18,8 @@ const MyComponent = (): React$Element<*> => (
   <SafeAreaView>
     <Device.Consumer>
       {({ appState, height, isConnected, platform, width }) =>
-        console.log(/* choose your weapon 😛 */)}
+        console.log(/* choose your weapon 😛 */)
+      }
     </Device.Consumer>
   </SafeAreaView>
 )
@@ -27,5 +28,7 @@ export default MyComponent
 ```
 
 ## Changelog
+
 #### Monday, July 2nd
+
 - Initial release. We didn't track changes before this version.

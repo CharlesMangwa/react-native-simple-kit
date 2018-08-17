@@ -42,12 +42,27 @@ See [React Native's Getting Started](https://facebook.github.io/react-native/doc
 ## Make the magic happen
 
 Just clone the repo and start (assuming you're using [Yarn](https://yarnpkg.com)):
+
 ```shell
 $ git clone https://github.com/CharlesMangwa/react-native-simple-kit.git myAwesomeApp
 $ cd myAwesomeApp
 $ git checkout react-navigation
 $ yarn
 $ yarn start
+```
+
+## Build app
+
+### iOS
+
+You can use Xcode directly to build your app and get the `.IPA` or send it to iTunesConnect.
+
+### Android
+
+Yoou need to follow the steps listed [here](https://facebook.github.io/react-native/docs/signed-apk-android) and then run this command fromthe root:
+
+```shell
+$ cd android && ./gradlew assembleRelease --stacktrace
 ```
 
 ## Motivations
@@ -60,7 +75,7 @@ That was the first reason. The second one is just: **community**. I think there 
 
 ## Project structure
 
-This project structure is by no means "**THE**" perfect project structure. It's just the one which is currently making more sense to me than any other else, after several tries. Long story short: I divide my apps by scenes, subdivided into "modules" that can use that scene's `components` (ie: `src > app > Auth > SignIn > component `). That's it. Give it a try, you might be surprised how intuitive it could be. Anyhow: feel free to modify this structure and even send some PRs if you find a way to improve it! Btw, you'll also notice that given on the branch you're, the structure isn't always the same: I took whatever makes more sense to me given the context (mainly the navigation library used).
+This project structure is by no means "**THE**" perfect project structure. It's just the one which is currently making more sense to me than any other else, after several tries. Long story short: I divide my apps by scenes, subdivided into "modules" that can use that scene's `components` (ie: `src > app > Auth > SignIn > component`). That's it. Give it a try, you might be surprised how intuitive it could be. Anyhow: feel free to modify this structure and even send some PRs if you find a way to improve it! Btw, you'll also notice that given on the branch you're, the structure isn't always the same: I took whatever makes more sense to me given the context (mainly the navigation library used).
 
 ```
 ...
@@ -107,22 +122,24 @@ src
 ## Components
 
 `react-native-simple-kit` (RNSK) comes with a bunch of components, ready to use right out the box! You can have fun with:
-* [```🔘 <Button />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components/Button)
-* [```📱 <Device />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components/Device)
-* [```💠 <Icon />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components/Icon)
-* [```🔲 <Modal />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components/Modal)
-* [```✍️ <TextInput />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components/TextInput)
-* [```👇 <Touchable />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components/Touchable)
+
+- [`🔘 <Button />`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components/Button)
+- [`📱 <Device />`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components/Device)
+- [`💠 <Icon />`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components/Icon)
+- [`🔲 <Modal />`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components/Modal)
+- [`✍️ <TextInput />`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components/TextInput)
+- [`👇 <Touchable />`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components/Touchable)
 
 Make sure to check their individual documentation if you want to see more: [`/src/shared/components`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components).
 
 ## Helpers
 
 Just like the components, you also have a bunch of helpers that can be useful to you as a React Native developer. You have access to:
-* [```🎨 Colors (rgba)```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/helpers/colors)
-* [```💠 Icon```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/helpers/icon)
-* [```🔗 Linking (call, email, openURL, share, startNavigation)```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/helpers/linking)
-* [```📱 Responsive (mq, rem, vh, vw)```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/helpers/responsive)
+
+- [`🎨 Colors (rgba)`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/helpers/colors)
+- [`💠 Icon`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/helpers/icon)
+- [`🔗 Linking (call, email, openURL, share, startNavigation)`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/helpers/linking)
+- [`📱 Responsive (mq, rem, vh, vw)`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/helpers/responsive)
 
 Make sure to check their individual documentation if you want to see more: [`/src/helpers`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/helpers).
 
@@ -130,18 +147,17 @@ Make sure to check their individual documentation if you want to see more: [`/sr
 
 Tests have been split into several tools & steps. Basically, with RNSK you'll deal with:
 
-* **Prettier/ESLint**, which makes sure that you keep the same code formatting inside the app
-* **Flow**, which enables static type checking in your JavaScript
-* **Jest**, which runs your unit tests
+- **Prettier/ESLint**, which makes sure that you keep the same code formatting inside the app
+- **Flow**, which enables static type checking in your JavaScript
+- **Jest**, which runs your unit tests
 
 They all constitute the backbone of the command ran before each commit:
 
 ```shell
 $ lint-staged && yarn lint && yarn flow && yarn jest
-````
+```
 
 This is run by [CircleCI 2.0](https://circleci.com/gh/CharlesMangwa/react-native-simple-kit) to make sure that we keep everything clean & harmonious: ![CircleCI](https://circleci.com/gh/CharlesMangwa/react-native-simple-kit.svg?style=shield&circle-token=7207fcf84efb2248759b3c51536c57a61d074712). So let's break it down piece by piece.
-
 
 ### Prettier
 
@@ -161,7 +177,7 @@ _This config lives inside `.eslintrc`_
 $ eslint . --fix
 ```
 
-The lint rules are based on **Airbnb, Flow & React configs**, plus some custom tweaks. The purpose of this tool is to keep a constant style in the codebase. Make sure to keep it in the green, and watch out while using [Prettier](https://github.com/prettier/prettier): it may bring unforeseen changes. 
+The lint rules are based on **Airbnb, Flow & React configs**, plus some custom tweaks. The purpose of this tool is to keep a constant style in the codebase. Make sure to keep it in the green, and watch out while using [Prettier](https://github.com/prettier/prettier): it may bring unforeseen changes.
 
 ### Flow
 
@@ -180,7 +196,7 @@ The idea is: whenever you use a function, a module, a class, etc, you have to ty
 ```jsx
 /* @flow */
 
-import React, { Component } from 'react'
+import React, { Component } from 'react'
 import { View, Text } from 'react-native'
 
 import type { Navigation } from '@types'
@@ -197,21 +213,19 @@ type Props = {
 }
 
 type State = {
-  isMounted: Status
+  isMounted: Status,
 }
 
 const MyComponent = ({ onPress, status }: Component): React$Element<*> => (
   <View>
-    <Text>
-      {`MyClass is mounted: ${ownProps.status}`}
-    </Text>
+    <Text>{`MyClass is mounted: ${ownProps.status}`}</Text>
     <Text onPress={onPress}>Go to settings</Text>
   </View>
 )
 
 export class MyClass extends Component<Props, State> {
   state: State = {
-    isMounted: false
+    isMounted: false,
   }
 
   componentDidMount() {
@@ -234,6 +248,7 @@ export class MyClass extends Component<Props, State> {
 I personally use these 3 tools to keep my code clean, homogeneous, (sometimes 😅) performant and kinda organized. Obviously, this is just a starter kit: it's up to you to make any changes you'd like!
 
 ### Jest
+
 _The tests live inside `/__tests__` & the config in `package.json`_
 
 ```shell
@@ -260,4 +275,5 @@ Pretty cool, heh?
 From this point, it's up to you! This is the part where I stop writing and let you explore & have some fun 👍
 
 ## Questions
+
 If you have any questions, feel free to get in touch on Twitter [@Charles_Mangwa](https://twitter.com/Charles_Mangwa)!

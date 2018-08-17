@@ -4,10 +4,9 @@ Documentation of all the generic components, their purpose, their API, and a lit
 
 ### Docs
 
-* [```🔘 <Button />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components/Button)
-* [```📱 <Device />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components/Device)
-* [```💠 <Icon />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components/Icon)
-* [```🔲 <Modal />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components/Modal)
-* [```✍️ <TextInput />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components/TextInput)
-* [```👇 <Touchable />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components/Touchable)
-
+- [`🔘 <Button />`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components/Button)
+- [`📱 <Device />`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components/Device)
+- [`💠 <Icon />`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components/Icon)
+- [`🔲 <Modal />`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components/Modal)
+- [`✍️ <TextInput />`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components/TextInput)
+- [`👇 <Touchable />`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation/src/shared/components/Touchable)

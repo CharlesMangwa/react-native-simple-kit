@@ -11,7 +11,12 @@ type iPhoneXType = {
 }
 
 export const iPhoneX: iPhoneXType = {
-  isValid: Dimensions.get('window').height > 800 && Platform.OS === 'ios',
+  isValid:
+    Platform.OS === 'ios' &&
+    !Platform.isPad &&
+    !Platform.isTVOS &&
+    (Dimensions.get('window').height === 812 ||
+      Dimensions.get('window').width === 812),
   indicatorHeight: 83,
   indicatorPadding: 34,
   statusBarHeight: 44,

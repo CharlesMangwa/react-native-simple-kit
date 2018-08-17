@@ -4,11 +4,11 @@ A generic component for handling touchable items with specific platforms behavio
 
 ### API
 
-* children?: `React$Element<*>`
-* onLongPress?: `Function`
-* onPress?: `Function`
-* ripple?: `{ color: string, borderless: boolean }`
-* style?: `StyleSheet`
+- children?: `React$Element<*>`
+- onLongPress?: `Function`
+- onPress?: `Function`
+- ripple?: `{ color: string, borderless: boolean }`
+- style?: `StyleSheet`
 
 ### Example
 
@@ -33,14 +33,19 @@ export default MyComponent
 ```
 
 ## Changelog
+
 #### Thursday, August 2nd
+
 - Implement ripple effect support.
 
 #### Saturday, June 23rd
+
 - Refactoring for React 16.3+
 
 #### Wednesday, November 22th
+
 - Switch to `React.PureComponent`.
 
 #### Thursday, November 16th
+
 - Initial release. We didn't track changes before this version.

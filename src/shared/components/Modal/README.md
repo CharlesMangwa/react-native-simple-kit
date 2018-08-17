@@ -6,11 +6,11 @@ A generic component for handling modal based on `react-native-modal`.
 
 #### Basic
 
-* children?: `() => React$Element<*> | React$Element<*>`
-* content?: `() => React$Element<*> | React$Element<*>`
-* isVisible: `boolean`
-* onClosePressed: `Function`
-* style?: `StyleSheet`
+- children?: `() => React$Element<*> | React$Element<*>`
+- content?: `() => React$Element<*> | React$Element<*>`
+- isVisible: `boolean`
+- onClosePressed: `Function`
+- style?: `StyleSheet`
 
 #### Complete
 
@@ -38,8 +38,11 @@ export default MyComponent
 ```
 
 ## Changelog
+
 #### Saturday, June 23rd
+
 - Enable swipe down to dismiss feature.
 
 #### Monday, November 20th
+
 - Initial release. We didn't track changes before this version.
