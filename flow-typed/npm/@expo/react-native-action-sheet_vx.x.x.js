@@ -14,7 +14,7 @@
  */
 
 declare module '@expo/react-native-action-sheet' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 /**
@@ -23,37 +23,45 @@ declare module '@expo/react-native-action-sheet' {
  * needed.
  */
 declare module '@expo/react-native-action-sheet/ActionSheet.android' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 declare module '@expo/react-native-action-sheet/ActionSheet.ios' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 declare module '@expo/react-native-action-sheet/ActionSheetProvider' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 declare module '@expo/react-native-action-sheet/connectActionSheet' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 // Filename aliases
 declare module '@expo/react-native-action-sheet/ActionSheet.android.js' {
-  declare module.exports: $Exports<'@expo/react-native-action-sheet/ActionSheet.android'>;
+  declare module.exports: $Exports<
+    '@expo/react-native-action-sheet/ActionSheet.android'
+  >
 }
 declare module '@expo/react-native-action-sheet/ActionSheet.ios.js' {
-  declare module.exports: $Exports<'@expo/react-native-action-sheet/ActionSheet.ios'>;
+  declare module.exports: $Exports<
+    '@expo/react-native-action-sheet/ActionSheet.ios'
+  >
 }
 declare module '@expo/react-native-action-sheet/ActionSheetProvider.js' {
-  declare module.exports: $Exports<'@expo/react-native-action-sheet/ActionSheetProvider'>;
+  declare module.exports: $Exports<
+    '@expo/react-native-action-sheet/ActionSheetProvider'
+  >
 }
 declare module '@expo/react-native-action-sheet/connectActionSheet.js' {
-  declare module.exports: $Exports<'@expo/react-native-action-sheet/connectActionSheet'>;
+  declare module.exports: $Exports<
+    '@expo/react-native-action-sheet/connectActionSheet'
+  >
 }
 declare module '@expo/react-native-action-sheet/index' {
-  declare module.exports: $Exports<'@expo/react-native-action-sheet'>;
+  declare module.exports: $Exports<'@expo/react-native-action-sheet'>
 }
 declare module '@expo/react-native-action-sheet/index.js' {
-  declare module.exports: $Exports<'@expo/react-native-action-sheet'>;
+  declare module.exports: $Exports<'@expo/react-native-action-sheet'>
 }

@@ -27,6 +27,7 @@ You have the [react-navigation-graphql](https://github.com/CharlesMangwa/react-n
 - [Android SDK](https://developer.android.com/sdk/) `25` for Android development
 - [Android](https://www.android.com/) `7.0` or newer on your Android device to test properly
 - [ESLint](http://eslint.org/) `4.11.0` or newer to lint your code on fly
+- [flow-typed](https://github.com/flow-typed/flow-typed/) `2.5.0` or newer to add/create third-party libraries interface definitions.
 
 See [React Native's Getting Started](https://facebook.github.io/react-native/docs/getting-started.html) to install requirement tools.
 
@@ -188,6 +189,8 @@ $ flow --show-all-errors
 ```
 
 Flow is used to type check our JavaScript statically, make sure to use the same version as React Native!
+
+⚠️ Each time you add a new library to the project, don't forget to add its interface definitions if they exist (check here) like this: `flow-typed install foo@1.2.3` or just create it if they don't as follow: `flow-typed create-stub foo`.
 
 ##### Use
 

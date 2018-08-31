@@ -14,7 +14,7 @@
  */
 
 declare module 'react-native-modal' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 /**
@@ -23,24 +23,24 @@ declare module 'react-native-modal' {
  * needed.
  */
 declare module 'react-native-modal/src/animations' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 declare module 'react-native-modal/src/index' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 declare module 'react-native-modal/src/index.style' {
-  declare module.exports: any;
+  declare module.exports: any
 }
 
 // Filename aliases
 declare module 'react-native-modal/src/animations.js' {
-  declare module.exports: $Exports<'react-native-modal/src/animations'>;
+  declare module.exports: $Exports<'react-native-modal/src/animations'>
 }
 declare module 'react-native-modal/src/index.js' {
-  declare module.exports: $Exports<'react-native-modal/src/index'>;
+  declare module.exports: $Exports<'react-native-modal/src/index'>
 }
 declare module 'react-native-modal/src/index.style.js' {
-  declare module.exports: $Exports<'react-native-modal/src/index.style'>;
+  declare module.exports: $Exports<'react-native-modal/src/index.style'>
 }

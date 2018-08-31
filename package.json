@@ -18,12 +18,12 @@
     "flow": "flow --show-all-errors",
     "jest": "jest --verbose",
     "test": "jest --verbose --coverage && cat ./__tests__/__coverage__/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
-    "prettier": "prettier --config .prettierrc --parser flow --write \"*.js\"",
+    "prettier": "prettier --config .prettierrc --parser flow --write \"**/*.js\"",
     "precommit": "lint-staged && yarn lint && git add . && yarn flow && yarn jest",
     "postcommit": "git update-index --again"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx}": [
+    "**/*.{js,jsx}": [
       "yarn prettier",
       "git add"
     ]
