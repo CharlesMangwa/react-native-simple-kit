@@ -5,7 +5,7 @@ import { rem } from '@helpers/responsive'
 import { DEFAULT_BACKGROUND_COLOR, DEFAULT_TEXT_COLOR } from '@theme/colors'
 import { AVENIR_REGULAR } from '@theme/fonts'
 
-const styles: Object = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     ...AVENIR_REGULAR,
     alignSelf: 'center',

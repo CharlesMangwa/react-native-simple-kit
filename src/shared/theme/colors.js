@@ -27,6 +27,9 @@ export const DEFAULT_ICON_COLOR: Color = NEUTRAL_COLOR_35
 export const DEFAULT_BACKGROUND_COLOR: Color = NEUTRAL_COLOR_00
 
 // Specific colors
+export const BRAND_COOR_PRIMARY: Color = '#E33258'
+export const BRAND_COOR_SECONDARY: Color = '#41AFE6'
+export const BRAND_COOR_TERTIARY: Color = '#FFAD1D'
 export const BRAND_COLOR_BLUE: Color = '#41AFE6'
 export const BRAND_COLOR_GREEN: Color = '#53C000'
 export const BRAND_COLOR_YELLOW: Color = '#FFAD1D'

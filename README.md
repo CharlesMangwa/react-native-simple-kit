@@ -4,7 +4,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/CharlesMangwa/react-native-simple-kit/badge.svg?branch=react-navigation-graphql)](https://coveralls.io/github/CharlesMangwa/react-native-simple-kit?branch=react-navigation-graphql)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![License MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://img.shields.io/badge/License-MIT-brightgreen.svg)
-[![GitHub package version](https://img.shields.io/badge/version-1.1.0-blue.svg)]()
+[![GitHub package version](https://img.shields.io/badge/version-1.1.1-blue.svg)]()
 [![Code style: Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![RNSK branch: react-navigation-graphql](https://img.shields.io/badge/ℹ_RNSK-react--navigation--graphql-7020f5.svg)]()
 
@@ -20,13 +20,14 @@ Finally, this branch does implement the 3rd one, React Navigation, coupled with 
 
 ## Requirements
 
-- [Node](https://nodejs.org) `8` or newer
+- [Node](https://nodejs.org) `8.3` or newer
 - [React Native CLI](http://facebook.github.io/react-native/docs/getting-started.html) for development
 - [Xcode](https://developer.apple.com/xcode/) `9.3` or newer for iOS development
 - [Android Studio](https://developer.android.com/studio/index.html) `3.0` or newer for Android development
-- [Android SDK](https://developer.android.com/sdk/) `25` for Android development
+- [Android SDK](https://developer.android.com/sdk/) `27` for Android development
 - [Android](https://www.android.com/) `7.0` or newer on your Android device to test properly
-- [ESLint](http://eslint.org/) `4.11.0` or newer to lint your code on fly
+- [ESLint](http://eslint.org/) `5.4.0` or newer to lint your code on fly
+- [flow-typed](https://github.com/flow-typed/flow-typed/) `2.5.0` or newer to add/create third-party libraries interface definitions.
 
 See [React Native's Getting Started](https://facebook.github.io/react-native/docs/getting-started.html) to install requirement tools.
 
@@ -37,15 +38,18 @@ See [React Native's Getting Started](https://facebook.github.io/react-native/doc
 - [Babel](http://babeljs.io/) `6.x.x` for ES6+ support
 - [React Navigation](https://github.com/react-navigation/react-navigation) `2.5.2`, for routing and navigation
 - [Apollo Client](https://github.com/apollographql/apollo-client) `2.3.5` a fully-featured, production ready caching GraphQL client for every UI framework and GraphQL server
-- [Flow](http://flowtype.org/) `0.75.0` a static type checker for JavaScript
-- [Jest](https://facebook.github.io/jest/) `23.1.0` delightful JavaScript testing
+- [Flow](http://flowtype.org/) `0.80.0` a static type checker for JavaScript
+- [Jest](https://facebook.github.io/jest/) `23.2.0` delightful JavaScript testing
 
 ## Make the magic happen
 
-Just clone the repo and start (assuming you're using [Yarn](https://yarnpkg.com)):
+Just clone the repo, rename it to suit your project name (using [react-native-rename](https://github.com/junedomingo/react-native-rename)) and start:
+
 ```shell
 $ git clone https://github.com/CharlesMangwa/react-native-simple-kit.git myAwesomeApp
 $ cd myAwesomeApp
+$ git checkout react-native-graphql
+$ react-native-rename "myAwesomeApp" -b com.companyname.myawesomeapp
 $ yarn
 $ yarn start
 ```
@@ -129,22 +133,26 @@ src
 ## Components
 
 `react-native-simple-kit` (RNSK) comes with a bunch of components, ready to use right out the box! You can have fun with:
-* [```🔘 <Button />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/shared/components/Button)
-* [```💠 <Icon />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/shared/components/Icon)
-* [```🔲 <Modal />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/shared/components/Modal)
-* [```✂️ <Mutation />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/shared/components/Mutation)
-* [```🔎 <Query />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/shared/components/Query)
-* [```✍️ <TextInput />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/shared/components/TextInput)
-* [```👇 <Touchable />```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/shared/components/Touchable)
+
+- [`🔘 <Button />`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/shared/components/Button)
+- [`📱 <Device />`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/shared/components/Device)
+- [`💠 <Icon />`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/shared/components/Icon)
+- [`🔲 <Modal />`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/shared/components/Modal)
+- [`✂️ <Mutation />`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/shared/components/Mutation)
+- [`🔎 <Query />`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/shared/components/Query)
+- [`✍️ <TextInput />`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/shared/components/TextInput)
+- [`👇 <Touchable />`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/shared/components/Touchable)
 
 Make sure to check their individual documentation if you want to see more: [`/src/shared/components`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/shared/components).
 
 ## Helpers
 
 Just like the components, you also have a bunch of helpers that can be useful to you as a React Native developer. You have access to:
-* [```💠 Icon```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/helpers/icon)
-* [```🔗 Linking (call, email, openURL, share, startNavigation)```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/helpers/linking)
-* [```📱 Responsive (mq, rem, vh, vw)```](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/helpers/responsive)
+
+- [`🎨 Colors (rgba)`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/helpers/colors)
+- [`💠 Icon`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/helpers/icon)
+- [`🔗 Linking (call, email, openURL, share, startNavigation)`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/helpers/linking)
+- [`📱 Responsive (mq, rem, vh, vw)`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/helpers/responsive)
 
 Make sure to check their individual documentation if you want to see more: [`/src/helpers`](https://github.com/CharlesMangwa/react-native-simple-kit/tree/react-navigation-graphql/src/helpers).
 
@@ -152,18 +160,17 @@ Make sure to check their individual documentation if you want to see more: [`/sr
 
 Tests have been split into several tools & steps. Basically, with RNSK you'll deal with:
 
-* **Prettier/ESLint**, which makes sure that you keep the same code formatting inside the app
-* **Flow**, which enables static type checking in your JavaScript
-* **Jest**, which runs your unit tests
+- **Prettier/ESLint**, which makes sure that you keep the same code formatting inside the app
+- **Flow**, which enables static type checking in your JavaScript
+- **Jest**, which runs your unit tests
 
 They all constitute the backbone of the command ran before each commit:
 
 ```shell
 $ lint-staged && yarn lint && yarn flow && yarn jest
-````
+```
 
 This is run by [CircleCI 2.0](https://circleci.com/gh/CharlesMangwa/react-native-simple-kit) to make sure that we keep everything clean & harmonious: ![CircleCI](https://circleci.com/gh/CharlesMangwa/react-native-simple-kit.svg?style=shield&circle-token=7207fcf84efb2248759b3c51536c57a61d074712). So let's break it down piece by piece.
-
 
 ### Prettier
 
@@ -183,7 +190,7 @@ _This config lives inside `.eslintrc`_
 $ eslint . --fix
 ```
 
-The lint rules are based on **Airbnb, Flow & React configs**, plus some custom tweaks. The purpose of this tool is to keep a constant style in the codebase. Make sure to keep it in the green, and watch out while using [Prettier](https://github.com/prettier/prettier): it may bring unforeseen changes. 
+The lint rules are based on **Airbnb, Flow & React configs**, plus some custom tweaks. The purpose of this tool is to keep a constant style in the codebase. Make sure to keep it in the green, and watch out while using [Prettier](https://github.com/prettier/prettier): it may bring unforeseen changes.
 
 ### Flow
 
@@ -195,6 +202,8 @@ $ flow --show-all-errors
 
 Flow is used to type check our JavaScript statically, make sure to use the same version as React Native!
 
+⚠️ Each time you add a new library to the project, don't forget to add its interface definitions if they exist (check here) like this: flow-typed install foo@1.2.3 or just create it if they don't as follow: flow-typed create-stub foo.
+
 ##### Use
 
 The idea is: whenever you use a function, a module, a class, etc, you have to type both its input and output. For instance:
@@ -202,14 +211,14 @@ The idea is: whenever you use a function, a module, a class, etc, you have to ty
 ```jsx
 /* @flow */
 
-import React, { Component } from 'react'
+import React, { Component } from 'react'
 import { View, Text } from 'react-native'
 
 import type { Navigation } from '@types'
 
 type Status = boolean
 
-type Component = {
+type MyComponentProps = {
   onPress: Function,
   status: Status,
 }
@@ -219,22 +228,21 @@ type Props = {
 }
 
 type State = {
-  isMounted: Status
+  isMounted: Status,
 }
 
-const MyComponent = ({ onPress, status }: Component): React$Element<*> => (
+const MyComponent = ({
+  onPress,
+  status,
+}: MyComponentProps): React$Element<*> => (
   <View>
-    <Text>
-      {`MyClass is mounted: ${ownProps.status}`}
-    </Text>
+    <Text>{`MyClass is mounted: ${ownProps.status}`}</Text>
     <Text onPress={onPress}>Go to settings</Text>
   </View>
 )
 
 export class MyClass extends Component<Props, State> {
-  state: State = {
-    isMounted: false
-  }
+  state = { isMounted: false }
 
   componentDidMount() {
     this.setState(state => ({ isMounted: !state.isMounted }))
@@ -256,6 +264,7 @@ export class MyClass extends Component<Props, State> {
 I personally use these 3 tools to keep my code clean, homogeneous, (sometimes 😅) performant and kinda organized. Obviously, this is just a starter kit: it's up to you to make any changes you'd like!
 
 ### Jest
+
 _The tests live inside `/__tests__` & the config in `package.json`_
 
 ```shell
@@ -282,4 +291,5 @@ Pretty cool, heh?
 From this point, it's up to you! This is the part where I stop writing and let you explore & have some fun 👍
 
 ## Questions
+
 If you have any questions, feel free to get in touch on Twitter [@Charles_Mangwa](https://twitter.com/Charles_Mangwa)!

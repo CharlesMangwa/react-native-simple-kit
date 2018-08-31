@@ -28,14 +28,17 @@ const styles: Object = StyleSheet.create({
     width: vw(100),
   },
   title: {
+    alignSelf: 'center',
     ...AVENIR_BOLD,
     fontSize: rem(20),
     color: DEFAULT_TEXT_COLOR,
   },
   footer: {
+    alignSelf: 'center',
     ...AVENIR_LIGHT_ITALIC,
     fontSize: rem(12),
     color: DEFAULT_TEXT_COLOR,
+    marginTop: rem(20),
   },
 })
 

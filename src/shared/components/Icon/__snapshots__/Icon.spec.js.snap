@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Generic component: <Icon /> renders activated version correctly 1`] = `
+exports[`💠 Generic component: <Icon /> should render activated version correctly 1`] = `
 <View
   activated={true}
   defaultActivatedColor="#53C000"
@@ -12,7 +12,7 @@ exports[`Generic component: <Icon /> renders activated version correctly 1`] = `
 </View>
 `;
 
-exports[`Generic component: <Icon /> renders correctly 1`] = `
+exports[`💠 Generic component: <Icon /> should render correctly 1`] = `
 <View
   activated={false}
   defaultActivatedColor="#53C000"
@@ -24,7 +24,7 @@ exports[`Generic component: <Icon /> renders correctly 1`] = `
 </View>
 `;
 
-exports[`Generic component: <Icon /> renders with activated version with custom color correctly 1`] = `
+exports[`💠 Generic component: <Icon /> should render with activated version with custom color correctly 1`] = `
 <View
   activated={true}
   defaultActivatedColor="#5AADEB"
@@ -36,7 +36,7 @@ exports[`Generic component: <Icon /> renders with activated version with custom 
 </View>
 `;
 
-exports[`Generic component: <Icon /> renders with defaultColor correctly 1`] = `
+exports[`💠 Generic component: <Icon /> should render with defaultColor correctly 1`] = `
 <View
   activated={false}
   defaultActivatedColor="#53C000"

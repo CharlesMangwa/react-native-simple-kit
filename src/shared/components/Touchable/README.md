@@ -4,10 +4,11 @@ A generic component for handling touchable items with specific platforms behavio
 
 ### API
 
-* children?: `React$Element<*>`
-* onLongPress?: `Function`
-* onPress?: `Function`
-* style?: `StyleSheet`
+- children?: `React$Element<*>`
+- onLongPress?: `Function`
+- onPress?: `Function`
+- ripple?: `{ color: string, borderless: boolean }`
+- style?: `StyleSheet`
 
 ### Example
 
@@ -21,6 +22,7 @@ const MyComponent = (): React$Element<*> => (
   <Touchable
     onLongPress={(): void => Alert.alert('👋')}
     onPress={(): void => Alert.alert('🤝')}
+    ripple={{ color: #FF990080, borderless: true }}
     style={StyleSheet.flatten({ backgroundColor: 'pink' })}
   >
     <Text>Hello my dear!</Text>
@@ -31,11 +33,7 @@ export default MyComponent
 ```
 
 ## Changelog
-#### Saturday, June 23rd
-- Refactoring for React 16.3+
 
-#### Wednesday, November 22th
-- Switch to `React.PureComponent`.
+#### Friday, August 17th, 2018
 
-#### Thursday, November 16th
 - Initial release. We didn't track changes before this version.

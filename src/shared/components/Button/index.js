@@ -29,7 +29,7 @@ class Button extends Component<Props> {
 
   static defaultProps: DefaultProps = {
     children: undefined,
-    color: 'red',
+    color: 'black',
     inactive: false,
     onPress: undefined,
     params: {},
@@ -101,3 +101,4 @@ class Button extends Component<Props> {
 }
 
 export default withNavigation(Button)
+export { Button as TestButton }

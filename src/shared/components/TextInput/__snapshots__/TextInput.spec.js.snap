@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Generic component: <TextInput /> renders correctly 1`] = `
+exports[`✍️ Generic component: <TextInput /> should render correctly 1`] = `
 <TextInput
   allowFontScaling={true}
   autoCapitalize="none"

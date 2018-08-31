@@ -1,25 +1,23 @@
-import '@mocks/SVG'
+import './mock.js'
 import React from 'react'
 import TestRenderer from 'react-test-renderer'
 import ShallowRenderer from 'react-test-renderer/shallow'
-import Icon from '@components/Icon'
+import Icon from './index.js'
 
-describe('Generic component: <Icon />', () => {
-  it('renders correctly', () => {
+describe('💠 Generic component: <Icon />', () => {
+  it('should render correctly', () => {
     const component = TestRenderer.create(<Icon name="backButton" size={15} />)
     const tree = component.toJSON()
     expect(tree).toMatchSnapshot()
   })
-
-  it('renders activated version correctly', () => {
+  it('should render activated version correctly', () => {
     const component = TestRenderer.create(
       <Icon activated name="backButton" size={15} />
     )
     const tree = component.toJSON()
     expect(tree).toMatchSnapshot()
   })
-
-  it('renders with activated version with custom color correctly', () => {
+  it('should render with activated version with custom color correctly', () => {
     const component = TestRenderer.create(
       <Icon
         activated
@@ -31,16 +29,14 @@ describe('Generic component: <Icon />', () => {
     const tree = component.toJSON()
     expect(tree).toMatchSnapshot()
   })
-
-  it('renders with defaultColor correctly', () => {
+  it('should render with defaultColor correctly', () => {
     const component = TestRenderer.create(
       <Icon defaultColor="#333333" name="backButton" size={15} />
     )
     const tree = component.toJSON()
     expect(tree).toMatchSnapshot()
   })
-
-  it("throws when the required SVG doesn't exist", () => {
+  it("should throw when the required SVG doesn't exist", () => {
     const renderer = new ShallowRenderer()
     expect(() =>
       renderer.render(<Icon name="throw me an error!" size={15} />)

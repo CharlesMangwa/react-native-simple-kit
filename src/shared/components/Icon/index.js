@@ -44,8 +44,10 @@ const Icon = (props: Props): React$Element<*> => {
       icon = SVGs.Profile
       break
     default: {
-      icon = createElement(View, { ...props })
-      throw new Error(`Invalid SVG name: ${name}`)
+      icon = View
+      if (process.env.NODE_ENV !== 'production') {
+        throw new Error(`Invalid SVG name: ${name}`)
+      }
     }
   }
 

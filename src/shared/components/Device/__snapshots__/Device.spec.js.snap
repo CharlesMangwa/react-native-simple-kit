@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`📱 Generic component: <Device /> should render \`<Device.Consumer />\` correctly 1`] = `<View />`;
+
+exports[`📱 Generic component: <Device /> should render \`<Device.Provider />\` correctly 1`] = `<View />`;

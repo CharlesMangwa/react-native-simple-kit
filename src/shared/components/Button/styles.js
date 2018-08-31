@@ -5,7 +5,7 @@ import { rem } from '@helpers/responsive'
 import { BRAND_COLOR_GREEN, DEFAULT_TEXT_COLOR_LIGHT } from '@theme/colors'
 import { AVENIR_MEDIUM } from '@theme/fonts'
 
-const styles: Object = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     width: rem(160),
     height: rem(42),

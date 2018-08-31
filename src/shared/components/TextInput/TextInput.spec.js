@@ -1,10 +1,9 @@
 import React from 'react'
 import TestRenderer from 'react-test-renderer'
-import ShallowRenderer from 'react-test-renderer/shallow'
-import TextInput from '@components/TextInput'
+import TextInput from './index.js'
 
-describe('Generic component: <TextInput />', () => {
-  it('renders correctly', () => {
+describe('✍️ Generic component: <TextInput />', () => {
+  it('should render correctly', () => {
     const component = TestRenderer.create(
       <TextInput placeholder="I'm rendered \o/" />
     )

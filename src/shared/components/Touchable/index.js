@@ -15,6 +15,7 @@ type DefaultProps = {
   children?: React$Element<*> | Array<React$Element<*>>,
   onLongPress?: Function,
   onPress?: Function,
+  ripple?: { color: string, borderless: boolean },
   style?: StyleSheet,
 }
 
@@ -22,6 +23,7 @@ type Props = {
   children?: React$Element<*> | Array<React$Element<*>>,
   onLongPress?: Function,
   onPress: Function,
+  ripple?: { color: string, borderless: boolean },
   style?: StyleSheet,
 }
 
@@ -33,12 +35,17 @@ class Touchable extends Component<Props> {
     ]),
     onLongPress: PropTypes.func,
     onPress: PropTypes.func.isRequired,
+    ripple: PropTypes.shape({
+      color: PropTypes.string.isRequired,
+      borderless: PropTypes.bool.isRequired,
+    }),
     style: PropTypes.any, // eslint-disable-line
   }
 
   static defaultProps: DefaultProps = {
     children: undefined,
     onLongPress: undefined,
+    ripple: undefined,
     style: null,
   }
 
@@ -52,30 +59,40 @@ class Touchable extends Component<Props> {
       children,
       onLongPress,
       onPress,
+      ripple,
       style,
       ...remainingProps
     } = this.props
-    return Platform.OS === 'ios' ? (
-      <TouchableOpacity
-        activeOpacity={0.7}
-        onLongPress={onLongPress}
-        onPress={onPress}
-      >
+
+    const TouchableComponent =
+      Platform.OS === 'ios' ? TouchableOpacity : TouchableNativeFeedback
+
+    const touchableComponentProps = {
+      ...Platform.select({
+        ios: {
+          activeOpacity: 0.7,
+          delayLongPress: 200,
+          onLongPress,
+          onPress,
+        },
+        android: {
+          background: ripple
+            ? TouchableNativeFeedback.Ripple(ripple.color, ripple.borderless)
+            : TouchableNativeFeedback.SelectableBackground(),
+          delayLongPress: 200,
+          useForeground: true,
+          onPress,
+          onLongPress,
+        },
+      }),
+    }
+
+    return (
+      <TouchableComponent {...touchableComponentProps}>
         <View {...remainingProps} style={style}>
           {children}
         </View>
-      </TouchableOpacity>
-    ) : (
-      <TouchableNativeFeedback
-        useForeground
-        onPress={onPress}
-        onLongPress={onLongPress}
-        background={TouchableNativeFeedback.SelectableBackground()}
-      >
-        <View {...remainingProps} style={style}>
-          {children}
-        </View>
-      </TouchableNativeFeedback>
+      </TouchableComponent>
     )
   }
 }

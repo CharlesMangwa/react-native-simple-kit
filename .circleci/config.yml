@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:7.10
+      - image: circleci/node:latest
 
     working_directory: ~/repo
 
@@ -11,12 +11,12 @@ jobs:
 
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          - v1-dependencies-
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
 
       - run:
           name: Installing Packages
-          command: yarn install
+          command: yarn install --ignore-engines
 
       - save_cache:
           paths:
@@ -38,5 +38,3 @@ jobs:
       - run:
           name: Running Tests
           command: yarn run test
-
-

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Generic component: <Touchable /> renders correctly 1`] = `
+exports[`👇 Generic component: <Touchable /> should render correctly 1`] = `
 <View
   accessible={true}
   isTVSelectable={true}

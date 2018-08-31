@@ -1,6 +1,6 @@
 /* @flow */
 
-import React, { Component, createRef } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { TextInput as TextInputModule, StyleSheet } from 'react-native'
 
@@ -9,7 +9,7 @@ import type { DefaultProps, Props } from './types'
 import styles from './styles'
 
 class TextInput extends Component<Props> {
-  ref = createRef()
+  ref: ?Component<*>
 
   static defaultProps: DefaultProps = {
     autoCapitalize: 'none',
@@ -52,7 +52,7 @@ class TextInput extends Component<Props> {
     } = this.props
     return (
       <TextInputModule
-        ref={this.ref}
+        ref={c => (this.ref = c)}
         autoFocus={autoFocus}
         autoCapitalize={autoCapitalize || 'none'}
         blurOnSubmit={true}

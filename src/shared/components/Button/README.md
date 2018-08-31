@@ -4,14 +4,14 @@ A generic button component that handles simple functions or navigation paths int
 
 ### API
 
-* color?: `'blue' | 'green' | 'red' | 'yellow' | 'white' | string`
-* children?: `React$Element<*>`
-* inactive?: `boolean`
-* onPress?: `Function`
-* params?: `Object`
-* style?: `StyleSheet`
-* text?: `string`
-* to?: `string`
+- color?: `'blue' | 'green' | 'red' | 'yellow' | 'white' | string`
+- children?: `React$Element<*>`
+- inactive?: `boolean`
+- onPress?: `Function`
+- params?: `Object`
+- style?: `StyleSheet`
+- text?: `string`
+- to?: `string`
 
 ### Example
 
@@ -24,6 +24,7 @@ const MyComponent = (): React$Element<*> => (
   <SafeAreaView style={{ flex: 1 }}>
     <Button
       color="#FF9900"
+      ripple={{ color: #FF990080, borderless: true }}
       to="Settings"
       text="Connection"
     />
@@ -39,17 +40,7 @@ export default MyComponent
 ```
 
 ## Changelog
-#### Sunday, June 24th
-- Remove useless props & add support for any color.
 
-#### Saturday, June 23rd
-- Refactoring for React 16.3+.
+#### Friday, August 17th, 2018
 
-#### Wednesday, November 22th
-- Switch to `React.PureComponent`.
-
-#### Monday, November 20th
-- Add `blue` as a supported color.
-
-#### Thursday, November 16th
 - Initial release. We didn't track changes before this version.
